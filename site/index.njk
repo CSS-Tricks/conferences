@@ -1,0 +1,15 @@
+---
+title: Conference Listings! - CSS-Tricks
+layout: layouts/base.njk
+description: A place for conferences.
+---
+
+<h1>Conferences</h1>
+
+<ul class="conference-list">
+{%- for conf in collections.conferences -%}
+  <li>
+    {% include "conference.njk" %}
+  </li>
+{%- endfor -%}
+</ul>
