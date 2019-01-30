@@ -4,11 +4,27 @@ layout: layouts/base.njk
 description: A place for conferences.
 ---
 
-<h1>Conferences</h1>
+<header class="site-header">
+  <div class="logo">
+    <a href="/">
+      <div class="screen-reader-text">CSS-Tricks</div>
+      <svg class="icon-logo-star" width="35px" height="35px">
+        <use xlink:href="#icon-logo-star"></use>
+      </svg>
+      <!-- 288 35 -->
+      <svg class="icon-logo-text" width="214px" height="35px">
+        <use xlink:href="#logo"></use>
+      </svg>
+    </a>
+  </div>
+
+  Front-End Design & Development (Related) Conference Listings
+
+</header>
 
 <ul class="conference-list">
 {%- for conf in collections.conferences -%}
-  <li>
+  <li class="conf">
     {% include "conference.njk" %}
   </li>
 {%- endfor -%}

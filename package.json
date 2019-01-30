@@ -17,6 +17,11 @@
   },
   "homepage": "https://github.com/CSS-Tricks/conferences#readme",
   "devDependencies": {
-    "@11ty/eleventy": "^0.7.1"
+    "@11ty/eleventy": "^0.7.1",
+    "luxon": "^1.10.0"
+  },
+  "dependencies": {
+    "nunjucks-inspect": "^0.1.6",
+    "t": "^0.5.1"
   }
 }

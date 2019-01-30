@@ -1,12 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 html {
   font-size: 20px;
   font-weight: 400;
   line-height: 1.35;
-  background: black;
+  background: #100e17;
   color: white;
   font-family: -system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
     "Segoe UI Symbol";
+
+  --orange: #ff8a00;
+  --pink: #da1b60;
+  --red: #f44336;
+  --purple: #9c27b0;
+  --blue: #03a9f4;
+  --green: #4caf50;
+  --lightgreen: #8bc34a;
+  --yellow: #ffeb3b;
+  --bluegray: #607d8b;
+}
+
+.screen-reader-text {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+}
+
+a {
+  text-decoration: none;
 }
 
 h1,
@@ -17,4 +43,89 @@ h5,
 h6 {
   font-family: "Rubik", "Lato", "Lucida Grande", "Lucida Sans Unicode", Tahoma,
     Sans-Serif;
+}
+
+.site-header {
+  padding: 2rem;
+  border-bottom: 1px solid #201c29;
+  color: #8a8784;
+}
+.logo {
+  margin-right: 1rem;
+}
+.icon-logo-star {
+  fill: var(--orange);
+}
+.icon-logo-text {
+  fill: white;
+}
+
+.conference-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  grid-gap: 2rem;
+  padding: 2rem;
+}
+.conf {
+  background: #201c29;
+  border-radius: 4px;
+  box-shadow: 0 25px 50px black;
+  overflow: hidden;
+  position: relative;
+  padding: 0 0 50px 0;
+}
+.conf-title {
+  border-bottom: 1px solid #3d364e;
+}
+.conf-title a {
+  display: block;
+  color: white;
+  padding: 0.5rem 1rem;
+  background: #2d2838;
+}
+.conf-title a:hover,
+.conf-title a:focus {
+  background: #3a3448;
+}
+
+.date-and-location {
+  display: flex;
+  flex-wrap: wrap;
+  white-space: nowrap;
+  padding: 0.5rem 1rem 0.5rem 0;
+}
+
+.conf-dates,
+.conf-location,
+.conf-coc {
+  font-size: 14px;
+  margin-left: 1rem;
+}
+
+.conf-location {
+  font-style: normal;
+}
+
+.conf-about {
+  padding: 1rem;
+}
+
+.conf-link {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 50px;
+  height: 50px;
+  background: #394353;
+  color: black;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding: 5px;
+  clip-path: polygon(100% 0, 100% 100%, 0 100%);
+}
+.conf-link:hover,
+.conf-link:focus {
+  background: white;
 }

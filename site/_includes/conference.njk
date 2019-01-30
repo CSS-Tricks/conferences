@@ -1,5 +1,26 @@
-<div class="conf">
-  <h2>{{conf.data.title}}</h2>
-  <time>{{conf.data.startDate}} - {{conf.data.endDate}}</time>
-  <a href="{{conf.data.url}}">Go</a>
+<h2 class="conf-title">
+  <a href="{{conf.data.url}}">
+    {{conf.data.title}}
+  </a>
+</h2>
+
+<div class="date-and-location">
+  <address class="conf-location">
+    📍 {{conf.data.location }}
+  </address>
+
+  <time class="conf-dates">📆 {{conf.data.startDate | readableDate}} - {{conf.data.endDate | readableDate}}</time>
+
+  <a href="{{conf.data.cocUrl}}" class="conf-coc">Code of Conduct</a>
 </div>
+
+<div class="conf-about">
+  {{conf.templateContent | safe}}  
+</div>
+
+<a href="{{conf.data.url}}" class="conf-link">
+  <span class="screen-reader-text">Go to Conference Site</span>
+  →
+</a>
+
+
