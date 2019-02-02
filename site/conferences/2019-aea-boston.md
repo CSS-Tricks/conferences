@@ -8,4 +8,4 @@ location: Boston, Massachusetts
 byline: Three days of design, code, and content
 ---
 
-An Event Apart Boston is a three-day conference with 17 sessions and an intense focus on digital design, UX, content, code, and more, giving you deep insights into where we are now and where things are going next.
+A three-day conference with 17 sessions and an intense focus on digital design, UX, content, code, and more, giving you deep insights into where we are now and where things are going next.
