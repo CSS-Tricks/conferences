@@ -1,5 +1,5 @@
 ---
-title: Front-End Design Conference
+title: Frontend Developer Love
 url: https://www.frontenddeveloperlove.com/
 cocUrl: http://confcodeofconduct.com/
 date: 2019-02-13
