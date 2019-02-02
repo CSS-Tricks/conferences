@@ -15,17 +15,18 @@ description: A place for conferences.
       <svg class="icon-logo-text" width="214px" height="35px">
         <use xlink:href="#logo"></use>
       </svg>
+      <span class="presents">presents</span>
     </a>
   </div>
 
-  Front-End Design & Development (Related) Conference Listings
-
+  <h1>Conference Listings</h1>
+  <div class="subtitle">Related to Front-End Design & Development</div>
 </header>
 
 <ul class="conference-list">
-{%- for conf in collections.conferences -%}
+  {%- for conf in collections.conferences -%}
   <li class="conf">
     {% include "conference.njk" %}
   </li>
-{%- endfor -%}
+  {%- endfor -%}
 </ul>

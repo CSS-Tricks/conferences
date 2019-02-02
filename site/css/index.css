@@ -48,27 +48,43 @@ h6 {
 .site-header {
   padding: 2rem;
   border-bottom: 1px solid #201c29;
-  color: #8a8784;
+}
+h1 {
+  font-family: "Rubik", "Lato", "Lucida Grande", "Lucida Sans Unicode", Tahoma,
+    Sans-Serif;
+  color: var(--orange);
+  line-height: 1;
 }
 .logo {
   margin-right: 1rem;
 }
 .icon-logo-star {
   fill: var(--orange);
+  height: 20px;
+  width: 20px;
 }
 .icon-logo-text {
   fill: white;
+  height: 20px;
+  width: 122px;
+}
+.presents {
+  color: white;
+  font-size: 13px;
+  position: relative;
+  top: -3px;
 }
 
 .conference-list {
   list-style: none;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-  grid-gap: 2rem;
+  grid-gap: 4rem;
   padding: 2rem;
 }
 .conf {
-  background: #201c29;
+  background: white;
+  color: #100e17;
   border-radius: 4px;
   box-shadow: 0 25px 50px black;
   overflow: hidden;
@@ -76,31 +92,34 @@ h6 {
   padding: 0 0 50px 0;
 }
 .conf-title {
-  border-bottom: 1px solid #3d364e;
 }
 .conf-title a {
   display: block;
-  color: white;
   padding: 0.5rem 1rem;
-  background: #2d2838;
+  background: var(--orange);
+  color: white;
+  text-shadow: 1px 1px 2px #00000073;
 }
 .conf-title a:hover,
 .conf-title a:focus {
   background: #3a3448;
 }
 
-.date-and-location {
-  display: flex;
-  flex-wrap: wrap;
-  white-space: nowrap;
-  padding: 0.5rem 1rem 0.5rem 0;
+.icon {
+  font-size: 24px;
+  margin-right: 0.5rem;
 }
 
 .conf-dates,
-.conf-location,
+.conf-location {
+  display: flex;
+  align-items: center;
+  padding: 0.66rem 1rem;
+  font-size: 15px;
+}
+
 .conf-coc {
   font-size: 14px;
-  margin-left: 1rem;
 }
 
 .conf-location {
@@ -118,7 +137,7 @@ h6 {
   width: 50px;
   height: 50px;
   background: #394353;
-  color: black;
+  color: white;
   display: flex;
   align-items: flex-end;
   justify-content: flex-end;
@@ -127,5 +146,5 @@ h6 {
 }
 .conf-link:hover,
 .conf-link:focus {
-  background: white;
+  background: var(--orange);
 }
