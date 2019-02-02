@@ -2,7 +2,7 @@
 title: An Event Apart
 url: https://aneventapart.com/event/seattle-2019
 cocUrl: https://aneventapart.com/registration-information#code-of-conduct
-startDate: 2019-03-04
+date: 2019-03-04
 endDate: 2019-03-06
 location: Seattle, Washington
 byline: Three days of design, code, and content

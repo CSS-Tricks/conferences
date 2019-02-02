@@ -2,7 +2,7 @@
 title: Front-End Design Conference
 url: http://frontenddesignconference.com/
 cocUrl: http://frontenddesignconference.com/terms.php
-startDate: 2019-04-25
+date: 2019-04-25
 endDate: 2019-04-26
 location: St. Petersburg, Florida
 byline: A Conference for Web Professionals Who Love their Community, the Web, and Learning.

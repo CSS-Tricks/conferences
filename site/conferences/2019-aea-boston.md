@@ -2,7 +2,7 @@
 title: An Event Apart
 url: https://aneventapart.com/event/boston-2019
 cocUrl: https://aneventapart.com/registration-information#code-of-conduct
-startDate: 2019-05-06
+date: 2019-05-06
 endDate: 2019-05-08
 location: Boston, Massachusetts
 byline: Three days of design, code, and content
