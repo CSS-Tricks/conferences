@@ -1,7 +1,9 @@
 <time class="conf-dates">
   <span class="icon">📆</span>
   {{ conf.data.date | readableDate }}
-  {% if conf.data.endDate %} - {{ conf.data.endDate | readableDate }}
+  {% if conf.data.endDate %}<span class="end-date">
+    - {{ conf.data.endDate | readableDate }}</span
+  >
   {% endif %}
 </time>
 
@@ -21,6 +23,10 @@
   {% if conf.data.cocUrl %}
   <a href="{{ conf.data.cocUrl }}" class="conf-coc">Code of Conduct</a>
   {% endif %}
+</div>
+
+<div class="conf-byline">
+  {{ conf.data.byline }}
 </div>
 
 <a href="{{ conf.data.url }}" class="conf-link">

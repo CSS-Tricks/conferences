@@ -9,9 +9,14 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="{{ '/css/index.css' | url }}" />
+    <link rel="stylesheet" href="{{ '/css/grid.css' | url }}" />
+    <link rel="stylesheet" href="{{ '/css/list.css' | url }}" />
   </head>
-  <body>
+  <body class="grid">
     {{ content | safe }}
+
     {% include "icons.njk" %}
+
+    <script src="{{ '/script/index.js' | url }}"></script>
   </body>
 </html>

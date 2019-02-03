@@ -17,11 +17,12 @@ module.exports = function(config) {
   });
 
   config.addPassthroughCopy("css");
+  config.addPassthroughCopy("js");
 
   return {
     dir: { input: "site", output: "dist", includes: "_includes" },
     passthroughFileCopy: true,
-    templateFormats: ["njk", "md", "css"],
+    templateFormats: ["njk", "md", "css", "js"],
     htmlTemplateEngine: "njk",
     markdownTemplateEngine: "njk"
   };
