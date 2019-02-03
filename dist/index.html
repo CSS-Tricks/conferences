@@ -9,8 +9,10 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="/css/index.css" />
+    <link rel="stylesheet" href="/css/grid.css" />
+    <link rel="stylesheet" href="/css/list.css" />
   </head>
-  <body>
+  <body class="grid">
     
 <header class="site-header">
   <div class="logo">
@@ -33,13 +35,30 @@
   <a class="contribute-link" href="https://github.com/CSS-Tricks/conferences"
     >Contribute on GitHub</a
   >
+
+  <div class="style-switcher">
+    <button class="active" data-body-class="grid">
+      ⠿
+      <span class="screen-reader-text">
+        View as Grid
+      </span>
+    </button>
+    <button data-body-class="list">
+      ☰
+      <span class="screen-reader-text">
+        View as List
+      </span>
+    </button>
+  </div>
 </header>
 
 <ul class="conference-list"><li class="conf">
     <time class="conf-dates">
   <span class="icon">📆</span>
   February 7, 2019
-   - February 8, 2019
+  <span class="end-date">
+    - February 8, 2019</span
+  >
   
 </time>
 
@@ -62,6 +81,10 @@
   
 </div>
 
+<div class="conf-byline">
+  Our mission: Provide a fun, unique and welcoming environment where diversity thrives and attendees can come together to discuss JavaScript as a technology and grow it as a community.
+</div>
+
 <a href="https://www.jsconfhi.com/" class="conf-link">
   <span class="screen-reader-text">Go to Conference Site</span>
   →
@@ -71,7 +94,9 @@
     <time class="conf-dates">
   <span class="icon">📆</span>
   February 13, 2019
-   - February 14, 2019
+  <span class="end-date">
+    - February 14, 2019</span
+  >
   
 </time>
 
@@ -94,6 +119,10 @@
   
 </div>
 
+<div class="conf-byline">
+  Biggest Frontend Conference in the Netherlands
+</div>
+
 <a href="https://www.frontenddeveloperlove.com/" class="conf-link">
   <span class="screen-reader-text">Go to Conference Site</span>
   →
@@ -103,7 +132,9 @@
     <time class="conf-dates">
   <span class="icon">📆</span>
   February 14, 2019
-   - December 15, 2019
+  <span class="end-date">
+    - December 15, 2019</span
+  >
   
 </time>
 
@@ -126,6 +157,10 @@
   
 </div>
 
+<div class="conf-byline">
+  Share knowledge with over 2000 Vue.js enthusiasts
+</div>
+
 <a href="https://www.vuejs.amsterdam/" class="conf-link">
   <span class="screen-reader-text">Go to Conference Site</span>
   →
@@ -135,7 +170,9 @@
     <time class="conf-dates">
   <span class="icon">📆</span>
   March 4, 2019
-   - March 6, 2019
+  <span class="end-date">
+    - March 6, 2019</span
+  >
   
 </time>
 
@@ -156,6 +193,10 @@
   
   <a href="https://aneventapart.com/registration-information#code-of-conduct" class="conf-coc">Code of Conduct</a>
   
+</div>
+
+<div class="conf-byline">
+  Three days of design, code, and content
 </div>
 
 <a href="https://aneventapart.com/event/seattle-2019" class="conf-link">
@@ -185,6 +226,10 @@
   <p>ServerlessDays are a family of events around the world focused on fostering a community around serverless technologies.</p>
 
   
+</div>
+
+<div class="conf-byline">
+  One Day, One Track, One Community.
 </div>
 
 <a href="https://boston.serverlessdays.io/" class="conf-link">
@@ -218,6 +263,10 @@
   
 </div>
 
+<div class="conf-byline">
+  A front-end conference for everyone who makes for the web
+</div>
+
 <a href="https://upfrontconf.com/" class="conf-link">
   <span class="screen-reader-text">Go to Conference Site</span>
   →
@@ -227,7 +276,9 @@
     <time class="conf-dates">
   <span class="icon">📆</span>
   April 2, 2019
-   - April 3, 2019
+  <span class="end-date">
+    - April 3, 2019</span
+  >
   
 </time>
 
@@ -250,6 +301,10 @@
   
 </div>
 
+<div class="conf-byline">
+  The largest tech conference
+</div>
+
 <a href="https://events.codemotion.com/conferences/amsterdam/2019/" class="conf-link">
   <span class="screen-reader-text">Go to Conference Site</span>
   →
@@ -259,7 +314,9 @@
     <time class="conf-dates">
   <span class="icon">📆</span>
   April 2, 2019
-   - April 3, 2019
+  <span class="end-date">
+    - April 3, 2019</span
+  >
   
 </time>
 
@@ -280,6 +337,10 @@
   
   <a href="https://perfmattersconf.com/code/" class="conf-coc">Code of Conduct</a>
   
+</div>
+
+<div class="conf-byline">
+  The building blocks of web performance&amp;#58; Getting to &quot;fast enough?&quot;
 </div>
 
 <a href="https://perfmattersconf.com/" class="conf-link">
@@ -313,6 +374,10 @@
   
 </div>
 
+<div class="conf-byline">
+  Biggest Frontend Conference in the Netherlands
+</div>
+
 <a href="https://2019.frontendne.co.uk/" class="conf-link">
   <span class="screen-reader-text">Go to Conference Site</span>
   →
@@ -322,7 +387,9 @@
     <time class="conf-dates">
   <span class="icon">📆</span>
   April 16, 2019
-   - April 17, 2019
+  <span class="end-date">
+    - April 17, 2019</span
+  >
   
 </time>
 
@@ -345,6 +412,10 @@
   
 </div>
 
+<div class="conf-byline">
+  A friendly, inclusive event which is focused on real-world problems and solutions.
+</div>
+
 <a href="https://smashingconf.com/sf-2019/" class="conf-link">
   <span class="screen-reader-text">Go to Conference Site</span>
   →
@@ -354,7 +425,9 @@
     <time class="conf-dates">
   <span class="icon">📆</span>
   April 25, 2019
-   - April 26, 2019
+  <span class="end-date">
+    - April 26, 2019</span
+  >
   
 </time>
 
@@ -377,6 +450,10 @@
   
 </div>
 
+<div class="conf-byline">
+  A Conference for Web Professionals Who Love their Community, the Web, and Learning.
+</div>
+
 <a href="http://frontenddesignconference.com/" class="conf-link">
   <span class="screen-reader-text">Go to Conference Site</span>
   →
@@ -386,7 +463,9 @@
     <time class="conf-dates">
   <span class="icon">📆</span>
   May 1, 2019
-   - May 3, 2019
+  <span class="end-date">
+    - May 3, 2019</span
+  >
   
 </time>
 
@@ -409,6 +488,10 @@
   
 </div>
 
+<div class="conf-byline">
+  The World&#39;s Original Angular Conference
+</div>
+
 <a href="https://www.ng-conf.org/" class="conf-link">
   <span class="screen-reader-text">Go to Conference Site</span>
   →
@@ -418,7 +501,9 @@
     <time class="conf-dates">
   <span class="icon">📆</span>
   May 6, 2019
-   - May 8, 2019
+  <span class="end-date">
+    - May 8, 2019</span
+  >
   
 </time>
 
@@ -441,6 +526,10 @@
   
 </div>
 
+<div class="conf-byline">
+  Three days of design, code, and content
+</div>
+
 <a href="https://aneventapart.com/event/boston-2019" class="conf-link">
   <span class="screen-reader-text">Go to Conference Site</span>
   →
@@ -450,7 +539,9 @@
     <time class="conf-dates">
   <span class="icon">📆</span>
   May 16, 2019
-   - May 17, 2019
+  <span class="end-date">
+    - May 17, 2019</span
+  >
   
 </time>
 
@@ -471,6 +562,10 @@
   
   <a href="https://skillsmatter.com/go/code-of-conduct" class="conf-coc">Code of Conduct</a>
   
+</div>
+
+<div class="conf-byline">
+  The Conference on JavaScript, Node &amp; Internet of Things
 </div>
 
 <a href="https://skillsmatter.com/conferences/11077-fullstack-nyc-2019-the-conference-on-javascript-node-and-internet-of-things" class="conf-link">
@@ -504,6 +599,10 @@
   
 </div>
 
+<div class="conf-byline">
+  A conference dedicated to the designers &amp; developers who love CSS. For the community, not for profit.
+</div>
+
 <a href="https://2019.cssconf.eu/" class="conf-link">
   <span class="screen-reader-text">Go to Conference Site</span>
   →
@@ -513,7 +612,9 @@
     <time class="conf-dates">
   <span class="icon">📆</span>
   June 1, 2019
-   - June 2, 2019
+  <span class="end-date">
+    - June 2, 2019</span
+  >
   
 </time>
 
@@ -534,6 +635,10 @@
   
   <a href="https://2019.jsconf.eu/code-of-conduct/" class="conf-coc">Code of Conduct</a>
   
+</div>
+
+<div class="conf-byline">
+  JSConf EU is the labour-of-love conference for the JavaScript community in Europe.
 </div>
 
 <a href="https://2019.jsconf.eu/" class="conf-link">
@@ -567,6 +672,10 @@
   
 </div>
 
+<div class="conf-byline">
+  Conferences, workshops, and advice for a better web
+</div>
+
 <a href="https://pixelpioneers.co/" class="conf-link">
   <span class="screen-reader-text">Go to Conference Site</span>
   →
@@ -576,7 +685,9 @@
     <time class="conf-dates">
   <span class="icon">📆</span>
   July 29, 2019
-   - July 31, 2019
+  <span class="end-date">
+    - July 31, 2019</span
+  >
   
 </time>
 
@@ -599,6 +710,10 @@
   
 </div>
 
+<div class="conf-byline">
+  Three days of design, code, and content
+</div>
+
 <a href="https://aneventapart.com/event/washington-dc-2019" class="conf-link">
   <span class="screen-reader-text">Go to Conference Site</span>
   →
@@ -608,7 +723,9 @@
     <time class="conf-dates">
   <span class="icon">📆</span>
   August 26, 2019
-   - August 28, 2019
+  <span class="end-date">
+    - August 28, 2019</span
+  >
   
 </time>
 
@@ -631,6 +748,10 @@
   
 </div>
 
+<div class="conf-byline">
+  Three days of design, code, and content
+</div>
+
 <a href="https://aneventapart.com/event/chicago-2019" class="conf-link">
   <span class="screen-reader-text">Go to Conference Site</span>
   →
@@ -640,7 +761,9 @@
     <time class="conf-dates">
   <span class="icon">📆</span>
   October 7, 2019
-   - October 8, 2019
+  <span class="end-date">
+    - October 8, 2019</span
+  >
   
 </time>
 
@@ -663,6 +786,10 @@
   
 </div>
 
+<div class="conf-byline">
+  A Front-End Developer Event
+</div>
+
 <a href="https://fitc.ca/event/webu19/" class="conf-link">
   <span class="screen-reader-text">Go to Conference Site</span>
   →
@@ -672,7 +799,9 @@
     <time class="conf-dates">
   <span class="icon">📆</span>
   October 28, 2019
-   - October 30, 2019
+  <span class="end-date">
+    - October 30, 2019</span
+  >
   
 </time>
 
@@ -695,6 +824,10 @@
   
 </div>
 
+<div class="conf-byline">
+  Three days of design, code, and content
+</div>
+
 <a href="https://aneventapart.com/event/denver-2019" class="conf-link">
   <span class="screen-reader-text">Go to Conference Site</span>
   →
@@ -704,7 +837,9 @@
     <time class="conf-dates">
   <span class="icon">📆</span>
   December 9, 2019
-   - December 11, 2019
+  <span class="end-date">
+    - December 11, 2019</span
+  >
   
 </time>
 
@@ -727,12 +862,17 @@
   
 </div>
 
+<div class="conf-byline">
+  Three days of design, code, and content
+</div>
+
 <a href="https://aneventapart.com/event/san-francisco-2019" class="conf-link">
   <span class="screen-reader-text">Go to Conference Site</span>
   →
 </a>
 
   </li></ul>
+
 
     <svg width="0" height="0" display="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
@@ -909,5 +1049,7 @@
   </symbol>
 </svg>
 
+
+    <script src="/script/index.js"></script>
   </body>
 </html>

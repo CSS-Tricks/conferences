@@ -1,0 +1,46 @@
+body.list .conference-list {
+  list-style: none;
+  padding: 2rem;
+  font-size: 14px;
+  width: 100%;
+}
+
+body.list .conf {
+  display: grid;
+  grid-template-columns: 170px 2fr 1fr 2fr;
+  background: white;
+  color: var(--dark);
+  margin: 0 0 1px 0;
+  border-radius: 5px;
+}
+body.list .conf > * {
+  padding: 0.5rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+body.list .conf-dates {
+}
+body.list .end-date {
+  display: none;
+}
+body.list .conf-title {
+}
+body.list .conf-title a {
+  font-size: 1rem;
+  line-height: 1;
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+body.list .conf-link,
+body.list .conf-about {
+  display: none;
+}
+body.list .conf-location {
+  font-style: normal;
+}
+
+body.list .conf-byline {
+}

@@ -1,0 +1,113 @@
+body.grid .conference-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  grid-gap: 4rem;
+  padding: 2rem;
+}
+body.grid .conf {
+  background: white;
+  color: #100e17;
+  border-radius: 4px;
+  box-shadow: 0 25px 50px black;
+  overflow: hidden;
+  position: relative;
+  padding: 0 0 50px 0;
+}
+
+body.grid .conf-title a {
+  display: block;
+  padding: 0.5rem 1rem;
+  background: var(--orange);
+  color: white;
+  text-shadow: 1px 1px 2px #00000073;
+}
+body.grid .conf-title a:hover,
+body.grid .conf-title a:focus {
+  background: #3a3448;
+}
+
+body.grid .icon {
+  font-size: 24px;
+  margin-right: 0.5rem;
+}
+
+body.grid .conf-dates,
+body.grid .conf-location {
+  display: flex;
+  align-items: center;
+  padding: 0.66rem 1rem;
+  font-size: 15px;
+}
+
+body.grid .conf-coc {
+  font-size: 14px;
+  color: var(--orange);
+}
+body.grid .conf-coc:hover,
+body.grid .conf-coc:focus {
+  color: var(--dark);
+}
+
+body.grid .conf-location {
+  font-style: normal;
+  background-color: #ffc9a3;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 900'%3E%3Cpolygon fill='%23f5b680' points='957 450 539 900 1396 900'/%3E%3Cpolygon fill='%23ed5109' points='957 450 872.9 900 1396 900'/%3E%3Cpolygon fill='%23fabe91' points='-60 900 398 662 816 900'/%3E%3Cpolygon fill='%23ef5f0a' points='337 900 398 662 816 900'/%3E%3Cpolygon fill='%23f2c29d' points='1203 546 1552 900 876 900'/%3E%3Cpolygon fill='%23f16d0b' points='1203 546 1552 900 1162 900'/%3E%3Cpolygon fill='%23ebcaa9' points='641 695 886 900 367 900'/%3E%3Cpolygon fill='%23f4790d' points='587 900 641 695 886 900'/%3E%3Cpolygon fill='%23ebd4b9' points='1710 900 1401 632 1096 900'/%3E%3Cpolygon fill='%23ef8d0f' points='1710 900 1401 632 1365 900'/%3E%3Cpolygon fill='%23eadacb' points='1210 900 971 687 725 900'/%3E%3Cpolygon fill='%23fd9212' points='943 900 1210 900 971 687'/%3E%3C/svg%3E");
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+body.grid .conf-about {
+  padding: 1rem;
+}
+
+body.grid .conf-byline {
+  display: none;
+}
+
+body.grid .conf-link {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 50px;
+  height: 50px;
+  background: var(--orange);
+  color: white;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding: 5px;
+  clip-path: polygon(100% 0, 100% 100%, 0 100%);
+}
+body.grid .conf-link:hover,
+body.grid .conf-link:focus {
+  background: var(--dark);
+}
+
+@media (max-width: 700px) {
+  html {
+    font-size: 15px;
+  }
+  .logo {
+    margin-bottom: 0.5rem;
+  }
+  h1 {
+    font-size: 26px;
+  }
+  .subtitle {
+    margin-bottom: 0.5rem;
+  }
+  .site-header {
+    padding: 1rem;
+  }
+  body.grid .contribute-link {
+    position: static;
+  }
+  body.grid .conference-list {
+    display: block;
+    padding: 1rem;
+  }
+  body.grid .conf {
+    margin-bottom: 4rem;
+  }
+}
