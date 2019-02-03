@@ -18,6 +18,7 @@ body.list .conf > * {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  display: block;
 }
 body.list .conf-dates {
 }
@@ -43,4 +44,13 @@ body.list .conf-location {
 }
 
 body.list .conf-byline {
+}
+
+@media (max-width: 700px) {
+  body.list .conference-list {
+    padding: 1rem;
+  }
+  body.list .conf {
+    display: block;
+  }
 }

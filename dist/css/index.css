@@ -104,3 +104,28 @@ button.active {
   background: white;
   color: black;
 }
+
+@media (max-width: 700px) {
+  html {
+    font-size: 15px;
+  }
+  .logo {
+    margin-bottom: 0.5rem;
+  }
+  h1 {
+    font-size: 26px;
+  }
+  .subtitle {
+    margin-bottom: 0.5rem;
+  }
+  .site-header {
+    padding: 1rem;
+  }
+  .contribute-link {
+    position: static;
+  }
+  .style-switcher {
+    position: static;
+    margin-top: 1rem;
+  }
+}
