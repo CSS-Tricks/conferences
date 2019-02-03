@@ -4,7 +4,7 @@ url: https://aneventapart.com/event/denver-2019
 cocUrl: https://aneventapart.com/registration-information#code-of-conduct
 date: 2019-10-28
 endDate: 2019-10-30
-location: Denver, Colorodo
+location: Denver, Colorado
 byline: Three days of design, code, and content
 ---
 
