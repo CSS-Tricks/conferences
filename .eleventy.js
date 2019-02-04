@@ -16,10 +16,6 @@ module.exports = function(config) {
     }).toFormat("LLLL d, y");
   });
 
-  config.addFilter("inspect", function(obj) {
-    return new NunjucksInspect(obj);
-  });
-
   config.addPassthroughCopy("css");
   config.addPassthroughCopy("js");
 
