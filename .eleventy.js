@@ -20,8 +20,7 @@ module.exports = function(config) {
     return new CleanCSS({}).minify(code).styles;
   });
 
-  // config.addPassthroughCopy("css");
-  // config.addPassthroughCopy("script");
+  config.addPassthroughCopy("site/script");
 
   return {
     dir: { input: "site", output: "dist", includes: "_includes" },
