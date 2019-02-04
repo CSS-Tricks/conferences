@@ -8,4 +8,4 @@ location: San Francisco, California
 byline: Transforming the digital media experience
 ---
 
-ImageCon connects, educates, and inspires visual storytellers. A two-day digital media conference in downtown San Francisco with 12 educational workshops, various executive keynotes, ample networking opportunities, and 7 thought leadership talks that focus on some of the most important digital media topics of today.
+ImageCon connects, educates, and inspires visual storytellers. The 2-day SF conference includes 12 workshops, exec keynotes,  7 talks by thought leaders on digital media experience topics and ample networking opportunities.
