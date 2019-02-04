@@ -22,7 +22,6 @@
     "prettier": "^1.16.3"
   },
   "dependencies": {
-    "nunjucks-inspect": "^0.1.6",
     "t": "^0.5.1"
   }
 }
