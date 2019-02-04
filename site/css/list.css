@@ -52,5 +52,9 @@ body.list .conf-byline {
   }
   body.list .conf {
     display: block;
+    margin-bottom: 0.5rem;
+  }
+  body.list .conf > * {
+    padding: 0.25rem 0.5rem;
   }
 }
