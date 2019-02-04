@@ -1,4 +1,5 @@
 const { DateTime } = require("luxon");
+const CleanCSS     = require("clean-css");
 
 module.exports = function(config) {
   config.addCollection("conferences", function(collection) {
@@ -15,8 +16,12 @@ module.exports = function(config) {
     }).toFormat("LLLL d, y");
   });
 
-  config.addPassthroughCopy("css");
-  config.addPassthroughCopy("js");
+  config.addFilter("cssmin", function(code) {
+    return new CleanCSS({}).minify(code).styles;
+  });
+
+  // config.addPassthroughCopy("css");
+  // config.addPassthroughCopy("script");
 
   return {
     dir: { input: "site", output: "dist", includes: "_includes" },

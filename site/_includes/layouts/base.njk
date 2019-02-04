@@ -8,9 +8,14 @@
       href="https://fonts.googleapis.com/css?family=Rubik:700"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="{{ '/css/index.css' | url }}" />
-    <link rel="stylesheet" href="{{ '/css/grid.css' | url }}" />
-    <link rel="stylesheet" href="{{ '/css/list.css' | url }}" />
+    {%- set css -%}
+      {% include "css/index.css" %}
+      {% include "css/grid.css" %}
+      {% include "css/list.css" %}
+    {%- endset %}
+    <style>
+      {{ css | cssmin | safe }}
+    </style>
   </head>
   <body class="grid">
     {{ content | safe }}

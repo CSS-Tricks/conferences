@@ -22,6 +22,7 @@
     "prettier": "^1.16.3"
   },
   "dependencies": {
+    "clean-css": "^4.2.1",
     "t": "^0.5.1"
   }
 }
