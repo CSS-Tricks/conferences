@@ -1,5 +1,4 @@
 const { DateTime } = require("luxon");
-const NunjucksInspect = require("nunjucks-inspect");
 
 module.exports = function(config) {
   config.addCollection("conferences", function(collection) {
