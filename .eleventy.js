@@ -3,7 +3,11 @@ const NunjucksInspect = require("nunjucks-inspect");
 
 module.exports = function(config) {
   config.addCollection("conferences", function(collection) {
-    return collection.getFilteredByGlob("site/conferences/*.md");
+    let allConferences = collection.getFilteredByGlob("site/conferences/*.md");
+    let futureConferences = allConferences.filter(conf => {
+      return conf.data.date >= new Date();
+    });
+    return futureConferences;
   });
 
   config.addFilter("readableDate", dateObj => {
