@@ -1,7 +1,7 @@
 ---
 title: Rustbelt Refresh
 url: https://rustbeltrefresh.com/
-cocUrl: https://aneventapart.com/registration-information#code-of-conduct
+cocUrl: https://rustbeltrefresh.com/conduct.html
 date: 2019-03-08
 endDate: 2019-03-08
 location: Cleveland, Ohio
