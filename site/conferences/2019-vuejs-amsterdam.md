@@ -3,7 +3,7 @@ title: "Vue.Js Amsterdam"
 url: https://www.vuejs.amsterdam/
 cocUrl: http://confcodeofconduct.com/
 date: 2019-02-14
-endDate: 2019-12-15
+endDate: 2019-02-15
 location: Amsterdam, Netherlands
 byline: Share knowledge with over 2000 Vue.js enthusiasts
 ---
