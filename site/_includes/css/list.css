@@ -59,12 +59,12 @@ body.list .conf-byline {
   }
 }
 
-body.list h2 a {
+body.list h3 a {
   color: var(--dark);
 }
 
-body.list h2 a:hover,
-body.list h2 a:focus,
-body.list h2 a:visited {
+body.list h3 a:hover,
+body.list h3 a:focus,
+body.list h3 a:visited {
   color: #3a3448;
 }
