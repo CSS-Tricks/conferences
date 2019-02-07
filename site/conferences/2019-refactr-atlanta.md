@@ -2,8 +2,8 @@
 title: "Refactr.Tech"
 url: http://refactr.tech/
 cocUrl: http://refactr.tech/code-of-conduct.html
-date: 2019-06-5
-endDate: 2019-06-7
+date: 2019-06-05
+endDate: 2019-06-07
 location: Atlanta, Georgia
 byline: Diversity. Inclusion. Tech.
 ---
