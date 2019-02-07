@@ -3,7 +3,6 @@ title: DevFest KC
 url: https://devfestkc.com
 cocUrl: https://devfestkc.com/code-of-conduct
 date: 2019-02-09
-endDate: 2019-02-09
 location: Kansas City, Missouri
 byline: Don't miss out on the best DevFest KC yet!
 ---
