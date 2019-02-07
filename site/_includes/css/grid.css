@@ -40,6 +40,10 @@ body.grid .conf-location {
   font-size: 15px;
 }
 
+body.grid .end-date {
+  margin-left: 0.25rem;
+}
+
 body.grid .conf-coc {
   font-size: 14px;
   color: var(--orange);
