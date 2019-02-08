@@ -93,6 +93,12 @@ h1 {
   bottom: 0;
   right: 2rem;
 }
+
+.month-heading {
+  padding: 0 2rem;
+  margin-top: 2rem;
+}
+
 button {
   background: none;
   padding: 0.5rem 1rem;
@@ -127,5 +133,9 @@ button.active {
   .style-switcher {
     position: static;
     margin-top: 1rem;
+  }
+  .month-heading {
+    padding: 0 1rem;
+    margin-top: 2rem;
   }
 }
