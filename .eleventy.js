@@ -10,6 +10,22 @@ module.exports = function(config) {
     return futureConferences;
   });
 
+  config.addFilter("getMonthName", dateObj => {
+    return DateTime.fromJSDate(dateObj, {
+      zone: "utc"
+    }).toFormat("MMMM");
+  })
+
+  config.addFilter("doesConfExist", (conferences, monthToTest) => {
+    let length = conferences.filter(conf => {
+      let month = DateTime.fromJSDate(conf.data.date, {
+        zone: "utc"
+      }).toFormat("MMMM");
+      return month === monthToTest
+    }).length
+    return length
+  })
+
   config.addFilter("readableDate", dateObj => {
     return DateTime.fromJSDate(dateObj, {
       zone: "utc"

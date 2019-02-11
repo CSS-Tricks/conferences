@@ -42,10 +42,21 @@ description: A place for conferences.
   </div>
 </header>
 
-<ul class="conference-list">
-  {%- for conf in collections.conferences -%}
-  <li class="conf">
-    {% include "conference.njk" %}
-  </li>
+<ul>
+  {%- for month in helper.months -%}
+    {% if (collections.conferences | doesConfExist(month)) > 0 %}
+      <li>
+        <h2 class="month-heading">{{month}}</h2>
+          <ul class="conference-list">
+          {%- for conf in collections.conferences -%}
+            {% if conf.data.date | getMonthName === month %}
+              <li class="conf">
+                {% include "conference.njk" %}
+              </li>
+            {% endif %}
+          {%- endfor -%}
+          </ul>
+      </li>
+    {% endif %}
   {%- endfor -%}
 </ul>
