@@ -1,7 +1,7 @@
 ---
 title: typeof
 url: https://typeofconf.com/
-cocUrl: https://typeofconf.com/
+cocUrl: https://typeofconf.com/code-of-conduct
 date: 2019-03-27
 endDate: 2019-03-29
 location: Porto, Portugal
