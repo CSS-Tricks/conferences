@@ -1,7 +1,7 @@
 ---
 title: Pixels Camp v3.0
 url: https://pixels.camp/
-cocUrl: https://github.com/PixelsCamp/docs/blob/master/CODE_OF_CONDUCT.md
+cocUrl: https://pixels.camp/docs/code-of-conduct
 date: 2019-03-21
 endDate: 2019-03-23
 location: Lisbon, Portugal
