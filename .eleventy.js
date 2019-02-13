@@ -37,6 +37,8 @@ module.exports = function(config) {
   });
 
   config.addPassthroughCopy("site/script");
+  config.addPassthroughCopy("apple-touch-icon.png");
+  config.addPassthroughCopy("favicon.ico");
 
   return {
     dir: { input: "site", output: "dist", includes: "_includes" },
