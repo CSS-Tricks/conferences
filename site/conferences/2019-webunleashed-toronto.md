@@ -2,8 +2,8 @@
 title: Web Unleashed
 url: https://fitc.ca/event/webu19/
 cocUrl: https://fitc.ca/code-of-conduct/
-date: 2019-10-07
-endDate: 2019-10-08
+date: 2019-09-13
+endDate: 2019-09-14
 location: Toronto, Ontario
 byline: A Front-End Developer Event
 ---

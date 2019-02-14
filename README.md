@@ -5,7 +5,7 @@ https://conferences.css-tricks.com/
 
 ## Running Locally
 
-If you wanna spin it up, after an `npm install`, you should be able to run `eleventy --serve`. You might need a special eleventy global CLI? I forget.
+If you wanna spin it up, after an `npm install`, you should be able to run `npm start` to generate and serve the site with hot reload and all that jazz.
 
 
 ## Contributing

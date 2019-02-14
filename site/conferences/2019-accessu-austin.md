@@ -1,5 +1,5 @@
 ---
-title: Slatin AccessU
+title: John Slatin AccessU
 url: https://knowbility.org/programs/accessu/
 cocUrl: https://knowbility.org/programs/accessu/code-of-conduct/
 date: 2019-05-15

@@ -1,0 +1,22 @@
+---
+permalink: feed.json
+---
+{
+  "source" : "https://conferences.css-tricks.com",
+  "conferences" : [
+    {% for conf in collections.conferences -%}
+    {
+      "title" : "{{ conf.data.title }}",
+      "date" : "{{ conf.data.date }}",
+      {%- if conf.data.endDate %}
+      "endDate" : "{{ conf.data.endDate }}",
+      {%- endif %}
+      "url" : "{{ conf.data.url }}",
+      "location" : "{{ conf.data.location }}",
+      "byline" : "{{ conf.data.byline }}"
+      {%- if conf.data.cocUrl %}
+      ,"cocUrl" : "{{ conf.data.cocUrl }}"
+      {%- endif %}
+    }{% if not loop.last %},{% else %}{% endif %}
+    {% endfor -%}
+]}
