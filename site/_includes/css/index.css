@@ -74,13 +74,23 @@ h1 {
   top: -3px;
 }
 
+.contribute-links {
+  position: absolute;
+  right: 2rem;
+  top: 2rem;
+  list-style: none;
+}
+
+.contribute-links li {
+  display: inline;
+  margin-left:0.5rem;
+}
+
 .contribute-link {
   font-size: 12px;
   color: white;
   border-bottom: 1px dotted var(--orange);
-  position: absolute;
-  right: 2rem;
-  top: 2rem;
+
 }
 .contribute-link:hover,
 .contribute-link:focus {
@@ -127,7 +137,7 @@ button.active {
   .site-header {
     padding: 1rem;
   }
-  .contribute-link {
+  .contribute-links {
     position: static;
   }
   .style-switcher {
