@@ -5,6 +5,7 @@
 }
 
 html {
+  --rust: #993300;
   --orange: #ff8a00;
   --dark: #100e17;
   --ff-title: "Rubik", "Lato", "Lucida Grande", "Lucida Sans Unicode", Tahoma,
@@ -83,14 +84,13 @@ h1 {
 
 .contribute-links li {
   display: inline;
-  margin-left:0.5rem;
+  margin-left: 0.5rem;
 }
 
 .contribute-link {
   font-size: 12px;
   color: white;
   border-bottom: 1px dotted var(--orange);
-
 }
 .contribute-link:hover,
 .contribute-link:focus {
