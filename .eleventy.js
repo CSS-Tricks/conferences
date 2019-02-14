@@ -1,5 +1,6 @@
 const { DateTime } = require("luxon");
 const CleanCSS     = require("clean-css");
+const pluginRss    = require("@11ty/eleventy-plugin-rss");
 
 module.exports = function(config) {
   config.addCollection("conferences", function(collection) {
@@ -35,6 +36,8 @@ module.exports = function(config) {
   config.addFilter("cssmin", function(code) {
     return new CleanCSS({}).minify(code).styles;
   });
+
+  config.addPlugin(pluginRss);
 
   config.addPassthroughCopy("site/script");
   config.addPassthroughCopy("apple-touch-icon.png");
