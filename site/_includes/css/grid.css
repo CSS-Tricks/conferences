@@ -18,7 +18,7 @@ body.grid .conf {
 body.grid .conf-title a {
   display: block;
   padding: 0.5rem 1rem;
-  background: var(--orange);
+  background: var(--rust);
   color: white;
   text-shadow: 1px 1px 2px #00000073;
 }
@@ -46,7 +46,7 @@ body.grid .end-date {
 
 body.grid .conf-coc {
   font-size: 14px;
-  color: var(--orange);
+  color: var(--rust);
 }
 body.grid .conf-coc:hover,
 body.grid .conf-coc:focus {
@@ -71,11 +71,11 @@ body.grid .conf-byline {
 
 body.grid .conf-link {
   position: absolute;
-  bottom: 0;
-  right: 0;
+  bottom: -1px;
+  right: -1px;
   width: 50px;
   height: 50px;
-  background: var(--orange);
+  background: var(--rust);
   color: white;
   display: flex;
   align-items: flex-end;
