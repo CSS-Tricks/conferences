@@ -24,17 +24,15 @@ description: A place for conferences.
 
   <ul class="contribute-links">
     <li>
-      <a class="contribute-link" href="/feed.xml"
-        >RSS XML</a
-      >
+      <a class="contribute-link" href="/feed.xml">RSS XML</a>
     </li>
     <li>
-      <a class="contribute-link" href="/feed.json"
-        >JSON</a
-      >
+      <a class="contribute-link" href="/feed.json">JSON</a>
     </li>
     <li>
-      <a class="contribute-link" href="https://github.com/CSS-Tricks/conferences"
+      <a
+        class="contribute-link"
+        href="https://github.com/CSS-Tricks/conferences"
         >Contribute on GitHub</a
       >
     </li>
@@ -42,13 +40,13 @@ description: A place for conferences.
 
   <div class="style-switcher">
     <button class="active" data-body-class="grid">
-      <span aria-hidden="true">⠿</span>
+      <span aria-hidden="true" class="view-icon">⠿</span>
       <span class="screen-reader-text">
         View conferences as grid
       </span>
     </button>
     <button data-body-class="list">
-      <span aria-hidden="true">☰</span>
+      <span aria-hidden="true" class="view-icon">☰</span>
       <span class="screen-reader-text">
         View conferences as list
       </span>
@@ -57,20 +55,20 @@ description: A place for conferences.
 </header>
 
 <ul>
-  {%- for month in helper.months -%}
-    {% if (collections.conferences | doesConfExist(month)) > 0 %}
-      <li>
-        <h2 class="month-heading" aria-label="Conferences in {{month}}">{{month}}</h2>
-          <ul class="conference-list">
-          {%- for conf in collections.conferences -%}
-            {% if conf.data.date | getMonthName === month %}
-              <li class="conf">
-                {% include "conference.njk" %}
-              </li>
-            {% endif %}
-          {%- endfor -%}
-          </ul>
+  {%- for month in helper.months -%} {% if (collections.conferences |
+  doesConfExist(month)) > 0 %}
+  <li>
+    <h2 class="month-heading" aria-label="Conferences in {{ month }}">
+      {{ month }}
+    </h2>
+    <ul class="conference-list">
+      {%- for conf in collections.conferences -%} {% if conf.data.date |
+      getMonthName === month %}
+      <li class="conf">
+        {% include "conference.njk" %}
       </li>
-    {% endif %}
-  {%- endfor -%}
+      {% endif %} {%- endfor -%}
+    </ul>
+  </li>
+  {% endif %} {%- endfor -%}
 </ul>
