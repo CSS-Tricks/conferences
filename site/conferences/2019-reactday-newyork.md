@@ -3,7 +3,6 @@ title: React Day New York
 url: https://reactnewyork.com/
 cocUrl: https://berlincodeofconduct.org/
 date: 2019-09-13
-endDate: 2019-09-13
 location: New York, New York
 byline: There will be hot dogs
 ---
