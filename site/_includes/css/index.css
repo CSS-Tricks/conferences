@@ -120,6 +120,9 @@ button.active {
   background: white;
   color: black;
 }
+.view-icon {
+  pointer-events: none;
+}
 
 @media (max-width: 700px) {
   html {
