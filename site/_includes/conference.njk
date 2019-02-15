@@ -1,8 +1,10 @@
-<time class="conf-dates">
-  <span class="icon">📆</span>
-  {{ conf.data.date | readableDate }}
-  {% if conf.data.endDate %}<span class="end-date">
-    - {{ conf.data.endDate | readableDate }}</span
+<time class="conf-dates" aria-label="Conference starts on {{ conf.data.date | readableDate }}">
+  <span class="icon" aria-hidden="true">📆</span>
+  <span>{{ conf.data.date | readableDate }}</span>
+  {% if conf.data.endDate %}
+    <span class="end-date">
+      - {{ conf.data.endDate | readableDate }}
+    </span
   >
   {% endif %}
 </time>
@@ -13,15 +15,15 @@
   </a>
 </h3>
 
-<address class="conf-location">
-  <span class="icon">📍</span>
+<address class="conf-location"  aria-label="Conference location">
+  <span class="icon" aria-hidden="true">📍</span>
   {{ conf.data.location }}
 </address>
 
 <div class="conf-about">
   {{ conf.templateContent | safe }}
   {% if conf.data.cocUrl %}
-  <a href="{{ conf.data.cocUrl }}" class="conf-coc">Code of Conduct</a>
+  <a href="{{ conf.data.cocUrl }}" class="conf-coc" aria-label="Code of Conduct for {{ conf.data.title }}">Code of Conduct</a>
   {% endif %}
 </div>
 
@@ -30,6 +32,6 @@
 </div>
 
 <a href="{{ conf.data.url }}" class="conf-link">
-  <span class="screen-reader-text">Go to Conference Site</span>
-  →
+  <span class="screen-reader-text">Visit {{ conf.data.title }} site for more information</span>
+  <span aria-hidden="true">→</span>
 </a>
