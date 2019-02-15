@@ -42,15 +42,15 @@ description: A place for conferences.
 
   <div class="style-switcher">
     <button class="active" data-body-class="grid">
-      ⠿
+      <span aria-hidden="true">⠿</span>
       <span class="screen-reader-text">
-        View as Grid
+        View conferences as grid
       </span>
     </button>
     <button data-body-class="list">
-      ☰
+      <span aria-hidden="true">☰</span>
       <span class="screen-reader-text">
-        View as List
+        View conferences as list
       </span>
     </button>
   </div>
@@ -60,7 +60,7 @@ description: A place for conferences.
   {%- for month in helper.months -%}
     {% if (collections.conferences | doesConfExist(month)) > 0 %}
       <li>
-        <h2 class="month-heading">{{month}}</h2>
+        <h2 class="month-heading" aria-label="Conferences in {{month}}">{{month}}</h2>
           <ul class="conference-list">
           {%- for conf in collections.conferences -%}
             {% if conf.data.date | getMonthName === month %}
