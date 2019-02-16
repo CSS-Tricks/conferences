@@ -1,3 +1,15 @@
+
+
+
+<div>
+<h3 class="conf-title">
+  <a href="{{ conf.data.url }}">
+    {{ conf.data.title }}
+  </a>
+</h3>
+</div>
+
+<div>
 <time class="conf-dates" aria-label="Conference starts on {{ conf.data.date | readableDate }}">
   <span class="icon" aria-hidden="true">📆</span>
   <span>{{ conf.data.date | readableDate }}</span>
@@ -8,17 +20,14 @@
   >
   {% endif %}
 </time>
+</div>
 
-<h3 class="conf-title">
-  <a href="{{ conf.data.url }}">
-    {{ conf.data.title }}
-  </a>
-</h3>
-
-<address class="conf-location"  aria-label="Conference location">
+<div>
+<address class="conf-location" aria-label="Conference location">
   <span class="icon" aria-hidden="true">📍</span>
   {{ conf.data.location }}
 </address>
+</div>
 
 <div class="conf-about">
   {{ conf.templateContent | safe }}
