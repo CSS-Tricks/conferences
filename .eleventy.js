@@ -1,6 +1,6 @@
 const { DateTime } = require("luxon");
-const CleanCSS     = require("clean-css");
-const pluginRss    = require("@11ty/eleventy-plugin-rss");
+const CleanCSS = require("clean-css");
+const pluginRss = require("@11ty/eleventy-plugin-rss");
 
 module.exports = function(config) {
   config.addCollection("conferences", function(collection) {
@@ -15,17 +15,17 @@ module.exports = function(config) {
     return DateTime.fromJSDate(dateObj, {
       zone: "utc"
     }).toFormat("MMMM");
-  })
+  });
 
   config.addFilter("doesConfExist", (conferences, monthToTest) => {
     let length = conferences.filter(conf => {
       let month = DateTime.fromJSDate(conf.data.date, {
         zone: "utc"
       }).toFormat("MMMM");
-      return month === monthToTest
-    }).length
-    return length
-  })
+      return month === monthToTest;
+    }).length;
+    return length;
+  });
 
   config.addFilter("readableDate", dateObj => {
     return DateTime.fromJSDate(dateObj, {
@@ -40,13 +40,14 @@ module.exports = function(config) {
   config.addPlugin(pluginRss);
 
   config.addPassthroughCopy("site/script");
+  config.addPassthroughCopy("site/admin");
   config.addPassthroughCopy("apple-touch-icon.png");
   config.addPassthroughCopy("favicon.ico");
 
   return {
     dir: { input: "site", output: "dist", includes: "_includes" },
     passthroughFileCopy: true,
-    templateFormats: ["njk", "md", "css", "js"],
+    templateFormats: ["njk", "md", "css", "js", "html", "yml"],
     htmlTemplateEngine: "njk",
     markdownTemplateEngine: "njk"
   };
