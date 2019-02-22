@@ -81,6 +81,7 @@ body.grid .conf-link {
   align-items: flex-end;
   justify-content: flex-end;
   padding: 5px;
+  -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%);
   clip-path: polygon(100% 0, 100% 100%, 0 100%);
 }
 body.grid .conf-link:hover,
