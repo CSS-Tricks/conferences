@@ -33,6 +33,12 @@ module.exports = function(config) {
     }).toFormat("LLLL d, y");
   });
 
+  config.addFilter("htmlTime", dateObj => {
+    return DateTime.fromJSDate(dateObj, {
+      zone: "utc"
+    }).toFormat("yyyy-MM-dd");
+  });
+
   config.addFilter("cssmin", function(code) {
     return new CleanCSS({}).minify(code).styles;
   });
