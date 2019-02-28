@@ -1,5 +1,5 @@
 ---
-title: YFGL Code Camp
+title: YGLF Code Camp
 url: https://www.israel.yglfconf.com/
 cocUrl: https://www.israel.yglfconf.com/codeofconduct
 date: 2019-04-03
