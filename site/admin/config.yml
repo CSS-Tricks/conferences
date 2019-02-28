@@ -1,0 +1,23 @@
+backend:
+  name: git-gateway
+  branch: master
+
+publish_mode: editorial_workflow
+
+media_folder: "images/uploads" # Media files will be stored in the repo under images/uploads
+
+collections:
+  - name: "conferences" # Used in routes, e.g., /admin/collections/blog
+    label: "Conference" # Used in the UI
+    folder: "site/conferences" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{year}}-{{name}}-{{city}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "URL", name: "url", widget: "string" }
+      - { label: "Code of Conduct URL", name: "cocUrl", widget: "string" }
+      - { label: "Start Date", name: "date", widget: "datetime" }
+      - { label: "End Date", name: "endDate", widget: "datetime" }
+      - { label: "Location", name: "location", widget: "string" }
+      - { label: "Byline", name: "byline", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown" }
