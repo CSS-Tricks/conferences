@@ -7,7 +7,7 @@ body.list .conference-list {
 
 body.list .conf {
   display: grid;
-  grid-template-columns: 170px 2fr 1fr 2fr;
+  grid-template-columns: 2fr 170px 1fr 2fr;
   background: white;
   color: var(--dark);
   margin: 0 0 1px 0;
@@ -55,7 +55,16 @@ body.list .conf-byline {
     margin-bottom: 0.5rem;
   }
   body.list .conf > * {
-    padding: 0.25rem 0.5rem;
+    padding: 1rem;
+  }
+  body.list .conf > *:not(:first-child) {
+    padding-top: 0.25rem;
+  }
+  body.list .conf > *:not(:nth-last-child(2)) {
+    padding-bottom: 0.5rem;
+  }
+  body.list .conf .conf-byline {
+    white-space: normal;
   }
 }
 
