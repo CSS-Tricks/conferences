@@ -1,28 +1,33 @@
+<div>
+  <h3 class="conf-title">
+    <a href="{{ conf.data.url }}">
+      {{ conf.data.title }}
+    </a>
+  </h3>
+</div>
+
 <div class="conf-dates" aria-label="Conference starts on {{ conf.data.date | readableDate }}">
   <span class="icon" aria-hidden="true">📆</span>
   <time datetime="{{ conf.data.date | htmlTime }}" >{{ conf.data.date | readableDate }}</time>
-  {% if conf.data.endDate %}
-    <span class="end-date">
-      - <time datetime="{{ conf.data.endDate | htmlTime }}">{{ conf.data.endDate | readableDate }}</time>
-    </span>
+    {% if conf.data.endDate %}
+      <span class="end-date">
+        - <time datetime="{{ conf.data.endDate | htmlTime }}">{{ conf.data.endDate | readableDate }}</time>
+      </span>
   {% endif %}
+  </time>
 </div>
 
-<h3 class="conf-title">
-  <a href="{{ conf.data.url }}">
-    {{ conf.data.title }}
-  </a>
-</h3>
-
-<address class="conf-location"  aria-label="Conference location">
-  <span class="icon" aria-hidden="true">📍</span>
-  {{ conf.data.location }}
-</address>
+<div>
+  <address class="conf-location" aria-label="Conference location">
+    <span class="icon" aria-hidden="true">📍</span>
+    {{ conf.data.location }}
+  </address>
+</div>
 
 <div class="conf-about">
   {{ conf.templateContent | safe }}
   {% if conf.data.cocUrl %}
-  <a href="{{ conf.data.cocUrl }}" class="conf-coc" aria-label="Code of Conduct for {{ conf.data.title }}">Code of Conduct</a>
+    <a href="{{ conf.data.cocUrl }}" class="conf-coc" aria-label="Code of Conduct for {{ conf.data.title }}">Code of Conduct</a>
   {% endif %}
 </div>
 

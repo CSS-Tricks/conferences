@@ -24,10 +24,10 @@ layout: layouts/base.njk
 
   <ul class="contribute-links">
     <li>
-      <a class="contribute-link" href="/feed.xml">RSS XML</a>
+      <a class="contribute-link" href="/feed.xml" aria-label="RSS feed"><abbr title="Really Simple Syndication">RSS</abbr> <abbr title="Extensible Markup Language">XML</abbr></a>
     </li>
     <li>
-      <a class="contribute-link" href="/feed.json">JSON</a>
+      <a class="contribute-link" href="/feed.json" aria-label="JSON feed"><abbr title="JavaScript Object Notation">JSON</abbr></a>
     </li>
     <li>
       <a
@@ -54,21 +54,23 @@ layout: layouts/base.njk
   </div>
 </header>
 
-<ul>
-  {%- for month in helper.months -%} {% if (collections.conferences |
-  doesConfExist(month)) > 0 %}
-  <li>
-    <h2 class="month-heading" aria-label="Conferences in {{ month }}">
-      {{ month }}
-    </h2>
-    <ul class="conference-list">
-      {%- for conf in collections.conferences -%} {% if conf.data.date |
-      getMonthName === month %}
-      <li class="conf">
-        {% include "conference.njk" %}
-      </li>
-      {% endif %} {%- endfor -%}
-    </ul>
-  </li>
-  {% endif %} {%- endfor -%}
-</ul>
+<div id="maincontent" role="main" aria-label="Conference listing">
+  <ul aria-label="Conference listed by months">
+    {%- for month in helper.months -%} {% if (collections.conferences |
+    doesConfExist(month)) > 0 %}
+    <li>
+      <h2 class="month-heading" aria-label="Conferences in {{ month }}">
+        {{ month }}
+      </h2>
+      <ul class="conference-list">
+        {%- for conf in collections.conferences -%} {% if conf.data.date |
+        getMonthName === month %}
+        <li class="conf">
+          {% include "conference.njk" %}
+        </li>
+        {% endif %} {%- endfor -%}
+      </ul>
+    </li>
+    {% endif %} {%- endfor -%}
+  </ul>
+</div>

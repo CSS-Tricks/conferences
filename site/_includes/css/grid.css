@@ -89,6 +89,30 @@ body.grid .conf-link:focus {
   background: var(--dark);
 }
 
+body.grid .conf {
+  display: flex;
+  flex-direction: column;
+}
+
+body.grid .conf div:nth-child(1) {
+  order: 2;
+}
+body.grid .conf div:nth-child(2) {
+  order: 1;
+}
+body.grid .conf div:nth-child(3) {
+  order: 3;
+}
+body.grid .conf div:nth-child(4) {
+  order: 4;
+}
+
+abbr[title] {
+  border-bottom: none !important;
+  cursor: inherit !important;
+  text-decoration: none !important;
+}
+
 @media (max-width: 700px) {
   body.grid .conference-list {
     display: block;
