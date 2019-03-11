@@ -23,7 +23,7 @@ collections:
       - { label: 'Body', name: 'body', widget: 'markdown' }
       - label: 'Featured Image'
         name: 'thumbnail'
-        optional: true
+        required: false
         widget: 'image'
         media_library:
           config:
