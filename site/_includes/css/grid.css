@@ -37,11 +37,11 @@ body.grid .icon-calendar {
 	display: block;
 	height: 24px;
 	width: 24px;
-	padding-top: 6px;
+	font-size: 12px;
+	text-align: center;
 	border: 1px solid #333;
 	border-radius: 2px;
-	text-align: center;
-	font-size: 12px;
+	padding-top: 6px;
 	margin: 3px 10px 3px 2px;
 }
 body.grid .icon-calendar::before {
@@ -51,9 +51,9 @@ body.grid .icon-calendar::before {
 	left: -1px;
 	height: 4px;
 	width: 100%;
+	background: var(--rust);
 	border: 1px solid #333;
 	border-radius: 2px 2px 0px 0px;
-	background: var(--rust);
 }
 
 body.grid .conf-dates,
