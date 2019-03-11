@@ -11,7 +11,7 @@ collections:
     label: 'Conference' # Used in the UI
     folder: 'site/conferences' # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
-    slug: '{{year}}-{{name}}-{{city}}' # Filename template, e.g., YYYY-MM-DD-title.md
+    slug: '{{year}}-{{title}}-{{city}}' # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'URL', name: 'url', widget: 'string' }
