@@ -17,7 +17,7 @@ Feel free to send me PR (Pull Request) of new conferences.
 Note:
 
 - To be listed, events need to be about front-end.
-- Events need to provide a custom Code of Conduct.
+- Events need to provide a custom Code of Conduct, and not just link to confcodeofconduct.com, because that provides nothing actionable for an attendee with a problem.
 
 After I merge in a PR, it will trigger a Netlify build that rebuilds the production site. I also set up a Zapier thing to rebuild the site each day, which should remove old conferences as they pass automatically.
 
