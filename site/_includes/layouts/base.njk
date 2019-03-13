@@ -1,39 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{{ title }}</title>
-    <meta name="description" content="{{ description }}">
-    <meta property="og:url" content="https://conferences.css-tricks.com/">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="{{ title }}">
-    <meta property="og:description" content="{{ description }}">
-    <meta property="og:image" content="https://css-tricks.com/wp-content/uploads/2013/06/CSS-Tricks-star.png">
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="{{ title }}">
-    <meta name="twitter:description" content="{{ description }}">
-    <meta name="twitter:image" content="https://css-tricks.com/wp-content/uploads/2013/06/CSS-Tricks-star.png">
-    <link
-      href="https://fonts.googleapis.com/css?family=Rubik:700"
-      rel="stylesheet"
-    />
-    {%- set css -%}
-      {% include "css/index.css" %}
-      {% include "css/grid.css" %}
-      {% include "css/list.css" %}
-    {%- endset %}
-    <style>
-      {{ css | cssmin | safe }}
-    </style>
-    <link rel="alternate" href="/feed.xml" title="Upcoming Conferences - CSS-Tricks" type="application/atom+xml">
-  </head>
-  <body class="grid">
-  
-    {{ content | safe }}
 
-    {% include "icons.njk" %}
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{ title }}</title>
+  <meta name="description" content="{{ description }}">
+  <meta property="og:url" content="https://conferences.css-tricks.com/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="{{ title }}">
+  <meta property="og:description" content="{{ description }}">
+  <meta property="og:image" content="https://css-tricks.com/wp-content/uploads/2013/06/CSS-Tricks-star.png">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="{{ title }}">
+  <meta name="twitter:description" content="{{ description }}">
+  <meta name="twitter:image" content="https://css-tricks.com/wp-content/uploads/2013/06/CSS-Tricks-star.png">
+  <link
+    href="https://fonts.googleapis.com/css?family=Rubik:700"
+    rel="stylesheet"
+  />
+  {%- set css -%}
+    {% include "css/index.css" %}
+    {% include "css/grid.css" %}
+    {% include "css/list.css" %}
+  {%- endset %}
+  <style>
+    {{ css | cssmin | safe }}
+  </style>
+  <link rel="alternate" href="/feed.xml" title="Upcoming Conferences - CSS-Tricks" type="application/atom+xml">
+</head>
 
-    <script src="{{ '/script/index.js' | url }}"></script>
-  </body>
+<body class="grid">
+
+  {{ content | safe }}
+
+  {% include "icons.njk" %}
+
+  <footer class="site-footer">
+
+    <div class="credit">
+      Built with
+      <a href="https://www.11ty.io/">
+        <img src="/images/11ty-logo.png" alt="11ty Logo">
+      </a>
+    </div>
+    
+    <div class="credit">
+      Hosted on
+      <a href="https://netlify.com">
+        <img src="/images/netlify-full-logo-dark.svg" alt="Netlify Logo">
+      </a>
+    </div>
+
+    <div class="credit">
+      Managed by
+      <a href="https://www.netlifycms.org/">
+        <img src="/images/netlify-cms-logo.svg" alt="Netlify CMS Logo">
+      </a>
+    </div>
+
+    <div class="syndication">
+      <a href="/feed.xml" aria-label="RSS feed"><abbr title="Really Simple Syndication">RSS</abbr> Feed</a>
+      &middot;
+      <a href="/feed.json" aria-label="JSON feed"><abbr title="JavaScript Object Notation">JSON</abbr> Feed</a>
+    </div>
+
+  </footer>
+
+  <script src="{{ '/script/index.js' | url }}"></script>
+
+</body>
+
 </html>
