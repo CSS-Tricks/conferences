@@ -20,6 +20,9 @@ body.list .conf > * {
   text-overflow: ellipsis;
   display: block;
 }
+body.list .icon-calendar {
+	display: none;
+}
 body.list .conf-dates {
 }
 body.list .end-date {
