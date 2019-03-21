@@ -7,7 +7,7 @@
 </div>
 
 <div class="conf-dates" aria-label="Conference starts on {{ conf.data.date | readableDate }}">
-  <span class="icon" aria-hidden="true">📆</span>
+  <span class="icon-calendar" aria-hidden="true">{{ conf.data.date | htmlTime | replace(r/^.{0,8}/, "") }}</span>
   <time datetime="{{ conf.data.date | htmlTime }}" >{{ conf.data.date | readableDate }}</time>
     {% if conf.data.endDate %}
       <span class="end-date">
