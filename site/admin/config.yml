@@ -17,7 +17,12 @@ collections:
       - { label: 'URL', name: 'url', widget: 'string' }
       - { label: 'Code of Conduct URL', name: 'cocUrl', widget: 'string' }
       - { label: 'Start Date', name: 'date', widget: 'datetime' }
-      - { label: 'End Date', name: 'endDate', widget: 'datetime' }
+      - {
+          label: 'End Date',
+          name: 'endDate',
+          widget: 'datetime',
+          required: false,
+        }
       - { label: 'Location', name: 'location', widget: 'string' }
       - { label: 'Byline', name: 'byline', widget: 'string' }
       - { label: 'Body', name: 'body', widget: 'markdown' }
