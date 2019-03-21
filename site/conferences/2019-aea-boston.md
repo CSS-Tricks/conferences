@@ -2,10 +2,10 @@
 title: An Event Apart
 url: 'https://aneventapart.com/event/boston-2019'
 cocUrl: 'http://aneventapart.com/registration-information#code-of-conduct'
-date: 2019-05-05T15:00:00.000Z
+date: 2019-05-05T16:00:00.000Z
 endDate: 2019-05-08T00:00:00.000Z
 location: 'Boston, Massachusetts'
-byline: 'Three days of design, code, and content'
+byline: 'Three days of design, code, and content.'
 thumbnail: /images/uploads/hero-bos-2019.png
 ---
 
