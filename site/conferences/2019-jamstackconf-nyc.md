@@ -1,6 +1,7 @@
 ---
 title: JAMstack_conf_nyc
 url: 'https://jamstackconf.com/nyc/'
+cocUrl: 'https://jamstackconf.com/nyc/code-of-conduct/'
 date: 2019-04-09T08:00:00.000Z
 endDate: 2019-04-10T16:00:00.000Z
 location: 'New York City, New York'
