@@ -2,6 +2,8 @@
 title: Smashing Conference
 url: https://smashingconf.com/sf-2019/
 cocUrl: https://smashingconf.com/codeofconduct
+cta: SmashingConf.com
+permalink: https://css-tricks.com
 date: 2019-04-16
 endDate: 2019-04-17
 location: San Francisco, California

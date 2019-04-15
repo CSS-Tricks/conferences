@@ -8,6 +8,7 @@ html {
   --rust: #993300;
   --orange: #ff8a00;
   --dark: #100e17;
+  --pink:  #da1b60;
   --ff-title: 'Rubik', 'Lato', 'Lucida Grande', 'Lucida Sans Unicode', Tahoma,
     Sans-Serif;
   --ff-body: -system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
@@ -43,17 +44,28 @@ h6 {
 }
 
 .site-header {
-  padding: 4rem 2rem;
+  padding: 6rem 2rem 4rem 2rem;
   position: relative;
 }
 h1 {
   font-family: var(--ff-title);
   color: var(--orange);
   line-height: 1;
-  font-size: 36px;
-  letter-spacing: -1px;
+  font-size: 41px;
+  letter-spacing: -.035em;
   text-transform: uppercase;
 }
+@media( min-width: 45em ) {
+  h1 {
+    font-size: 5.75vw;
+  }
+}
+@media( min-width: 65em ) {
+  h1 {
+    font-size: 60px;
+  }
+}
+
 .logo {
   margin-right: 1rem;
 }
@@ -143,20 +155,25 @@ button.active {
   .logo {
     margin-bottom: 0.5rem;
   }
-  h1 {
-    font-size: 26px;
-  }
   .subtitle {
     margin-bottom: 0.5rem;
   }
   .site-header {
-    padding: 1rem;
+    padding: 2.5rem 1rem 1rem 1rem;
+  }
+  .site-header:after {
+    content: "";
+    display: table;
+    clear: both;
   }
   .contribute-link {
+    margin-top: 1.5em;
     position: static;
+    float: left;
   }
   .style-switcher {
     position: static;
+    float: right;
     margin-top: 1rem;
   }
   .month-heading {
