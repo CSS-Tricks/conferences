@@ -1,27 +1,28 @@
-<div>
-  <h3 class="conf-title">
-    <a href="{{ conf.data.url }}">
-      {{ conf.data.title }}
-    </a>
-  </h3>
-</div>
+<div class="conf-head">
+  <div>
+    <h3 class="conf-title" id="{{ conf.data.title | slug }}-hed">
+      <a href="{{ conf.data.url }}">
+        {{ conf.data.title }}
+      </a>
+    </h3>
+  </div>
 
-<div class="conf-dates" aria-label="Conference starts on {{ conf.data.date | readableDate }}">
-  <span class="icon-calendar" aria-hidden="true">{{ conf.data.date | htmlTime | replace(r/^.{0,8}/, "") }}</span>
-  <time datetime="{{ conf.data.date | htmlTime }}" >{{ conf.data.date | readableDate }}</time>
-    {% if conf.data.endDate %}
-      <span class="end-date">
-        - <time datetime="{{ conf.data.endDate | htmlTime }}">{{ conf.data.endDate | readableDate }}</time>
-      </span>
-  {% endif %}
-  </time>
-</div>
+  <div class="conf-dates" aria-label="Conference starts on {{ conf.data.date | readableDate }}">
+    <time datetime="{{ conf.data.date | htmlTime }}" >{{ conf.data.date | readableDate }}</time>
+      {% if conf.data.endDate %}
+        <span class="end-date">
+          - <time datetime="{{ conf.data.endDate | htmlTime }}">{{ conf.data.endDate | readableDate }}</time>
+        </span>
+    {% endif %}
+    </time>
+  </div>
 
-<div>
-  <address class="conf-location" aria-label="Conference location">
-    <span class="icon" aria-hidden="true">📍</span>
-    {{ conf.data.location }}
-  </address>
+  <div>
+    <address class="conf-location" aria-label="Conference location">
+      <svg class="icon" aria-hidden="true" viewBox="0 0 268 426" version="1" xmlns="http://www.w3.org/2000/svg" fill="#fff" fill-rule="nonzero"><path d="M134 0C60 0 0 60 0 133c0 49 22 112 66 189a1051 1051 0 0 0 68 104l4-2c1-1 33-49 65-109 43-81 65-142 65-182C268 60 208 0 134 0zm62 137a62 62 0 1 1-124-1 62 62 0 0 1 124 1z"/></svg>
+      {{ conf.data.location }}
+    </address>
+  </div>
 </div>
 
 <div class="conf-about">

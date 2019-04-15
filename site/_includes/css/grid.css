@@ -18,18 +18,15 @@ body.grid .conf {
 body.grid .conf-title a {
   display: block;
   padding: 0.5rem 1rem;
-  background: var(--rust);
   color: white;
+  line-height: 1.2;
   text-shadow: 1px 1px 2px #00000073;
-}
-body.grid .conf-title a:hover,
-body.grid .conf-title a:focus {
-  background: #3a3448;
 }
 
 body.grid .icon {
   font-size: 24px;
   margin-right: 0.5rem;
+  width: 10px;
 }
 
 body.grid .icon-calendar {
@@ -56,6 +53,16 @@ body.grid .icon-calendar::before {
 	border-radius: 2px 2px 0px 0px;
 }
 
+body.grid .conf-dates {
+  background: #000;
+  background-image: url(https://res.cloudinary.com/css-tricks/image/fetch/w_1200,h_75,y_200,o_60,c_crop,q_auto,f_auto/https://css-tricks.com/wp-content/uploads/2019/04/diagonal-halftone.svg);
+  background-position: center center;
+  color: #fff;
+  font-weight: 600;
+  border: solid rgba(255,255,255,.125);
+  border-width: 1px 0 0 1px;
+  border-radius: 0 0 5.5em/95% 0;
+}
 body.grid .conf-dates,
 body.grid .conf-location {
   display: flex;
@@ -112,12 +119,11 @@ body.grid .conf-link:hover,
 body.grid .conf-link:focus {
   background: var(--dark);
 }
-
-body.grid .conf {
+body.grid .conf-head {
   display: flex;
   flex-direction: column;
+  background: linear-gradient(to right,#ff8a00,#da1b60);
 }
-
 body.grid .conf div:nth-child(1) {
   order: 2;
 }

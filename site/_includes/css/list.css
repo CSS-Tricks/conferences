@@ -4,10 +4,10 @@ body.list .conference-list {
   font-size: 14px;
   width: 100%;
 }
-
 body.list .conf {
   display: grid;
-  grid-template-columns: 2fr 170px 1fr 2fr;
+  grid-template-columns: 2fr 1fr;
+  justify-content: center;
   background: white;
   color: var(--dark);
   margin: 0 0 1px 0;
@@ -20,8 +20,15 @@ body.list .conf > * {
   text-overflow: ellipsis;
   display: block;
 }
-body.list .icon-calendar {
-	display: none;
+body.list .conf-head {
+  display: grid;
+  grid-template-columns: 2fr 170px 1fr;
+}
+body.list .icon {
+  width: 10px;
+  fill: #222;
+  margin-bottom: -3px;
+  margin-right: 5px;
 }
 body.list .conf-dates {
 }

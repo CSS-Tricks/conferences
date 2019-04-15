@@ -46,23 +46,21 @@ layout: layouts/base.njk
   </div>
 </header>
 
-<div id="maincontent" role="main" aria-label="Conference listing">
-  <ul aria-label="Conference listed by months">
+<main id="maincontent" role="main" aria-label="Conference listing">
     {%- for month in helper.months -%} {% if (collections.conferences |
     doesConfExist(month)) > 0 %}
-    <li>
-      <h2 class="month-heading" aria-label="Conferences in {{ month }}">
+    <div role="region">
+      <h2 class="month-heading" id="{{ month | slug }}-hed">
         {{ month }}
       </h2>
-      <ul class="conference-list">
+      <ul class="conference-list" aria-labelledby="{{ month | slug }}-hed">
         {%- for conf in collections.conferences -%} {% if conf.data.date |
         getMonthName === month %}
-        <li class="conf">
+        <li class="conf" aria-labelledby="{{ conf.data.title | slug }}-hed">
           {% include "conference.njk" %}
         </li>
         {% endif %} {%- endfor -%}
       </ul>
     </li>
     {% endif %} {%- endfor -%}
-  </ul>
-</div>
+</main>
