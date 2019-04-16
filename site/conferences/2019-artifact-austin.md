@@ -8,4 +8,4 @@ location: Austin, Texas
 byline: Practical insights for developing a multi-device world.
 ---
 
-ARTIFACT is an intimate, two-day, single-track conference for web designers and developers. In this special 5th anniversary event, our all-star line-up shares big ideas and best practices for creating inclusive sites that work for a multitude of devices and the people who use them.
+ARTIFACT is an intimate, two-day, single-track conference for web designers and developers. In this special event, our all-star line-up shares big ideas and best practices for creating inclusive sites that work for a multitude of devices and the people who use them.
