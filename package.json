@@ -22,6 +22,7 @@
     "@11ty/eleventy-plugin-rss": "^1.0.3",
     "gulp": "^4.0.0",
     "gulp-load-tasks": "^0.8.4",
+    "gulp-svg2png": "^2.0.2",
     "luxon": "^1.10.0",
     "prettier": "^1.16.3"
   },
