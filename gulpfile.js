@@ -1,2 +1,2 @@
 var gulp = require('gulp');
-require('gulp-load-tasks')();
+require('gulp-load-tasks')('tasks');
