@@ -1,6 +1,4 @@
 ---
-title: Upcoming Conferences - CSS-Tricks
-description: CSS-Tricks presents a directory of upcoming web design and front-end development conferences in 2019.
 layout: layouts/base.njk
 ---
 
@@ -19,8 +17,12 @@ layout: layouts/base.njk
     <span class="presents">presents</span>
   </div>
 
-  <h1>Upcoming Conferences</h1>
-  <div class="subtitle">... related to Front-End Design & Development</div>
+  <h1>{{ title }}</h1>
+  {% if lede %}
+  <p class="subtitle">{{ lede }}</p>
+  {% endif %}
+
+  {{ content | safe }}
 
   <a
     class="contribute-link"
@@ -47,15 +49,16 @@ layout: layouts/base.njk
 </header>
 
 <div id="maincontent" role="main" aria-label="Conference listing">
+
   <ul aria-label="Conference listed by months">
-    {%- for month in helper.months -%} {% if (collections.conferences |
+    {%- for month in helper.months -%} {% if (pagination.items |
     doesConfExist(month)) > 0 %}
     <li>
       <h2 class="month-heading" aria-label="Conferences in {{ month }}">
         {{ month }}
       </h2>
       <ul class="conference-list">
-        {%- for conf in collections.conferences -%} {% if conf.data.date |
+        {%- for conf in pagination.items -%} {% if conf.data.date |
         getMonthName === month %}
         <li class="conf">
           {% include "conference.njk" %}
