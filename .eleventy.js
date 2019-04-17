@@ -1,5 +1,6 @@
 const { DateTime } = require('luxon');
 const CleanCSS = require('clean-css');
+const urlParse = require('url-parse')
 const pluginRss = require('@11ty/eleventy-plugin-rss');
 
 module.exports = function(config) {
@@ -17,6 +18,11 @@ module.exports = function(config) {
       return conf.data.date <= new Date();
     });
     return pastConferences;
+  });
+
+  config.addFilter('domainRoot', rootUrl => {
+    let domainObj = urlParse(rootUrl);
+    return domainObj.hostname;
   });
 
   config.addFilter('getMonthName', dateObj => {

@@ -29,7 +29,7 @@
   {{ conf.templateContent | safe }}
 
   <a href="{{ conf.data.url | url }}" class="conf-link">
-    {{ conf.data.cta }}
+    {{ conf.data.url | domainRoot }}
     <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-arrow-right">
      <path d="M7 12.5L23 12.5" stroke="url(#paint0_linear)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
       <path d="M1 12.5H2" stroke="url(#paint1_linear)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
