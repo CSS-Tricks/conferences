@@ -60,6 +60,10 @@ body.list .conf-about {
 }
 body.list .conf-location {
   font-style: normal;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
 }
 
 body.list .conf-byline {
