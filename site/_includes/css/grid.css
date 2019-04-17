@@ -118,6 +118,9 @@ body.grid .conf-location {
 body.grid .conf-about {
   padding: 1rem 2.5rem 1rem 1rem;
 }
+body.grid .conf-about p+p{
+  margin: .75em 0 0 0;
+}
 
 body.grid .conf-byline {
   display: none;
