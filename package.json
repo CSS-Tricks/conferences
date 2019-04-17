@@ -20,6 +20,8 @@
   "devDependencies": {
     "@11ty/eleventy": "^0.7.1",
     "@11ty/eleventy-plugin-rss": "^1.0.3",
+    "gulp": "^4.0.0",
+    "gulp-load-tasks": "^0.8.4",
     "luxon": "^1.10.0",
     "prettier": "^1.16.3"
   },
