@@ -53,8 +53,9 @@ layout: layouts/base.njk
   <ul aria-label="Conference listed by months">
     {%- for month in helper.months -%} {% if (pagination.items |
     doesConfExist(month)) > 0 %}
-    <li>
-      <h2 class="month-heading" aria-label="Conferences in {{ month }}">
+
+    <div role="region" aria-labelledby="{{ month | slug }}-hed">
+      <h2 class="month-heading" id="{{ month | slug }}-hed">
         {{ month }}
       </h2>
       <ul class="conference-list">
@@ -65,7 +66,7 @@ layout: layouts/base.njk
         </li>
         {% endif %} {%- endfor -%}
       </ul>
-    </li>
+    </div>
     {% endif %} {%- endfor -%}
   </ul>
 </div>

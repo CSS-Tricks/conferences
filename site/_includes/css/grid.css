@@ -18,18 +18,15 @@ body.grid .conf {
 body.grid .conf-title a {
   display: block;
   padding: 0.5rem 1rem;
-  background: var(--rust);
   color: white;
+  line-height: 1.2;
   text-shadow: 1px 1px 2px #00000073;
-}
-body.grid .conf-title a:hover,
-body.grid .conf-title a:focus {
-  background: #3a3448;
 }
 
 body.grid .icon {
   font-size: 24px;
   margin-right: 0.5rem;
+  width: 10px;
 }
 
 body.grid .icon-calendar {
@@ -56,6 +53,16 @@ body.grid .icon-calendar::before {
 	border-radius: 2px 2px 0px 0px;
 }
 
+body.grid .conf-dates {
+  background: #000;
+  background-image: url(https://res.cloudinary.com/css-tricks/image/fetch/w_1200,h_75,y_200,o_60,c_crop,q_auto,f_auto/https://css-tricks.com/wp-content/uploads/2019/04/diagonal-halftone.svg);
+  background-position: center center;
+  color: #fff;
+  font-weight: 600;
+  border: solid rgba(255,255,255,.125);
+  border-width: 1px 0 0 1px;
+  border-radius: 0 0 5.5em/95% 0;
+}
 body.grid .conf-dates,
 body.grid .conf-location {
   display: flex;
@@ -71,10 +78,33 @@ body.grid .end-date {
 body.grid .conf-coc {
   font-size: 14px;
   color: var(--rust);
+  position: absolute;
+  bottom: 10px;
+  right: 1rem;
 }
 body.grid .conf-coc:hover,
 body.grid .conf-coc:focus {
   color: var(--dark);
+}
+
+body.grid .conf-link {
+  font-size: 17px;
+  color: #f77115;
+  margin-top: 22px;
+  letter-spacing: 0.02em;
+  font-weight: 700;
+  display: inline-block;
+}
+
+body.grid .icon-arrow-right {
+  margin-bottom: -.225em;
+  transition: margin-left .2s ease-in-out;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  body.grid .conf-link:hover .icon-arrow-right {
+    margin-left: .125em;
+  }
 }
 
 body.grid .conf-location {
@@ -86,38 +116,52 @@ body.grid .conf-location {
 }
 
 body.grid .conf-about {
-  padding: 1rem;
+  padding: 1rem 2.5rem 1rem 1rem;
+}
+body.grid .conf-about p+p{
+  margin: .75em 0 0 0;
 }
 
 body.grid .conf-byline {
   display: none;
 }
 
-body.grid .conf-link {
+body.grid .csstricks-link {
   position: absolute;
   bottom: -1px;
-  right: -1px;
+  left: -1px;
   width: 50px;
   height: 50px;
-  background: var(--rust);
+  padding-left: 5px;
+  background-color: var(--pink);
+  background-image: linear-gradient(to right,#ff8a00, rgba(255,255,255,0));
   color: white;
   display: flex;
   align-items: flex-end;
-  justify-content: flex-end;
-  padding: 5px;
-  -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%);
-  clip-path: polygon(100% 0, 100% 100%, 0 100%);
+  -webkit-clip-path: polygon(0 0, 0% 100%, 100% 100%);
+  clip-path: polygon(0 0, 0% 100%, 100% 100%);
+  transition: background-color .2s linear;
 }
-body.grid .conf-link:hover,
-body.grid .conf-link:focus {
-  background: var(--dark);
+body.grid .csstricks-link:hover,
+body.grid .csstricks-link:focus {
+  background-color: var(--orange);
 }
 
-body.grid .conf {
+body.grid .csstricks-link svg {
+  fill: #fff;
+  transition: transform .65s ease-in-out;
+}
+@media (prefers-reduced-motion: no-preference) {
+  body.grid .csstricks-link:hover svg {
+    transform: rotate(360deg);
+  }
+}
+
+body.grid .conf-head {
   display: flex;
   flex-direction: column;
+  background: linear-gradient(to right,#ff8a00,#da1b60);
 }
-
 body.grid .conf div:nth-child(1) {
   order: 2;
 }
