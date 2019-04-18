@@ -1,0 +1,12 @@
+---
+pagination:
+  data: collections.allconferences
+  size: 1
+permalink: teasers/svg/{{ pagination.items[0].data.title | slug }}.svg
+---
+{% for conf in pagination.items %}<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="260" height="245">
+  <title>{{ conf.data.title }}</title>
+  <path d="m55,237 74-228 74,228L9,96h240"/>
+</svg>
+{% endfor %}

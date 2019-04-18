@@ -19,6 +19,10 @@ module.exports = function(config) {
     return pastConferences;
   });
 
+  config.addCollection('allconferences', function(collection) {
+    return collection.getFilteredByGlob('site/conferences/*.md');
+  });
+
   config.addFilter('getMonthName', dateObj => {
     return DateTime.fromJSDate(dateObj, {
       zone: 'utc'
