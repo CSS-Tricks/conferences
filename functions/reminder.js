@@ -30,12 +30,10 @@ exports.handler = function(event, context, callback) {
 };*/
 
 exports.handler = function(event, context, callback) {
-  const SparkPost = require('sparkpost');
-  const client = new SparkPost( process.env.SPARKPOST );
-  
+  const params = event.queryStringParameters;
 
   callback(null, {
     statusCode: 200,
-    body: `<h1>${ params.email }</h1><p>${ params.lede }</p>`
+    body: `<h1>${ params.title }</h1><p>${ params.lede }</p>`
   });
 };
