@@ -1,41 +1,73 @@
-<div>
-  <h3 class="conf-title">
-    <a href="{{ conf.data.url }}">
-      {{ conf.data.title }}
-    </a>
-  </h3>
-</div>
+<div class="conf-head">
+  <div>
+    <h3 class="conf-title" id="{{ conf.data.title | slug }}-hed">
+      <a href="{{ conf.data.url }}">
+        {{ conf.data.title }}
+      </a>
+    </h3>
+  </div>
 
-<div class="conf-dates" aria-label="Conference starts on {{ conf.data.date | readableDate }}">
-  <span class="icon-calendar" aria-hidden="true">{{ conf.data.date | htmlTime | replace(r/^.{0,8}/, "") }}</span>
-  <time datetime="{{ conf.data.date | htmlTime }}" >{{ conf.data.date | readableDate }}</time>
-    {% if conf.data.endDate %}
-      <span class="end-date">
-        - <time datetime="{{ conf.data.endDate | htmlTime }}">{{ conf.data.endDate | readableDate }}</time>
-      </span>
-  {% endif %}
-  </time>
-</div>
+  <div class="conf-dates" aria-label="Conference starts on {{ conf.data.date | readableDate }}">
+    <time datetime="{{ conf.data.date | htmlTime }}" >{{ conf.data.date | readableDate }}</time>
+      {% if conf.data.endDate %}
+        <span class="end-date">
+          - <time datetime="{{ conf.data.endDate | htmlTime }}">{{ conf.data.endDate | readableDate }}</time>
+        </span>
+    {% endif %}
+    </time>
+  </div>
 
-<div>
-  <address class="conf-location" aria-label="Conference location">
-    <span class="icon" aria-hidden="true">📍</span>
-    {{ conf.data.location }}
-  </address>
+  <div>
+    <address class="conf-location" aria-label="Conference location">
+      <svg class="icon" aria-hidden="true" viewBox="0 0 268 426" version="1" xmlns="http://www.w3.org/2000/svg" fill="#fff" fill-rule="nonzero"><path d="M134 0C60 0 0 60 0 133c0 49 22 112 66 189a1051 1051 0 0 0 68 104l4-2c1-1 33-49 65-109 43-81 65-142 65-182C268 60 208 0 134 0zm62 137a62 62 0 1 1-124-1 62 62 0 0 1 124 1z"/></svg>
+      {{ conf.data.location }}
+    </address>
+  </div>
 </div>
 
 <div class="conf-about">
   {{ conf.templateContent | safe }}
-  {% if conf.data.cocUrl %}
-    <a href="{{ conf.data.cocUrl }}" class="conf-coc" aria-label="Code of Conduct for {{ conf.data.title }}">Code of Conduct</a>
-  {% endif %}
+
+  <a href="{{ conf.data.url | url }}" class="conf-link">
+    {{ conf.data.url | domainRoot }}
+    <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-arrow-right">
+     <path d="M7 12.5L23 12.5" stroke="url(#paint0_linear)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+      <path d="M1 12.5H2" stroke="url(#paint1_linear)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+      <path d="M17.5 7L23 12.5L17.5 18" stroke="url(#paint2_linear)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+      <defs>
+        <linearGradient id="paint0_linear" x1="10.7498" y1="12.5" x2="11.3447" y2="9.73465" gradientUnits="userSpaceOnUse">
+          <stop stop-color="#FF8A00"></stop>
+          <stop offset="1" stop-color="#DA1B60"></stop>
+        </linearGradient>
+        <linearGradient id="paint1_linear" x1="1.23436" y1="12.5" x2="2.00945" y2="12.2748" gradientUnits="userSpaceOnUse">
+          <stop stop-color="#FF8A00"></stop>
+          <stop offset="1" stop-color="#DA1B60"></stop>
+        </linearGradient>
+        <linearGradient id="paint2_linear" x1="18.789" y1="17.9995" x2="23.3162" y2="17.3419" gradientUnits="userSpaceOnUse">
+          <stop stop-color="#FF8A00"></stop>
+          <stop offset="1" stop-color="#DA1B60"></stop>
+        </linearGradient>
+      </defs>
+    </svg>
+  </a>
 </div>
 
 <div class="conf-byline">
   {{ conf.data.byline }}
 </div>
 
-<a href="{{ conf.data.url }}" class="conf-link">
-  <span class="screen-reader-text">Visit {{ conf.data.title }} site for more information</span>
-  <span aria-hidden="true">→</span>
-</a>
+<div class="conf-meta">
+  {% if conf.data.notes %}
+  <a href="{{ conf.data.notes | url }}" class="csstricks-link">
+    <span class="screen-reader-text our-notes-text">Our Notes</span>
+    <span aria-hidden="true">
+      <svg class="icon-logo-star" width="35px" height="35px">
+        <use xlink:href="#icon-logo-star"></use>
+      </svg>
+    </span>
+  </a>
+  {% endif %}
+  {% if conf.data.cocUrl %}
+    <a href="{{ conf.data.cocUrl }}" class="conf-coc" aria-label="Code of Conduct for {{ conf.data.title }}">Code of Conduct</a>
+  {% endif %}
+</div>

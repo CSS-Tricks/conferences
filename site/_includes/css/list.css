@@ -4,35 +4,51 @@ body.list .conference-list {
   font-size: 14px;
   width: 100%;
 }
-
 body.list .conf {
   display: grid;
-  grid-template-columns: 2fr 170px 1fr 2fr;
+  grid-template-columns: 2fr 1fr;
+  justify-content: center;
   background: white;
   color: var(--dark);
   margin: 0 0 1px 0;
   border-radius: 5px;
 }
-body.list .conf > * {
-  padding: 0.5rem;
+body.list .conf > *,
+body.list .conf-head > * {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   display: block;
 }
-body.list .icon-calendar {
-	display: none;
+body.list .conf > *{
+  padding: 0.5rem;
+}
+body.list .conf-head {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+}
+body.list .our-notes-text {
+  color: var(--rust);
+  position: static;
+}
+body.list .csstricks-link .icon-logo-star {
+  width: 10px;
+  margin-bottom: -5px;
+}
+body.list .icon {
+  width: 10px;
+  fill: #222;
+  margin-bottom: -3px;
+  margin-right: 5px;
 }
 body.list .conf-dates {
 }
 body.list .end-date {
   display: none;
 }
-body.list .conf-title {
-}
 body.list .conf-title a {
   font-size: 1rem;
-  line-height: 1;
+  line-height: 1.2;
   display: block;
   white-space: nowrap;
   overflow: hidden;
@@ -44,11 +60,24 @@ body.list .conf-about {
 }
 body.list .conf-location {
   font-style: normal;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
 }
 
 body.list .conf-byline {
 }
-
+body.list .conf .conf-meta {
+  padding: .25rem .5rem .375rem .5rem;
+  display: flex;
+  justify-content: flex-start;
+  grid-column: 1 / span 2;
+}
+body.list .conf-coc {
+  color: var(--rust);
+  margin-left: auto;
+}
 @media (max-width: 700px) {
   body.list .conference-list {
     padding: 1rem;
@@ -57,17 +86,23 @@ body.list .conf-byline {
     display: block;
     margin-bottom: 0.5rem;
   }
+  body.list .conf-head {
+    display: block;
+  }
+  body.list .conf-head > * {
+    padding: .25rem 0;
+  }
   body.list .conf > * {
     padding: 1rem;
   }
   body.list .conf > *:not(:first-child) {
     padding-top: 0.25rem;
   }
-  body.list .conf > *:not(:nth-last-child(2)) {
-    padding-bottom: 0.5rem;
-  }
   body.list .conf .conf-byline {
     white-space: normal;
+  }
+  body.list .conf .conf-meta {
+    padding: .15rem 1rem .75rem 1rem;
   }
 }
 
