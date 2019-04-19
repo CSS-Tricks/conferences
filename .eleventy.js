@@ -51,6 +51,42 @@ module.exports = function(config) {
     }).toFormat('LLLL d, y');
   });
 
+  config.addFilter("firstLine", firstString => {
+    let partString = firstString.split(/[ ,]+/);
+    let ret = "";
+    if( partString[ 0 ] ) {
+      ret += partString[ 0 ];
+    }
+    if( partString[ 1 ] ) {
+      ret += " " + partString[ 1 ];
+    }
+    return ret;
+  });
+
+  config.addFilter("secondLine", firstString => {
+    let partString = firstString.split(/[ ,]+/);
+    let ret = "";
+    if( partString[ 2 ] ) {
+      ret += " " + partString[ 2 ];
+    }
+    if( partString[ 3 ] ) {
+      ret += " " + partString[ 3 ];
+    }
+    return ret;
+  });
+
+    config.addFilter("thirdLine", firstString => {
+    let partString = firstString.split(/[ ,]+/);
+    let ret = "";
+    if( partString[ 4 ] ) {
+      ret += " " + partString[ 4 ];
+    }
+    if( partString[ 5 ] ) {
+      ret += " " + partString[ 5 ];
+    }
+    return ret;
+  });
+
   config.addFilter('htmlTime', dateObj => {
     return DateTime.fromJSDate(dateObj, {
       zone: 'utc'

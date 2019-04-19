@@ -18,7 +18,7 @@ viewButtons.forEach(button => {
   var savedState = localStorage.getItem('view'),
     current;
 
-   if( savedState !== null ) {
+   if( savedState !== null && viewButtons.length > 0 ) {
      current = document.querySelector('[data-body-class="' +  savedState + '"]');
      current.click();
    }

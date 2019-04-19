@@ -1,3 +1,4 @@
+
 <div class="conf-head">
   <div>
     <h3 class="conf-title" id="{{ conf.data.title | slug }}-hed">
@@ -57,16 +58,14 @@
 </div>
 
 <div class="conf-meta">
-  {% if conf.data.notes %}
-  <a href="{{ conf.data.notes | url }}" class="csstricks-link">
-    <span class="screen-reader-text our-notes-text">Our Notes</span>
+  <a href="{{ conf.url | url }}"" class="csstricks-link">
+    <span class="screen-reader-text our-notes-text">More about {{ conf.data.title }}</span>
     <span aria-hidden="true">
       <svg class="icon-logo-star" width="35px" height="35px">
         <use xlink:href="#icon-logo-star"></use>
       </svg>
     </span>
   </a>
-  {% endif %}
   {% if conf.data.cocUrl %}
     <a href="{{ conf.data.cocUrl }}" class="conf-coc" aria-label="Code of Conduct for {{ conf.data.title }}">Code of Conduct</a>
   {% endif %}
