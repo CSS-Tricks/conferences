@@ -23,3 +23,18 @@ viewButtons.forEach(button => {
      current.click();
    }
 }());
+
+(function() {
+  var toggles = document.querySelectorAll('[aria-controls]');
+
+  toggles.forEach(el => {
+    el.addEventListener( "click", function( e ){
+      let target = this.getAttribute( "aria-controls"),
+        targetEl = document.querySelector( '#' + target ),
+        newState = this.getAttribute( 'aria-expanded' ) === "true" ? false : true;
+
+      this.setAttribute( "aria-expanded", newState );
+      targetEl.setAttribute( "aria-hidden", newState );
+    });
+  });
+}());
