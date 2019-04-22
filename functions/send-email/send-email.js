@@ -13,11 +13,18 @@ exports.handler = function(event, context, callback) {
       recipients: [{ address: 'chriscoyier@gmail.com' }]
     })
     .then(data => {
-      console.log('Woohoo! You just sent your first mailing!');
-      console.log(data);
+      callback(null, {
+        statusCode: 301,
+        headers: {
+          "location" : "https://conferences.css-tricks.com"
+        },
+        body: null
+      });
     })
     .catch(err => {
-      console.log('Whoops! Something went wrong');
-      console.log(err);
+      callback(null, {
+        statusCode: 200,
+        body: `Sorry, something went wrong.`
+      });
     });
 };
