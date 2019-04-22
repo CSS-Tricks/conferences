@@ -9,7 +9,7 @@ exports.handler = function(event, context, callback) {
       sandbox: true
     },
     content: {
-      from: 'testing@sparkpostbox.com',
+      from: 'testing@css-tricks.com',
       subject: 'Hello, World!',
       html:`<html><body><p>Hi. This seems to be working.</p></body></html>`
     },
@@ -30,10 +30,11 @@ exports.handler = function(event, context, callback) {
 };*/
 
 exports.handler = function(event, context, callback) {
-  const params = event.queryStringParameters;
-
+  if (event.body !== null && event.body !== undefined) {
+    let body = JSON.parse(event.body);
+  }
   callback(null, {
     statusCode: 200,
-    body: `<h1>${ params.title }</h1><p>${ params.lede }</p>`
+    body: `<h1>${ body.email }</h1>`
   });
 };
