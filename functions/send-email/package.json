@@ -14,7 +14,6 @@
   "author": "Chris Coyier",
   "license": "MIT",
   "dependencies": {
-    "node-fetch": "^2.3.0",
     "sparkpost": "^2.1.3"
   }
 }
