@@ -1,8 +1,8 @@
 {
-  "name": "node-fetch",
+  "name": "send-email",
   "version": "1.0.0",
-  "description": "netlify functions:create - default template for node fetch function",
-  "main": "node-fetch.js",
+  "description": "Send a conference reminder email with Sparkpost",
+  "main": "send-email.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -11,9 +11,10 @@
     "serverless",
     "js"
   ],
-  "author": "Netlify",
+  "author": "Chris Coyier",
   "license": "MIT",
   "dependencies": {
-    "node-fetch": "^2.3.0"
+    "node-fetch": "^2.3.0",
+    "sparkpost": "^2.1.3"
   }
 }
