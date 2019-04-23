@@ -43,7 +43,7 @@
 <div class="remindme">
   <button aria-controls="reminder-{{ conf.data.title | slug }}" aria-haspopup="true" aria-expanded="false">Send me this info</button>
   <div class="flyout" id="reminder-{{ conf.data.title | slug }}" aria-hidden="true">
-    <form action="http://localhost:34567/.netlify/functions/send-email/send-email" method="post">
+    <form action="/.netlify/functions/send-email/send-email" method="post">
       <label>
         Email address
         <input type="email" name="email" required>
@@ -54,7 +54,7 @@
       <input type="hidden" name="loc" value="{{ conf.data.location }}">
       <input type="hidden" name="coc" value="{{ conf.data.cocUrl }}">
       <input type="hidden" name="desc" value="{{ conf.templateContent | safe }}">
-      <button class="send-email">
+      <button class="send-email" aria-label="send email">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-arrow-right">
           <use xlink:href="#icon-arrow-right"></use>
         </svg>

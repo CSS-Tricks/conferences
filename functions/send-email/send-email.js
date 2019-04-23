@@ -37,15 +37,6 @@ exports.handler = function(event, context, callback) {
       },
       recipients: [{ address: email }]
     })
-    .then(data => {
-      callback(null, {
-        statusCode: 301,
-        headers: {
-          "location" : event.headers.referer
-        },
-        body: null
-      });
-    })
     .catch(err => {
       callback(null, {
         statusCode: 200,

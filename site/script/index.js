@@ -29,7 +29,7 @@ viewButtons.forEach(button => {
 
   toggles.forEach(el => {
     el.addEventListener( "click", function( e ){
-      let target = this.getAttribute( "aria-controls"),
+      let target = this.getAttribute( "aria-controls" ),
         targetEl = document.querySelector( '#' + target ),
         newState = this.getAttribute( 'aria-expanded' ) === "true" ? false : true;
 
@@ -38,3 +38,32 @@ viewButtons.forEach(button => {
     });
   });
 }());
+
+(function() {
+  var forms = document.querySelectorAll('form');
+
+  forms.forEach(el => {
+    el.addEventListener( "submit", function( e ){
+      let form = this,
+        action = form.getAttribute( "action" ),
+        method = form.getAttribute( "method" ),
+        data   = new FormData( form );
+
+      fetch(
+        action,
+        {
+          method: method,
+          body: data
+        }
+      )
+      .then( response => {
+        if( response.ok === true ) {
+          form.querySelector( ".send-email" ).setAttribute( "aria-label", "Sent!" );
+        }
+      })
+      .catch( error => console.error('error:', error) );
+      e.preventDefault();
+    });
+  });
+}());
+
