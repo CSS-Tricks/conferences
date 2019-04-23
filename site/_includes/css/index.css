@@ -29,6 +29,9 @@ html {
   top: -9999px;
   left: -9999px;
 }
+.remindme [aria-hidden="true"] {
+  display: none;
+}
 
 a {
   text-decoration: none;

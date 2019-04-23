@@ -34,7 +34,7 @@ viewButtons.forEach(button => {
         newState = this.getAttribute( 'aria-expanded' ) === "true" ? false : true;
 
       this.setAttribute( "aria-expanded", newState );
-      targetEl.setAttribute( "aria-hidden", newState );
+      targetEl.setAttribute( "aria-hidden", !newState );
     });
   });
 }());

@@ -195,3 +195,43 @@ abbr[title] {
     margin-bottom: 4rem;
   }
 }
+
+body.grid .remindme {
+  margin: 0 1rem .35rem 1rem;
+}
+body.grid .remindme button {
+  border: none;
+  background: none;
+  padding: .25em 0;
+  font-size: .75rem;
+  color: var(--rust);
+  cursor: pointer;
+  transition: opacity .1s linear;
+}
+body.grid .remindme button[aria-expanded="true"] {
+  opacity: .65;
+}
+body.grid .flyout {
+  position: relative;
+}
+body.grid .flyout label {
+  font-size: .8rem;
+}
+body.grid .flyout input[type="email"] {
+  width: 100%;
+  font-size: 1rem;
+  margin-top: .15em;
+  border: 2px solid #ff8a00;
+  padding: .5em .6em .55em .5em;
+  border-radius: .2em;
+}
+body.grid .flyout .send-email {
+  position: absolute;
+  border: none;
+  z-index: 2;
+  bottom: .2em;
+  right: .2em;
+  height: 2.85em;
+  width: 3.5em;
+  background: none;
+}

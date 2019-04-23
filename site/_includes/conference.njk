@@ -31,29 +31,36 @@
   <a href="{{ conf.data.url | url }}" class="conf-link">
     {{ conf.data.url | domainRoot }}
     <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-arrow-right">
-     <path d="M7 12.5L23 12.5" stroke="url(#paint0_linear)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-      <path d="M1 12.5H2" stroke="url(#paint1_linear)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-      <path d="M17.5 7L23 12.5L17.5 18" stroke="url(#paint2_linear)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-      <defs>
-        <linearGradient id="paint0_linear" x1="10.7498" y1="12.5" x2="11.3447" y2="9.73465" gradientUnits="userSpaceOnUse">
-          <stop stop-color="#FF8A00"></stop>
-          <stop offset="1" stop-color="#DA1B60"></stop>
-        </linearGradient>
-        <linearGradient id="paint1_linear" x1="1.23436" y1="12.5" x2="2.00945" y2="12.2748" gradientUnits="userSpaceOnUse">
-          <stop stop-color="#FF8A00"></stop>
-          <stop offset="1" stop-color="#DA1B60"></stop>
-        </linearGradient>
-        <linearGradient id="paint2_linear" x1="18.789" y1="17.9995" x2="23.3162" y2="17.3419" gradientUnits="userSpaceOnUse">
-          <stop stop-color="#FF8A00"></stop>
-          <stop offset="1" stop-color="#DA1B60"></stop>
-        </linearGradient>
-      </defs>
+      <use xlink:href="#icon-arrow-right"></use>
     </svg>
   </a>
 </div>
 
 <div class="conf-byline">
   {{ conf.data.byline }}
+</div>
+
+<div class="remindme">
+  <button aria-controls="reminder-{{ conf.data.title | slug }}" aria-haspopup="true" aria-expanded="false">Email me this info/button>
+  <div class="flyout" id="reminder-{{ conf.data.title | slug }}" aria-hidden="true">
+    <form action="http://localhost:34567/.netlify/functions/send-email/send-email" method="post">
+      <label>
+        What’s your email address?
+        <input type="email" name="email" required>
+      </label>
+      <input type="hidden" name="url" value="{{ conf.data.url }}">
+      <input type="hidden" name="conf" value="{{ conf.data.title }}">
+      <input type="hidden" name="dates" value="{{ conf.data.date | readableDate }}{% if conf.data.endDate %} - {{ conf.data.endDate | readableDate }}{% endif %}">
+      <input type="hidden" name="loc" value="{{ conf.data.location }}">
+      <input type="hidden" name="coc" value="{{ conf.data.cocUrl }}">
+      <input type="hidden" name="desc" value="{{ conf.templateContent | safe }}">
+      <button class="send-email">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-arrow-right">
+          <use xlink:href="#icon-arrow-right"></use>
+        </svg>
+      </button>
+    </form>
+  </div>
 </div>
 
 <div class="conf-meta">
