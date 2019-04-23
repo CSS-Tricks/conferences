@@ -41,11 +41,11 @@
 </div>
 
 <div class="remindme">
-  <button aria-controls="reminder-{{ conf.data.title | slug }}" aria-haspopup="true" aria-expanded="false">Email me this info/button>
+  <button aria-controls="reminder-{{ conf.data.title | slug }}" aria-haspopup="true" aria-expanded="false">Send me this info</button>
   <div class="flyout" id="reminder-{{ conf.data.title | slug }}" aria-hidden="true">
     <form action="http://localhost:34567/.netlify/functions/send-email/send-email" method="post">
       <label>
-        What’s your email address?
+        Email address
         <input type="email" name="email" required>
       </label>
       <input type="hidden" name="url" value="{{ conf.data.url }}">
