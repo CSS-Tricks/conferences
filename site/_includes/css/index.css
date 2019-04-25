@@ -44,7 +44,7 @@ h6 {
 }
 
 .site-header {
-  padding: 6rem 2rem 4rem 2rem;
+  padding: 6rem 2rem 3.25rem 2rem;
   position: relative;
 }
 h1 {
@@ -106,6 +106,17 @@ h1 {
   position: absolute;
   bottom: 0;
   right: 2rem;
+}
+
+.time-travel {
+  display: block;
+  text-align: right;
+  padding-top: .5em;
+  clear: both;
+}
+.time-travel a {
+  color: var(--orange);
+  font-size: .825rem;
 }
 
 .month-heading {

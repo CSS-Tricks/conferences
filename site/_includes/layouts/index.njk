@@ -46,6 +46,14 @@ layout: layouts/base.njk
       </span>
     </button>
   </div>
+  <div class="time-travel">
+  {% if page.url == "/" %}
+    <a href="/archive/">Past Conferences</a>
+  {% endif %}
+  {% if page.url == "/archive/" %}
+    <a href="/">Upcoming Conferences</a>
+  {% endif %}
+  </div>
 </header>
 
 <div id="maincontent" role="main" aria-label="Conference listing">
