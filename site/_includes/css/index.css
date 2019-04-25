@@ -118,6 +118,9 @@ h1 {
   color: var(--orange);
   font-size: .825rem;
 }
+.time-travel a:after {
+  content: " ›";
+}
 
 .month-heading {
   padding: 0 2rem;
