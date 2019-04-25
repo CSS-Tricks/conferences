@@ -42,7 +42,7 @@
 </div>
 
 <div class="remindme">
-  <button aria-controls="reminder-{{ conf.data.title | slug | replace('!', '') }}" aria-haspopup="true" aria-expanded="false">Send me this info</button>
+  <button aria-controls="reminder-{{ conf.data.title | slug | replace('!', '') }}" aria-haspopup="true" aria-expanded="false">Email this info</button>
   <div class="flyout" id="reminder-{{ conf.data.title | slug | replace('!', '') }}" aria-hidden="true">
     <form action="/.netlify/functions/send-email/send-email" method="post">
       <label>
