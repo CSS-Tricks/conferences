@@ -97,7 +97,7 @@ body.grid .conf-coc:focus {
 
 body.grid .conf-link {
   font-size: 17px;
-  color: #f77115;
+  color: var(--rust);
   margin-top: 22px;
   letter-spacing: 0.02em;
   font-weight: 700;
@@ -203,17 +203,20 @@ body.grid .remindme {
 body.grid .remindme button {
   border: none;
   background: none;
-  padding: 0.25em 0;
-  font-size: 0.75rem;
-  color: var(--rust);
+  padding: 0.15em 0.75em;
+  font-size: 0.66rem;
   cursor: pointer;
+  color: var(--rust);
   transition: opacity 0.1s linear;
+  border: 1px solid var(--rust);
+  border-radius: 10px;
 }
 body.grid .remindme button[aria-expanded='true'] {
   opacity: 0.65;
 }
 body.grid .flyout {
   position: relative;
+  margin-top: 1rem;
 }
 body.grid .flyout label {
   font-size: 0.8rem;
@@ -222,7 +225,7 @@ body.grid .flyout input[type='email'] {
   width: 100%;
   font-size: 1rem;
   margin-top: 0.15em;
-  border: 2px solid #ff8a00;
+  border: 2px solid var(--orange);
   padding: 0.5em 0.6em 0.55em 0.5em;
   border-radius: 0.2em;
 }
@@ -230,7 +233,7 @@ body.grid .flyout .send-email {
   position: absolute;
   border: none;
   z-index: 2;
-  bottom: 0.2em;
+  bottom: 0.4em;
   right: 0.2em;
   height: 2.85em;
   width: 3.5em;
