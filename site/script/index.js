@@ -58,7 +58,12 @@ viewButtons.forEach(button => {
       )
       .then( response => {
         if( response.ok === true ) {
-          form.querySelector( ".send-email" ).setAttribute( "aria-label", "Sent!" );
+          let submit = form.querySelector( ".send-email" );
+
+          submit.setAttribute( "aria-label", "Sent!" );
+          submit.querySelector( 'use' ).setAttribute( 'xlink:href', '#icon-check');
+        } else {
+          console.error('error: no response');
         }
       })
       .catch( error => console.error('error:', error) );
