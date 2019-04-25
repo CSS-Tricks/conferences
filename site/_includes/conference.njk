@@ -31,12 +31,21 @@
 <div class="conf-about">
   {{ conf.templateContent | safe }}
 
+  <div class="link-and-coc">  
   <a href="{{ conf.data.url | url }}" class="conf-link">
     {{ conf.data.url | domainRoot }}
     <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-arrow-right">
       <use xlink:href="#icon-arrow-right"></use>
     </svg>
   </a>
+
+  {% if conf.data.cocUrl %}
+    <a href="{{ conf.data.cocUrl }}" class="conf-coc" aria-label="Code of Conduct for {{ conf.data.title }}">
+      Code of Conduct
+    </a>
+  {% endif %}
+  </div>
+
 </div>
 
 <div class="conf-byline">
@@ -76,8 +85,5 @@
       </svg>
     </span>
   </a>
-  {% endif %}
-  {% if conf.data.cocUrl %}
-    <a href="{{ conf.data.cocUrl }}" class="conf-coc" aria-label="Code of Conduct for {{ conf.data.title }}">Code of Conduct</a>
   {% endif %}
 </div>

@@ -87,25 +87,28 @@ body.grid .end-date {
   margin-left: 0.25rem;
 }
 
-body.grid .conf-coc {
-  font-size: 14px;
-  color: var(--rust);
-  position: absolute;
-  bottom: 10px;
-  right: 1rem;
+body.grid .link-and-coc {
+  margin-top: 2rem;
 }
 body.grid .conf-coc:hover,
-body.grid .conf-coc:focus {
+body.grid .conf-coc:focus,
+body.grid .conf-link:hover,
+body.grid .conf-link:focus {
   color: var(--dark);
 }
 
-body.grid .conf-link {
-  font-size: 17px;
+body.grid .conf-link,
+body.grid .conf-coc {
+  font-size: 0.8rem;
   color: var(--rust);
-  margin-top: 22px;
-  letter-spacing: 0.02em;
   font-weight: 700;
-  display: inline-block;
+  white-space: nowrap;
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+body.grid .conf-coc {
+  font-size: 0.66rem;
 }
 
 body.grid .icon-arrow-right {
@@ -220,7 +223,7 @@ body.grid .remindme button[aria-expanded='true'] {
 }
 body.grid .flyout {
   position: relative;
-  margin-top: 1rem;
+  margin-top: 2rem;
 }
 body.grid .flyout label {
   font-size: 0.8rem;
