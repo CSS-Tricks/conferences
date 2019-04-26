@@ -197,12 +197,15 @@ button.active {
   font-size: 2.4em;
 }
 .conf-standalone .split {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 4rem;
   padding: .5rem 0 0 0;
 }
-
+@media( min-width: 65em ) {
+  .conf-standalone .split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 4rem;
+  }
+}
 .conf-teasers img,
 .conf-teasers object {
   max-width: 600px;
@@ -213,11 +216,11 @@ body.grid .conf .split div.conf-about {
 }
 
 .conf-standalone .conf-teasers {
-  margin-top: 1rem;
+  margin: 1rem;
 }
 .conf-standalone figcaption {
   font-size: .9rem;
-  display: inline-block;
+  display: block;
   margin: .75rem 0 .25rem 0;
 }
 .conf-standalone figcaption a {
