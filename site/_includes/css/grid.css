@@ -30,36 +30,43 @@ body.grid .icon {
 }
 
 body.grid .icon-calendar {
-	position: relative;
-	display: block;
-	height: 24px;
-	width: 24px;
-	font-size: 12px;
-	text-align: center;
-	border: 1px solid #333;
-	border-radius: 2px;
-	padding-top: 6px;
-	margin: 3px 10px 3px 2px;
+  position: relative;
+  display: block;
+  height: 24px;
+  width: 24px;
+  font-size: 12px;
+  text-align: center;
+  border: 1px solid #333;
+  border-radius: 2px;
+  padding-top: 6px;
+  margin: 3px 10px 3px 2px;
 }
 body.grid .icon-calendar::before {
-	content: '';
-	position: absolute;
-	top: -1px;
-	left: -1px;
-	height: 4px;
-	width: 100%;
-	background: var(--rust);
-	border: 1px solid #333;
-	border-radius: 2px 2px 0px 0px;
+  content: '';
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  height: 4px;
+  width: 100%;
+  background: var(--rust);
+  border: 1px solid #333;
+  border-radius: 2px 2px 0px 0px;
 }
 
 body.grid .conf-dates {
   background: #000;
-  background-image: url(https://res.cloudinary.com/css-tricks/image/fetch/w_1200,h_75,y_200,o_60,c_crop,q_auto,f_auto/https://css-tricks.com/wp-content/uploads/2019/04/diagonal-halftone.svg);
-  background-position: center center;
+
+  background: repeating-linear-gradient(
+    45deg,
+    #1f1f1f,
+    #1f1f1f 10px,
+    #0f0e16 10px,
+    #0f0e16 20px
+  );
+  background-attachment: fixed;
   color: #fff;
   font-weight: 600;
-  border: solid rgba(255,255,255,.125);
+  border: solid rgba(255, 255, 255, 0.125);
   border-width: 1px 0 0 1px;
   border-radius: 0 0 5.5em/95% 0;
 }
@@ -97,29 +104,27 @@ body.grid .conf-link {
 }
 
 body.grid .icon-arrow-right {
-  margin-bottom: -.225em;
-  transition: margin-left .2s ease-in-out;
+  margin-bottom: -0.225em;
+  transition: margin-left 0.2s ease-in-out;
 }
 
 @media (prefers-reduced-motion: no-preference) {
   body.grid .conf-link:hover .icon-arrow-right {
-    margin-left: .125em;
+    margin-left: 0.125em;
   }
 }
 
 body.grid .conf-location {
   font-style: normal;
   background-color: #ffc9a3;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 900'%3E%3Cpolygon fill='%23f5b680' points='957 450 539 900 1396 900'/%3E%3Cpolygon fill='%23ed5109' points='957 450 872.9 900 1396 900'/%3E%3Cpolygon fill='%23fabe91' points='-60 900 398 662 816 900'/%3E%3Cpolygon fill='%23ef5f0a' points='337 900 398 662 816 900'/%3E%3Cpolygon fill='%23f2c29d' points='1203 546 1552 900 876 900'/%3E%3Cpolygon fill='%23f16d0b' points='1203 546 1552 900 1162 900'/%3E%3Cpolygon fill='%23ebcaa9' points='641 695 886 900 367 900'/%3E%3Cpolygon fill='%23f4790d' points='587 900 641 695 886 900'/%3E%3Cpolygon fill='%23ebd4b9' points='1710 900 1401 632 1096 900'/%3E%3Cpolygon fill='%23ef8d0f' points='1710 900 1401 632 1365 900'/%3E%3Cpolygon fill='%23eadacb' points='1210 900 971 687 725 900'/%3E%3Cpolygon fill='%23fd9212' points='943 900 1210 900 971 687'/%3E%3C/svg%3E");
-  background-attachment: fixed;
   background-size: cover;
 }
 
 body.grid .conf-about {
   padding: 1rem 2.5rem 1rem 1rem;
 }
-body.grid .conf-about p+p{
-  margin: .75em 0 0 0;
+body.grid .conf-about p + p {
+  margin: 0.75em 0 0 0;
 }
 
 body.grid .conf-byline {
@@ -134,13 +139,13 @@ body.grid .csstricks-link {
   height: 50px;
   padding-left: 5px;
   background-color: var(--pink);
-  background-image: linear-gradient(to right,#ff8a00, rgba(255,255,255,0));
+  background-image: linear-gradient(to right, #ff8a00, rgba(255, 255, 255, 0));
   color: white;
   display: flex;
   align-items: flex-end;
   -webkit-clip-path: polygon(0 0, 0% 100%, 100% 100%);
   clip-path: polygon(0 0, 0% 100%, 100% 100%);
-  transition: background-color .2s linear;
+  transition: background-color 0.2s linear;
 }
 body.grid .csstricks-link:hover,
 body.grid .csstricks-link:focus {
@@ -149,7 +154,7 @@ body.grid .csstricks-link:focus {
 
 body.grid .csstricks-link svg {
   fill: #fff;
-  transition: transform .65s ease-in-out;
+  transition: transform 0.65s ease-in-out;
 }
 @media (prefers-reduced-motion: no-preference) {
   body.grid .csstricks-link:hover svg {
@@ -160,7 +165,7 @@ body.grid .csstricks-link svg {
 body.grid .conf-head {
   display: flex;
   flex-direction: column;
-  background: linear-gradient(to right,#ff8a00,#da1b60);
+  background: linear-gradient(to right, #ff8a00, #da1b60);
 }
 body.grid .conf div:nth-child(1) {
   order: 2;
