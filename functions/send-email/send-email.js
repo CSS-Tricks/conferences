@@ -46,7 +46,7 @@ exports.handler = function(event, context, callback) {
     .catch(err => {
       callback(null, {
         statusCode: 500,
-        body: `Sorry, something went wrong.`
+        body: `Sorry, something went wrong. ${err}`
       });
     });
 };
