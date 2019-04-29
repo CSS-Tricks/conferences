@@ -4,6 +4,7 @@ const querystring = require('querystring');
 
 exports.handler = function(event, context, callback) {
   const post = querystring.parse(event.body);
+
   const email = post['email'],
     conf = post['conf'],
     url = post['url'],
@@ -36,9 +37,15 @@ exports.handler = function(event, context, callback) {
       },
       recipients: [{ address: email }]
     })
-    .catch(err => {
+    .then(data => {
       callback(null, {
         statusCode: 200,
+        body: `Message sent!`
+      });
+    })
+    .catch(err => {
+      callback(null, {
+        statusCode: 500,
         body: `Sorry, something went wrong.`
       });
     });
