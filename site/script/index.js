@@ -32,7 +32,12 @@
         targetEl = document.querySelector('#' + target),
         newState = this.getAttribute('aria-expanded') === 'true' ? false : true;
 
-      this.setAttribute('aria-expanded', newState);
+      let parent = this.closest('.card');
+      let bothButtons = parent.querySelectorAll('[aria-controls]');
+      bothButtons.forEach(el => {
+        el.setAttribute('aria-expanded', newState);
+      });
+
       targetEl.setAttribute('aria-hidden', !newState);
       targetEl.querySelector('input[type=email]').focus();
     });

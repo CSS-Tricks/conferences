@@ -51,9 +51,14 @@
   {{ conf.data.byline }}
 </div>
 
-<div class="remindme">
-  <button aria-controls="reminder-{{ conf.fileSlug }}" aria-haspopup="true" aria-expanded="false">Email this info</button>
-  <div class="flyout" id="reminder-{{ conf.fileSlug }}" aria-hidden="true">
+<div class="remindme card" id="reminder-{{ conf.fileSlug }}" aria-hidden="true">
+    
+  <div class="card__face card__face--front">
+    <button aria-controls="reminder-{{ conf.fileSlug }}" aria-haspopup="true" aria-expanded="false">Email this info</button>
+  </div>
+  
+  <div class="flyout card__face card__face--back">
+    <button aria-controls="reminder-{{ conf.fileSlug }}" aria-haspopup="true" aria-expanded="false">Close</button>
     <form action="/.netlify/functions/send-email" method="post">
       <label>
         Email address

@@ -205,7 +205,7 @@ abbr[title] {
 }
 
 body.grid .remindme {
-  margin: 0 1rem 0.35rem 1rem;
+  margin: 2rem 0 0 0;
 }
 body.grid .remindme button {
   border: none;
@@ -217,13 +217,6 @@ body.grid .remindme button {
   transition: opacity 0.1s linear;
   border: 1px solid var(--rust);
   border-radius: 10px;
-}
-body.grid .remindme button[aria-expanded='true'] {
-  opacity: 0.65;
-}
-body.grid .flyout {
-  position: relative;
-  margin-top: 2rem;
 }
 body.grid .flyout label {
   font-size: 0.8rem;
@@ -240,9 +233,33 @@ body.grid .flyout .send-email {
   position: absolute;
   border: none;
   z-index: 2;
-  bottom: 0.4em;
-  right: 0.2em;
+  bottom: 2em;
+  right: 1.6em;
   height: 2.85em;
   width: 3.5em;
   background: none;
+}
+
+.card {
+  position: relative;
+  transform-style: preserve-3d;
+  transform-origin: center right;
+  transition: transform 0.5s;
+}
+.card[aria-hidden='false'] {
+  transform: translateX(-100%) rotateY(-180deg);
+}
+
+.card__face {
+  position: absolute;
+  width: 100%;
+  backface-visibility: hidden;
+  bottom: 0;
+  padding: 1rem;
+}
+
+.card__face--back {
+  transform: rotateY(180deg);
+  background: white;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
