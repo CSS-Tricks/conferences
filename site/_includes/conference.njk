@@ -54,7 +54,7 @@
 <div class="remindme">
   <button aria-controls="reminder-{{ conf.fileSlug }}" aria-haspopup="true" aria-expanded="false">Email this info</button>
   <div class="flyout" id="reminder-{{ conf.fileSlug }}" aria-hidden="true">
-    <form action="/.netlify/functions/send-email/send-email" method="post">
+    <form action="/.netlify/functions/send-email/" method="post">
       <label>
         Email address
         <input type="email" name="email" required>
