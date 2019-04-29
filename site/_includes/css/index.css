@@ -8,7 +8,7 @@ html {
   --rust: #993300;
   --orange: #ff8a00;
   --dark: #100e17;
-  --pink:  #da1b60;
+  --pink: #da1b60;
   --ff-title: 'Rubik', 'Lato', 'Lucida Grande', 'Lucida Sans Unicode', Tahoma,
     Sans-Serif;
   --ff-body: -system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
@@ -52,15 +52,15 @@ h1 {
   color: var(--orange);
   line-height: 1;
   font-size: 41px;
-  letter-spacing: -.035em;
+  letter-spacing: -0.035em;
   text-transform: uppercase;
 }
-@media( min-width: 45em ) {
+@media (min-width: 45em) {
   h1 {
     font-size: 5.75vw;
   }
 }
-@media( min-width: 65em ) {
+@media (min-width: 65em) {
   h1 {
     font-size: 60px;
   }
@@ -162,7 +162,7 @@ button.active {
     padding: 2.5rem 1rem 1rem 1rem;
   }
   .site-header:after {
-    content: "";
+    content: '';
     display: table;
     clear: both;
   }

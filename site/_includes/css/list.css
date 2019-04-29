@@ -20,7 +20,7 @@ body.list .conf-head > * {
   text-overflow: ellipsis;
   display: block;
 }
-body.list .conf > *{
+body.list .conf > * {
   padding: 0.5rem;
 }
 body.list .conf-head {
@@ -46,13 +46,22 @@ body.list .conf-dates {
 body.list .end-date {
   display: none;
 }
-body.list .conf-title a {
-  font-size: 1rem;
-  line-height: 1.2;
-  display: block;
+body.list .conf-meta {
+  display: none;
+}
+body.list .conf-coc-in-title {
+  display: inline-block;
+  color: var(--rust);
+  font-size: 0.7rem !important;
+}
+body.list .conf-title {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+body.list .conf-title a {
+  font-size: 1rem;
+  line-height: 1.2;
 }
 body.list .conf-link,
 body.list .conf-about {
@@ -66,14 +75,6 @@ body.list .conf-location {
   display: block;
 }
 
-body.list .conf-byline {
-}
-body.list .conf .conf-meta {
-  padding: .25rem .5rem .375rem .5rem;
-  display: flex;
-  justify-content: flex-start;
-  grid-column: 1 / span 2;
-}
 body.list .conf-coc {
   color: var(--rust);
   margin-left: auto;
@@ -90,7 +91,7 @@ body.list .conf-coc {
     display: block;
   }
   body.list .conf-head > * {
-    padding: .25rem 0;
+    padding: 0.25rem 0;
   }
   body.list .conf > * {
     padding: 1rem;
@@ -102,16 +103,17 @@ body.list .conf-coc {
     white-space: normal;
   }
   body.list .conf .conf-meta {
-    padding: .15rem 1rem .75rem 1rem;
+    padding: 0.15rem 1rem 0.75rem 1rem;
   }
 }
-
 body.list h3 a {
   color: var(--dark);
 }
-
 body.list h3 a:hover,
 body.list h3 a:focus,
 body.list h3 a:visited {
   color: #3a3448;
+}
+body.list .remindme {
+  display: none;
 }

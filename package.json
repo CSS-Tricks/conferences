@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "eleventy --serve",
-    "build": "eleventy"
+    "build": "eleventy",
+    "postbuild": "cd functions/send-email && npm install"
   },
   "repository": {
     "type": "git",
@@ -18,7 +19,7 @@
   },
   "homepage": "https://github.com/CSS-Tricks/conferences#readme",
   "devDependencies": {
-    "@11ty/eleventy": "^0.7.1",
+    "@11ty/eleventy": "^0.8.2",
     "@11ty/eleventy-plugin-rss": "^1.0.3",
     "luxon": "^1.10.0",
     "prettier": "^1.16.3"
