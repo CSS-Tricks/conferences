@@ -53,7 +53,7 @@
         data = new FormData(form),
         sendData = "";
 
-      for (var [key, value] of .entries()) { 
+      for (var [key, value] of data.entries()) { 
         sendData .= key + "=" + value + "&";
       }
 
