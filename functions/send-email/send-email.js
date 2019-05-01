@@ -24,7 +24,7 @@ exports.handler = function(event, context, callback) {
       content: {
         from: 'chris@css-tricks.com',
         subject: `${fakeconf}`,
-        html: `test`
+        html: `${ event.body }`
       },
       recipients: [{ address: "mat@matmarquis.com" }]
     })
