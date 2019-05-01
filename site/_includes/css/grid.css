@@ -11,6 +11,7 @@ body.grid .conf {
   border-radius: 10px;
   box-shadow: 0 25px 50px black;
   position: relative;
+  padding-bottom: 50px;
 }
 
 body.grid .conf-title a {
@@ -209,7 +210,10 @@ abbr[title] {
 }
 
 body.grid .remindme {
-  margin: 2rem 0 0 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
 }
 body.grid .remindme button {
   border: none;
@@ -221,6 +225,9 @@ body.grid .remindme button {
   transition: opacity 0.1s linear;
   border: 1px solid var(--rust);
   border-radius: 10px;
+}
+body.grid .flyout {
+  z-index: 1;
 }
 body.grid .flyout label {
   font-size: 0.8rem;
@@ -252,6 +259,7 @@ body.grid .flyout .send-email {
 }
 .card[aria-hidden='false'] {
   transform: translateX(-100%) rotateY(-180deg);
+  z-index: 5;
 }
 
 .card__face {
