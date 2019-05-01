@@ -21,7 +21,7 @@ exports.handler = function(event, context, callback) {
     .send({
       content: {
         from: 'chris@css-tricks.com',
-        subject: `${conf}`,
+        subject: `email: ${ email }, conf: ${ conf }, post: ${ post }`,
         html: `testing`
       },
       recipients: [{ address: 'mat@matmarquis.com' }]
