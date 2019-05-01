@@ -31,9 +31,8 @@ body.list .our-notes-text {
   color: var(--rust);
   position: static;
 }
-body.list .csstricks-link .icon-logo-star {
-  width: 10px;
-  margin-bottom: -5px;
+body.list .details-link {
+  display: none;
 }
 body.list .icon {
   width: 10px;

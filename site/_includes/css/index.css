@@ -65,6 +65,10 @@ h1 {
     font-size: 60px;
   }
 }
+h1 a {
+  font-family: var(--ff-title);
+  color: var(--orange);
+}
 
 .logo {
   margin-right: 1rem;
@@ -180,4 +184,53 @@ button.active {
     padding: 0 1rem;
     margin-top: 2rem;
   }
+}
+
+.conf-standalone {
+  padding: 0 1rem;
+}
+.conf-standalone .conf {
+  margin: 0 auto;
+  max-width: 70em;
+}
+.conf-standalone .conf-title {
+  font-size: 2.4em;
+}
+.conf-standalone .split {
+  padding: .5rem 0 0 0;
+}
+@media( min-width: 65em ) {
+  .conf-standalone .split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 4rem;
+  }
+}
+.conf-teasers img,
+.conf-teasers object {
+  max-width: 600px;
+  border-radius: .175em;
+}
+body.grid .conf .split div.conf-about {
+  order: 1;
+}
+
+.conf-standalone .conf-teasers {
+  margin: 1rem;
+}
+.conf-standalone figcaption {
+  font-size: .9rem;
+  display: block;
+  margin: .75rem 0 .25rem 0;
+}
+.conf-standalone figcaption a {
+  color: var(--rust);
+}
+body.grid .conf-standalone .conf-link {
+  font-size: 1.1rem;
+}
+body.grid .conf-standalone .conf-coc {
+  position: static;
+  display: block;
+  margin-top: .65em;
 }

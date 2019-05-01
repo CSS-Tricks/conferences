@@ -1,0 +1,117 @@
+---
+layout: layouts/base.njk
+---
+
+<header class="site-header">
+  <div class="logo">
+    <a href="https://css-tricks.com">
+      <div class="screen-reader-text">CSS-Tricks</div>
+      <svg class="icon-logo-star" width="35px" height="35px">
+        <use xlink:href="#icon-logo-star"></use>
+      </svg>
+      <!-- 288 35 -->
+      <svg class="icon-logo-text" width="214px" height="35px">
+        <use xlink:href="#logo"></use>
+      </svg>
+    </a>
+    <span class="presents">presents</span>
+  </div>
+
+  <h1><a href="/">Conferences</a></h1>
+
+  {% if lede %}
+  <p class="subtitle">{{ lede }}</p>
+  {% endif %}
+
+  <a
+    class="contribute-link"
+    href="https://github.com/CSS-Tricks/conferences#contributing"
+  >
+    <strong>Add a Conference</strong>
+    on GitHub
+  </a>
+</header>
+
+<div id="maincontent" role="main">
+  <div class="conf-standalone">
+    <div class="conf">
+      <div class="conf-head">
+        <div>
+          <h3 class="conf-title" id="{{ title | slug }}-hed">
+            <a href="{{ url }}">
+              {{ title }}
+            </a>
+          </h3>
+        </div>
+
+        <div class="conf-dates" aria-label="Conference starts on {{ date | readableDate }}">
+          <span class="icon-calendar" aria-hidden="true">{{ date | htmlTime | replace(r/^.{0,8}/, "") }}</span>
+          <time datetime="{{ date | htmlTime }}" >{{ date | readableDate }}</time>
+            {% if endDate %}
+            <span class="end-date">
+              - <time datetime="{{ endDate | htmlTime }}">{{ endDate | readableDate }}</time>
+            </span>
+          {% endif %}
+          </time>
+        </div>
+
+        <div>
+          <address class="conf-location" aria-label="Conference location">
+            <svg class="icon" aria-hidden="true" viewBox="0 0 268 426" version="1" xmlns="http://www.w3.org/2000/svg" fill="#fff" fill-rule="nonzero"><path d="M134 0C60 0 0 60 0     133c0   49 22 112 66 189a1051 1051 0 0 0 68 104l4-2c1-1 33-49 65-109 43-81 65-142 65-182C268 60 208 0 134 0zm62 137a62 62 0 1 1-124-1 62 62 0 0 1 124 1z"/></svg>
+            {{ location }}
+          </address>
+        </div>
+      </div>
+
+      <div class="split">
+        <div class="conf-about">
+          {{ content | safe }}
+          <a href="{{ url | url }}" class="conf-link">
+            {{ url | domainRoot }}
+            <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-arrow-right">
+             <path d="M7 12.5L23 12.5" stroke="url(#paint0_linear)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+              <path d="M1 12.5H2" stroke="url(#paint1_linear)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+              <path d="M17.5 7L23 12.5L17.5 18" stroke="url(#paint2_linear)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+              <defs>
+                <linearGradient id="paint0_linear" x1="10.7498" y1="12.5" x2="11.3447" y2="9.73465" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#FF8A00"></stop>
+                  <stop offset="1" stop-color="#DA1B60"></stop>
+                </linearGradient>
+                <linearGradient id="paint1_linear" x1="1.23436" y1="12.5" x2="2.00945" y2="12.2748" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#FF8A00"></stop>
+                  <stop offset="1" stop-color="#DA1B60"></stop>
+                </linearGradient>
+                <linearGradient id="paint2_linear" x1="18.789" y1="17.9995" x2="23.3162" y2="17.3419" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#FF8A00"></stop>
+                  <stop offset="1" stop-color="#DA1B60"></stop>
+                </linearGradient>
+              </defs>
+            </svg>
+          </a>
+          {% if cocUrl %}
+          <a href="{{ cocUrl }}" class="conf-coc" aria-label="Code of Conduct for {{ title }}">Code of Conduct</a>
+          {% endif %}
+        </div>
+        <div class="conf-teasers">
+          <h4>We generated these cool graphics for it.</h4>
+          <figure>
+            <figcaption>
+              Here’s <a href="/teasers/svg/{{ title | slug }}.svg">the SVG one:</a>
+            </figcaption>
+            <object data='/teasers/svg/{{ title | slug }}.svg'></object>
+          </figure>
+          <figure>
+            <figcaption>
+              Here’s <a href="/teasers/png/{{ title | slug }}.png">the PNG one:</a>
+            </figcaption>
+            <img src='/teasers/png/{{ title | slug }}.png' alt=""></object>
+          </figure>
+        </div>
+      </div>
+      <div class="conf-byline">
+        {{ byline }}
+      </div>
+
+    </div>
+  </div>
+</div>
