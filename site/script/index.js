@@ -50,11 +50,16 @@
       let form = this,
         action = form.getAttribute('action'),
         method = form.getAttribute('method'),
-        data = new FormData(form);
+        data = new FormData(form),
+        sendData = "";
+
+      for (var [key, value] of data.entries()) { 
+        sendData += key + "=" + value + "&";
+      }
 
       fetch(action, {
         method: method,
-        body: data
+        body: sendData
       })
         .then(response => {
           if (response.ok === true) {
