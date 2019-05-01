@@ -51,7 +51,7 @@ h1 {
   font-family: var(--ff-title);
   color: var(--orange);
   line-height: 1;
-  font-size: 41px;
+  font-size: 32px;
   letter-spacing: -0.035em;
   text-transform: uppercase;
 }
@@ -110,12 +110,14 @@ h1 a {
   border-bottom: 2px solid white;
   display: flex;
   align-items: flex-end;
+  margin: 2rem 0 0 0;
 }
 .main-nav a {
   color: white;
   display: inline-block;
-  padding: 2px 5px 2px 0;
+  padding: 2px 10px 2px 0;
   opacity: 0.75;
+  margin-right: 5px;
 }
 .main-nav a.active {
   opacity: 1;
@@ -145,6 +147,7 @@ button.active {
   color: black;
 }
 .view-icon {
+  font-family: sans-serif;
   pointer-events: none;
 }
 
@@ -172,14 +175,11 @@ button.active {
   html {
     font-size: 15px;
   }
-  .logo {
-    margin-bottom: 0.5rem;
-  }
   .subtitle {
     margin-bottom: 0.5rem;
   }
   .site-header {
-    padding: 2.5rem 1rem 1rem 1rem;
+    padding: 1.5rem 1rem 1rem 1rem;
   }
   .site-header:after {
     content: '';
@@ -187,18 +187,15 @@ button.active {
     clear: both;
   }
   .contribute-link {
-    margin-top: 1.5em;
     position: static;
-    float: left;
+    margin-bottom: 1rem;
   }
   .style-switcher {
-    position: static;
-    float: right;
-    margin-top: 1rem;
   }
   .month-heading {
     padding: 0 1rem;
     margin-top: 2rem;
+    display: block;
   }
 }
 
