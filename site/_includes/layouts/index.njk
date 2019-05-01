@@ -32,20 +32,27 @@ layout: layouts/base.njk
     on GitHub
   </a>
 
-  <div class="style-switcher">
-    <button class="active" data-body-class="grid">
-      <span aria-hidden="true" class="view-icon">⠿</span>
-      <span class="screen-reader-text">
-        View conferences as grid
-      </span>
-    </button>
-    <button data-body-class="list">
-      <span aria-hidden="true" class="view-icon">☰</span>
-      <span class="screen-reader-text">
-        View conferences as list
-      </span>
-    </button>
-  </div>
+  <nav class="main-nav">
+    <div class="time-travel">
+      <a href="/"  {% if page.url == "/" %} class="active"{% endif %}>Upcoming Conferences</a>
+      <a href="/archive/"{% if page.url == "/archive/" %} class="active"{% endif %}>Past Conferences</a>
+    </div>
+    <div class="style-switcher">
+      <button class="active" data-body-class="grid">
+        <span aria-hidden="true" class="view-icon">⠿</span>
+        <span class="screen-reader-text">
+          View conferences as grid
+        </span>
+      </button>
+      <button data-body-class="list">
+        <span aria-hidden="true" class="view-icon">☰</span>
+        <span class="screen-reader-text">
+          View conferences as list
+        </span>
+      </button>
+    </div>
+  </nav>
+
 </header>
 
 <div id="maincontent" role="main" aria-label="Conference listing">

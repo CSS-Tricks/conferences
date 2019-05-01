@@ -44,7 +44,7 @@ h6 {
 }
 
 .site-header {
-  padding: 6rem 2rem 4rem 2rem;
+  padding: 6rem 2rem 3.25rem 2rem;
   position: relative;
 }
 h1 {
@@ -105,11 +105,27 @@ h1 a {
   background: var(--orange);
 }
 
+.main-nav {
+  position: relative;
+  border-bottom: 2px solid white;
+  display: flex;
+  align-items: flex-end;
+}
+.main-nav a {
+  color: white;
+  display: inline-block;
+  padding: 2px 5px 2px 0;
+  opacity: 0.75;
+}
+.main-nav a.active {
+  opacity: 1;
+  color: var(--orange);
+  border-bottom: 4px solid var(--orange);
+}
+
 .style-switcher {
   display: flex;
-  position: absolute;
-  bottom: 0;
-  right: 2rem;
+  margin-left: auto;
 }
 
 .month-heading {
@@ -197,9 +213,9 @@ button.active {
   font-size: 2.4em;
 }
 .conf-standalone .split {
-  padding: .5rem 0 0 0;
+  padding: 0.5rem 0 0 0;
 }
-@media( min-width: 65em ) {
+@media (min-width: 65em) {
   .conf-standalone .split {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -209,7 +225,7 @@ button.active {
 .conf-teasers img,
 .conf-teasers object {
   max-width: 600px;
-  border-radius: .175em;
+  border-radius: 0.175em;
 }
 body.grid .conf .split div.conf-about {
   order: 1;
@@ -219,9 +235,9 @@ body.grid .conf .split div.conf-about {
   margin: 1rem;
 }
 .conf-standalone figcaption {
-  font-size: .9rem;
+  font-size: 0.9rem;
   display: block;
-  margin: .75rem 0 .25rem 0;
+  margin: 0.75rem 0 0.25rem 0;
 }
 .conf-standalone figcaption a {
   color: var(--rust);
@@ -232,5 +248,5 @@ body.grid .conf-standalone .conf-link {
 body.grid .conf-standalone .conf-coc {
   position: static;
   display: block;
-  margin-top: .65em;
+  margin-top: 0.65em;
 }

@@ -132,8 +132,10 @@ body.grid .conf-about {
   padding: 1rem 2.5rem 1rem 1rem;
 }
 body.grid .conf-about p {
-  font-size: 125%;
   margin-bottom: 1rem;
+}
+body.grid .conf-standalone .conf-about p {
+  font-size: 130%;
 }
 
 body.grid .conf-byline {
