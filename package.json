@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "eleventy --serve",
-    "build": "eleventy",
+    "build": "eleventy && gulp svg2png",
     "postbuild": "cd functions/send-email && npm install",
     "graphics": "gulp svg2png"
   },
