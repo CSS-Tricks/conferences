@@ -267,6 +267,7 @@ body.grid .flyout .send-email {
 .card__face {
   position: absolute;
   width: 100%;
+  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   bottom: 0;
   padding: 1rem;
