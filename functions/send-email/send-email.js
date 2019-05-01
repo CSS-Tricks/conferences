@@ -1,30 +1,47 @@
 const SparkPost = require('sparkpost');
 const client = new SparkPost(process.env.SPARKPOST);
-const querystring = require('querystring');
+const { parse } = require('querystring');
+
+function collectRequestData(request, callback) {
+    const FORM_URLENCODED = 'application/x-www-form-urlencoded';
+
+    if(request.headers['content-type'] === FORM_URLENCODED) {
+        let body = '';
+        request.on('data', chunk => {
+            body += chunk.toString();
+        });
+        request.on('end', () => {
+            callback(parse(body));
+        });
+    }
+    else {
+        callback(null);
+    }
+}
 
 exports.handler = function(event, context, callback) {
   const post = querystring.parse(event.body);
-
-  const email = post['email'],
-    conf = post['conf'],
-    url = post['url'],
-    loc = post['loc'],
-    dates = post['dates'],
-    desc = post['desc'],
-    coc = post['coc'];
-
-  const fakeconf = "POST Conference";
 
   if (!post || event.httpMethod !== 'POST') {
     return;
   }
 
+  collectRequestData(req, post => {
+    const email = post.email,
+      conf = post.conf,
+      url = post.url,
+      loc = post.loc,
+      dates = post.dates,
+      desc = post.desc,
+      coc = post.coc;
+  });
+
   client.transmissions
     .send({
       content: {
         from: 'chris@css-tricks.com',
-        subject: `${fakeconf}`,
-        html: `${ event.body }`
+        subject: `${ conf }`,
+        html: `${ desc }`
       },
       recipients: [{ address: "mat@matmarquis.com" }]
     })
