@@ -45,11 +45,12 @@ layout: layouts/base.njk
         </div>
 
         <div class="conf-dates" aria-label="Conference starts on {{ date | readableDate }}">
+          <span class="icon-calendar" aria-hidden="true">{{ date | htmlTime | replace(r/^.{0,8}/, "") }}</span>
           <time datetime="{{ date | htmlTime }}" >{{ date | readableDate }}</time>
             {% if endDate %}
-              <span class="end-date">
-                - <time datetime="{{ endDate | htmlTime }}">{{ endDate | readableDate }}</time>
-              </span>
+            <span class="end-date">
+              - <time datetime="{{ endDate | htmlTime }}">{{ endDate | readableDate }}</time>
+            </span>
           {% endif %}
           </time>
         </div>

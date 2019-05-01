@@ -130,44 +130,49 @@ body.grid .conf-location {
 body.grid .conf-about {
   padding: 1rem 2.5rem 1rem 1rem;
 }
-body.grid .conf-about p + p {
-  margin: 0.75em 0 0 0;
+body.grid .conf-about p {
+  font-size: 125%;
+  margin-bottom: 1rem;
 }
 
 body.grid .conf-byline {
   display: none;
 }
 
-body.grid .csstricks-link {
+body.grid .details-link {
   position: absolute;
-  bottom: -1px;
-  left: -1px;
-  width: 50px;
-  height: 50px;
+  bottom: 0;
+  right: 0;
+  width: 45px;
+  height: 45px;
   padding-left: 5px;
   background-color: var(--pink);
   background-image: linear-gradient(to right, #ff8a00, rgba(255, 255, 255, 0));
   color: white;
   display: flex;
   align-items: flex-end;
-  -webkit-clip-path: polygon(0 0, 0% 100%, 100% 100%);
-  clip-path: polygon(0 0, 0% 100%, 100% 100%);
   transition: background-color 0.2s linear;
+  border-top-left-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
-body.grid .csstricks-link:hover,
-body.grid .csstricks-link:focus {
+body.grid .details-link:hover,
+body.grid .details-link:focus {
   background-color: var(--orange);
 }
 
-body.grid .csstricks-link svg {
+body.grid .details-link svg {
+  display: block;
   fill: #fff;
-  transition: transform 0.65s ease-in-out;
+  transition: transform 0.25s;
+  position: absolute;
+  top: 10px;
+  left: 10px;
 }
-@media (prefers-reduced-motion: no-preference) {
-  body.grid .csstricks-link:hover svg {
-    transform: rotate(360deg);
-  }
+/* @media (prefers-reduced-motion: no-preference) { */
+body.grid .details-link:hover svg {
+  transform: translate(5px, 5px) rotate(160deg);
 }
+/* } */
 
 body.grid .conf-head {
   display: flex;

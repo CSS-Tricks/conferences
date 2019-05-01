@@ -79,15 +79,11 @@
   </div>
 </div>
 
-<div class="conf-meta">
-  {% if conf.data.notes %}
-  <a href="{{ conf.data.notes | url }}" class="csstricks-link">
-    <span class="screen-reader-text our-notes-text">Our Notes</span>
-    <span aria-hidden="true">
-      <svg class="icon-logo-star" width="35px" height="35px">
-        <use xlink:href="#icon-logo-star"></use>
-      </svg>
-    </span>
-  </a>
-  {% endif %}
-</div>
+<a href="{{ conf.url }}" class="details-link">
+  <span class="screen-reader-text our-notes-text">Details</span>
+  <span aria-hidden="true">
+    <svg class="icon-logo-star" width="35px" height="35px">
+      <use xlink:href="#icon-logo-star"></use>
+    </svg>
+  </span>
+</a>

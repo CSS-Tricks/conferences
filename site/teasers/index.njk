@@ -4,6 +4,7 @@ pagination:
   size: 1
 permalink: teasers/svg/{{ pagination.items[0].data.title | slug }}.svg
 ---
+
 {% for conf in pagination.items %}
 <svg width="1440" height="831" viewBox="0 0 1440 831" version="1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <defs><style type="text/css">@import url(https://fonts.googleapis.com/css?family=Rubik:700);</style>

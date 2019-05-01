@@ -6,7 +6,8 @@
   "scripts": {
     "start": "eleventy --serve",
     "build": "eleventy",
-    "postbuild": "cd functions/send-email && npm install"
+    "postbuild": "cd functions/send-email && npm install",
+    "graphics": "gulp svg2png"
   },
   "repository": {
     "type": "git",
