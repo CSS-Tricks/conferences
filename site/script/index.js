@@ -54,7 +54,7 @@
         sendData = "";
 
       for (var [key, value] of data.entries()) { 
-        sendData .= key + "=" + value + "&";
+        sendData += key + "=" + value + "&";
       }
 
       fetch(action, {
