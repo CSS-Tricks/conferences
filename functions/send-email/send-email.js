@@ -26,35 +26,29 @@ exports.handler = function(event, context, callback) {
     return;
   }
 
-  collectRequestData(req, post => {
-    const email = post.email,
-      conf = post.conf,
-      url = post.url,
-      loc = post.loc,
-      dates = post.dates,
-      desc = post.desc,
-      coc = post.coc;
+  collectRequestData(req, result => {
+    client.transmissions
+      .send({
+        content: {
+          from: 'chris@css-tricks.com',
+          subject: `${ result.conf }`,
+          html: `test`
+        },
+        recipients: [{ address: "mat@matmarquis.com" }]
+      })
+      .then(data => {
+        callback(null, {
+          statusCode: 200,
+          body: `Message sent!`
+        });
+      })
+      .catch(err => {
+        callback(null, {
+          statusCode: 500,
+          body: `Sorry, something went wrong. ${err}`
+        });
+    });
   });
 
-  client.transmissions
-    .send({
-      content: {
-        from: 'chris@css-tricks.com',
-        subject: `${ conf }`,
-        html: `${ desc }`
-      },
-      recipients: [{ address: "mat@matmarquis.com" }]
-    })
-    .then(data => {
-      callback(null, {
-        statusCode: 200,
-        body: `Message sent!`
-      });
-    })
-    .catch(err => {
-      callback(null, {
-        statusCode: 500,
-        body: `Sorry, something went wrong. ${err}`
-      });
-    });
+ 
 };
