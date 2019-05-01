@@ -14,6 +14,7 @@
   "author": "Chris Coyier",
   "license": "MIT",
   "dependencies": {
+    "querystring": "^0.2.0",
     "sparkpost": "^2.1.3"
   }
 }

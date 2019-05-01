@@ -8,7 +8,7 @@ html {
   --rust: #993300;
   --orange: #ff8a00;
   --dark: #100e17;
-  --pink:  #da1b60;
+  --pink: #da1b60;
   --ff-title: 'Rubik', 'Lato', 'Lucida Grande', 'Lucida Sans Unicode', Tahoma,
     Sans-Serif;
   --ff-body: -system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
@@ -52,18 +52,22 @@ h1 {
   color: var(--orange);
   line-height: 1;
   font-size: 41px;
-  letter-spacing: -.035em;
+  letter-spacing: -0.035em;
   text-transform: uppercase;
 }
-@media( min-width: 45em ) {
+@media (min-width: 45em) {
   h1 {
     font-size: 5.75vw;
   }
 }
-@media( min-width: 65em ) {
+@media (min-width: 65em) {
   h1 {
     font-size: 60px;
   }
+}
+h1 a {
+  font-family: var(--ff-title);
+  color: var(--orange);
 }
 
 .logo {
@@ -176,7 +180,7 @@ button.active {
     padding: 2.5rem 1rem 1rem 1rem;
   }
   .site-header:after {
-    content: "";
+    content: '';
     display: table;
     clear: both;
   }
@@ -194,4 +198,53 @@ button.active {
     padding: 0 1rem;
     margin-top: 2rem;
   }
+}
+
+.conf-standalone {
+  padding: 0 1rem;
+}
+.conf-standalone .conf {
+  margin: 0 auto;
+  max-width: 70em;
+}
+.conf-standalone .conf-title {
+  font-size: 2.4em;
+}
+.conf-standalone .split {
+  padding: .5rem 0 0 0;
+}
+@media( min-width: 65em ) {
+  .conf-standalone .split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 4rem;
+  }
+}
+.conf-teasers img,
+.conf-teasers object {
+  max-width: 600px;
+  border-radius: .175em;
+}
+body.grid .conf .split div.conf-about {
+  order: 1;
+}
+
+.conf-standalone .conf-teasers {
+  margin: 1rem;
+}
+.conf-standalone figcaption {
+  font-size: .9rem;
+  display: block;
+  margin: .75rem 0 .25rem 0;
+}
+.conf-standalone figcaption a {
+  color: var(--rust);
+}
+body.grid .conf-standalone .conf-link {
+  font-size: 1.1rem;
+}
+body.grid .conf-standalone .conf-coc {
+  position: static;
+  display: block;
+  margin-top: .65em;
 }

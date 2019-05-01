@@ -8,11 +8,10 @@ body.grid .conference-list {
 body.grid .conf {
   background: white;
   color: #100e17;
-  border-radius: 4px;
+  border-radius: 10px;
   box-shadow: 0 25px 50px black;
-  overflow: hidden;
   position: relative;
-  padding: 0 0 50px 0;
+  padding-bottom: 50px;
 }
 
 body.grid .conf-title a {
@@ -21,6 +20,10 @@ body.grid .conf-title a {
   color: white;
   line-height: 1.2;
   text-shadow: 1px 1px 2px #00000073;
+}
+
+body.grid .conf-coc-in-title {
+  display: none !important;
 }
 
 body.grid .icon {
@@ -37,9 +40,11 @@ body.grid .icon-calendar {
   font-size: 12px;
   text-align: center;
   border: 1px solid #333;
+  background: white;
+  color: black;
   border-radius: 2px;
   padding-top: 6px;
-  margin: 3px 10px 3px 2px;
+  margin: 3px 10px 3px 0;
 }
 body.grid .icon-calendar::before {
   content: '';
@@ -82,25 +87,28 @@ body.grid .end-date {
   margin-left: 0.25rem;
 }
 
-body.grid .conf-coc {
-  font-size: 14px;
-  color: var(--rust);
-  position: absolute;
-  bottom: 10px;
-  right: 1rem;
+body.grid .link-and-coc {
+  margin-top: 2rem;
 }
 body.grid .conf-coc:hover,
-body.grid .conf-coc:focus {
+body.grid .conf-coc:focus,
+body.grid .conf-link:hover,
+body.grid .conf-link:focus {
   color: var(--dark);
 }
 
-body.grid .conf-link {
-  font-size: 17px;
-  color: #f77115;
-  margin-top: 22px;
-  letter-spacing: 0.02em;
+body.grid .conf-link,
+body.grid .conf-coc {
+  font-size: 0.8rem;
+  color: var(--rust);
   font-weight: 700;
-  display: inline-block;
+  white-space: nowrap;
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+body.grid .conf-coc {
+  font-size: 0.66rem;
 }
 
 body.grid .icon-arrow-right {
@@ -123,44 +131,49 @@ body.grid .conf-location {
 body.grid .conf-about {
   padding: 1rem 2.5rem 1rem 1rem;
 }
-body.grid .conf-about p + p {
-  margin: 0.75em 0 0 0;
+body.grid .conf-about p {
+  font-size: 125%;
+  margin-bottom: 1rem;
 }
 
 body.grid .conf-byline {
   display: none;
 }
 
-body.grid .csstricks-link {
+body.grid .details-link {
   position: absolute;
-  bottom: -1px;
-  left: -1px;
-  width: 50px;
-  height: 50px;
+  bottom: 0;
+  right: 0;
+  width: 45px;
+  height: 45px;
   padding-left: 5px;
   background-color: var(--pink);
   background-image: linear-gradient(to right, #ff8a00, rgba(255, 255, 255, 0));
   color: white;
   display: flex;
   align-items: flex-end;
-  -webkit-clip-path: polygon(0 0, 0% 100%, 100% 100%);
-  clip-path: polygon(0 0, 0% 100%, 100% 100%);
   transition: background-color 0.2s linear;
+  border-top-left-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
-body.grid .csstricks-link:hover,
-body.grid .csstricks-link:focus {
+body.grid .details-link:hover,
+body.grid .details-link:focus {
   background-color: var(--orange);
 }
 
-body.grid .csstricks-link svg {
+body.grid .details-link svg {
+  display: block;
   fill: #fff;
-  transition: transform 0.65s ease-in-out;
+  transition: transform 0.25s;
+  position: absolute;
+  top: 10px;
+  left: 10px;
 }
-@media (prefers-reduced-motion: no-preference) {
-  body.grid .csstricks-link:hover svg {
-    transform: rotate(360deg);
-  }
+/* @media (prefers-reduced-motion: no-preference) { */
+body.grid .details-link:hover svg {
+  transform: translate(5px, 5px) rotate(160deg);
 }
+/* } */
 
 body.grid .conf-head {
   display: flex;
@@ -194,4 +207,72 @@ abbr[title] {
   body.grid .conf {
     margin-bottom: 4rem;
   }
+}
+
+body.grid .remindme {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+body.grid .remindme button {
+  border: none;
+  background: none;
+  padding: 0.15em 0.75em;
+  font-size: 0.66rem;
+  cursor: pointer;
+  color: var(--rust);
+  transition: opacity 0.1s linear;
+  border: 1px solid var(--rust);
+  border-radius: 10px;
+}
+body.grid .flyout {
+  z-index: 1;
+}
+body.grid .flyout label {
+  font-size: 0.8rem;
+}
+body.grid .flyout input[type='email'] {
+  width: 100%;
+  font-size: 1rem;
+  margin-top: 0.15em;
+  border: 2px solid var(--orange);
+  padding: 0.5em 0.6em 0.55em 0.5em;
+  border-radius: 0.2em;
+}
+body.grid .flyout .send-email {
+  position: absolute;
+  border: none;
+  z-index: 2;
+  bottom: 2em;
+  right: 1.6em;
+  height: 2.85em;
+  width: 3.5em;
+  background: none;
+}
+
+.card {
+  position: relative;
+  transform-style: preserve-3d;
+  transform-origin: center right;
+  transition: transform 0.5s;
+}
+.card[aria-hidden='false'] {
+  transform: translateX(-100%) rotateY(-180deg);
+  z-index: 5;
+}
+
+.card__face {
+  position: absolute;
+  width: 100%;
+  backface-visibility: hidden;
+  bottom: 0;
+  padding: 1rem;
+}
+
+.card__face--back {
+  transform: rotateY(180deg);
+  background: white;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
 }
