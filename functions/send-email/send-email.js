@@ -13,6 +13,8 @@ exports.handler = function(event, context, callback) {
     desc = post['desc'],
     coc = post['coc'];
 
+  const fakeconf = "POST Conference";
+
   if (!post || event.httpMethod !== 'POST') {
     return;
   }
@@ -21,10 +23,10 @@ exports.handler = function(event, context, callback) {
     .send({
       content: {
         from: 'chris@css-tricks.com',
-        subject: `${post}`,
-        html: `none`
+        subject: `${fakeconf}`,
+        html: `test`
       },
-      recipients: [{ address: 'mat@matmarquis.com' }]
+      recipients: [{ address: "mat@matmarquis.com" }]
     })
     .then(data => {
       callback(null, {
