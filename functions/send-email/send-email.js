@@ -34,7 +34,7 @@ exports.handler = function(event, context, callback) {
           subject: `${ result.conf }`,
           html: `test`
         },
-        recipients: [{ address: "mat@matmarquis.com" }]
+        recipients: [{ address: `${ result.email }` }]
       })
       .then(data => {
         callback(null, {
