@@ -8,4 +8,4 @@ location: Alicante, Spain
 byline: A full day to learn about your favorite framework from local, national and international speakers.
 ---
 
-The best VueJS conference in Spain will gather an amazing group of speakers including Eduardo San Martín (Vue Core Team member), Sebastien Chopin (Co-creator of Nuxt), Alexandre Chopin (Co-creator of Nuxt), Alex Jover (Vue Community Partner). This year, the venue is cinema by the sea with the Alñicante harbor view.
+The best VueJS conference in Spain will gather an amazing group of speakers including Eduardo San Martín (Vue Core Team member), Sebastien Chopin (Co-creator of Nuxt), Alexandre Chopin (Co-creator of Nuxt), Alex Jover (Vue Community Partner). This year, the venue is a cinema by the sea with the view of the port of Alicante.
