@@ -4,7 +4,7 @@ url: https://vueday.org/
 cocUrl: https://vueday.org/code-of-conduct.html
 date: 2019-05-31
 endDate: 2019-05-31
-location: Alicante, spain
+location: Alicante, Spain
 byline: A full day to learn about your favorite framework from local, national and international speakers.
 ---
 
