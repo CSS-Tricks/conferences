@@ -1,5 +1,5 @@
 ---
-title: "ReactiveCOnf"
+title: "ReactiveConf"
 url: https://reactiveconf.com/
 cocUrl: https://reactiveconf.com/code-of-conduct/
 date: 2019-10-30
