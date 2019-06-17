@@ -2,6 +2,7 @@ const { DateTime } = require('luxon');
 const CleanCSS = require('clean-css');
 const urlParse = require('url-parse')
 const pluginRss = require('@11ty/eleventy-plugin-rss');
+const slugify = require('slugify');
 
 module.exports = function(config) {
   config.addCollection('conferences', function(collection) {
@@ -97,6 +98,20 @@ module.exports = function(config) {
     return new CleanCSS({}).minify(code).styles;
   });
 
+  // override the slug filter to be more restrictive
+  // eg. for confereces with parenthesis or Script'19
+  slugify.extend(
+    {"'": '-'},
+    {'(': ''},
+    {')': ''},
+  )
+  config.addFilter('slug', function(value) {
+    return slugify(value, {
+      replacement: "-",
+      lower: true
+    });
+  });
+
   config.addPlugin(pluginRss);
 
   config.addPassthroughCopy('site/script');
@@ -104,6 +119,7 @@ module.exports = function(config) {
   config.addPassthroughCopy('site/admin');
   config.addPassthroughCopy('apple-touch-icon.png');
   config.addPassthroughCopy('favicon.ico');
+  
 
   return {
     dir: { input: 'site', output: 'dist', includes: '_includes' },
