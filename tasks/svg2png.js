@@ -8,7 +8,7 @@ module.exports = function(done) {
     .pipe(
       rename(function(path) {
         // trying to remove single quote, like in conference name Script'19
-        path.basename = path.basename.replace(/\'/g, '');
+        path.basename = path.basename.replace(/&#39;/g, '');
       })
     )
     .pipe(svg2png())
