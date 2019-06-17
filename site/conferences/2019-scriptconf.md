@@ -1,5 +1,5 @@
 ---
-title: Script\'19
+title: "Script'19"
 url: https://scriptconf.org
 cocUrl: https://scriptconf.org/code-of-conduct
 date: 2019-10-25
