@@ -1,5 +1,5 @@
 const gulp = require('gulp');
-var svg2png = require('gulp-svg2png');
+const svg2png = require('gulp-svg2png');
 
 module.exports = function(done) {
   gulp
