@@ -4,7 +4,7 @@ url: https://fullstackeurope.com
 cocUrl: https://fullstackeurope.com/code-of-conduct/
 date: 2019-10-23
 endDate: 2019-10-25
-location: Antwer, Belgium
+location: Antwerp, Belgium
 byline: A conference for every kind of developer.
 ---
 
