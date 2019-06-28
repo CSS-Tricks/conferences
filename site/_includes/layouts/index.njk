@@ -58,6 +58,9 @@ layout: layouts/base.njk
 <div id="maincontent" role="main" aria-label="Conference listing">
 
   <ul aria-label="Conference listed by months">
+
+    {# I think this logic isn't going to work long term. It's July 2019 right now and we have a conference on the site for May 2020, but it lists FIRST because May is before July.  #}
+    
     {%- for month in helper.months -%} {% if (pagination.items |
     doesConfExist(month)) > 0 %}
 
