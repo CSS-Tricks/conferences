@@ -69,7 +69,7 @@
       <input type="hidden" name="dates" value="{{ conf.data.date | readableDate }}{% if conf.data.endDate %} - {{ conf.data.endDate | readableDate }}{% endif %}">
       <input type="hidden" name="loc" value="{{ conf.data.location }}">
       <input type="hidden" name="coc" value="{{ conf.data.cocUrl }}">
-      <input type="hidden" name="desc" value="{{ conf.templateContent | safe }}">
+      <input type="hidden" name="desc" value="{{ conf.templateContent }}">
       <button class="send-email" aria-label="send email">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-arrow-right">
           <use xlink:href="#icon-arrow-right"></use>
