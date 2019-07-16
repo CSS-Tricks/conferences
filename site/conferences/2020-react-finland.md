@@ -1,5 +1,3 @@
-NOTE from Chris: I'll put this back, we just have a bug with the ordering of conferences and having a 2020 conference is breaking stuff right now.
-
 ---
 title: React Finland
 url: https://react-finland.fi
