@@ -25,6 +25,20 @@ module.exports = function(config) {
     return collection.getFilteredByGlob('site/conferences/*.md');
   });
 
+  config.addFilter('getConferenceYears', (conferences) => {
+      let result = conferences.reduce((years,conf) => {
+        let current_year = DateTime.fromJSDate(conf.data.date,{
+          zone: 'utc'
+        }).year;
+        if(years.indexOf(current_year) === -1){
+          years.push(current_year);
+        }
+        return years;
+      },[])
+      result.sort();
+      return result;
+  });
+
   config.addFilter('domainRoot', rootUrl => {
     let domainObj = urlParse(rootUrl);
     return domainObj.hostname;
@@ -36,12 +50,15 @@ module.exports = function(config) {
     }).toFormat('MMMM');
   });
 
-  config.addFilter('doesConfExist', (conferences, monthToTest) => {
+  config.addFilter('doesConfExist', (conferences, monthToTest, yearToTest) => {
     let length = conferences.filter(conf => {
       let month = DateTime.fromJSDate(conf.data.date, {
         zone: 'utc'
       }).toFormat('MMMM');
-      return month === monthToTest;
+      let year = DateTime.fromJSDate(conf.data.date, {
+        zone: 'utc'
+      }).year;
+      return month === monthToTest && year === yearToTest;
     }).length;
     return length;
   });
@@ -119,7 +136,7 @@ module.exports = function(config) {
   config.addPassthroughCopy('site/admin');
   config.addPassthroughCopy('apple-touch-icon.png');
   config.addPassthroughCopy('favicon.ico');
-  
+
 
   return {
     dir: { input: 'site', output: 'dist', includes: '_includes' },

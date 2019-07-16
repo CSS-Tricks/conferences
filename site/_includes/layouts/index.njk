@@ -60,13 +60,13 @@ layout: layouts/base.njk
   <ul aria-label="Conference listed by months">
 
     {# I think this logic isn't going to work long term. It's July 2019 right now and we have a conference on the site for May 2020, but it lists FIRST because May is before July.  #}
-    
+    {%- for year in (pagination.items | getConferenceYears) -%}
     {%- for month in helper.months -%} {% if (pagination.items |
-    doesConfExist(month)) > 0 %}
+    doesConfExist(month, year)) > 0 %}
 
     <div role="region" aria-labelledby="{{ month | slug }}-hed">
       <h2 class="month-heading" id="{{ month | slug }}-hed">
-        {{ month }}
+        {{ month }} {{ year }}
       </h2>
       <ul class="conference-list">
         {%- for conf in pagination.items -%} {% if conf.data.date |
@@ -77,6 +77,6 @@ layout: layouts/base.njk
         {% endif %} {%- endfor -%}
       </ul>
     </div>
-    {% endif %} {%- endfor -%}
+    {% endif %} {%- endfor -%} {%- endfor -%}
   </ul>
 </div>
