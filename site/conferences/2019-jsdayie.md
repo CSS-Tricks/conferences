@@ -8,6 +8,4 @@ location: Dublin, Ireland
 byline: A tech conference dedicated to the JavaScript community in Ireland
 ---
 
-JSDayIE 2019 is a 1-day single track tech conference dedicated to the JavaScript community in Ireland featuring over 450 attendees and some of the best JavaScript professionals and organizations.
-
-JSDayIE is the first JavaScript conference in Ireland and will take place in 2019, on September 20th at The Round Room at the Mansion House in Dawson Street, Dublin.
+JSDayIE 2019 is a 1-day single track tech conference dedicated to the JavaScript community in Ireland featuring over 450 attendees and some of the best JavaScript professionals and organizations. JSDayIE is the first JavaScript conference in Ireland will take place at The Round Room at the Mansion House in Dawson Street, Dublin.
