@@ -8,4 +8,4 @@ location: Groningen, The Netherlands
 byline: Design & front-end development in Groningen
 ---
 
-We love to bring people together and share knowledge. After a succesful first conference about design & front-end development in Groningen, we are pleased to accounce our second edition.
+We love to bring people together and share knowledge. After a succesful first conference about design & front-end development in Groningen, we are pleased to announce our second edition.
