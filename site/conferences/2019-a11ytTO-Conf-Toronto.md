@@ -3,7 +3,7 @@ title: '#a11yTO Conf'
 url: 'https://conf.a11yto.com/'
 cocUrl: 'https://conf.a11yto.com/code-of-conduct'
 date: 2019-10-24
-endDate:
+endDate: 2019-10-25
 location: 'Toronto, Ontario'
 byline: A curated playlist of talks, focused on digital accessibility
 ---
