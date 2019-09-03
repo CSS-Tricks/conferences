@@ -1,5 +1,5 @@
 ---
-title: #a11yTO Conf
+title: '#a11yTO Conf'
 url: 'https://conf.a11yto.com/'
 cocUrl: 'https://conf.a11yto.com/code-of-conduct'
 date: 2019-10-24
