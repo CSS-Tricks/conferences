@@ -8,4 +8,4 @@ location: Munich, Germany
 byline: The focus of JS Kongress 2020 is Scaling JS – Pushing the Limits: Massive Platforms, Data-Driven Architectures, and Modern APIs. The #DeepTrack is about all things JavaScript where YOU create the program!
 ---
 
-JS Kongress 2020 is a two-day developer-driven and single-track International JavaScript / Web Conference. This edition is about Scaling JS – Pushing the Limits: Massive Platforms, Data-Driven Architectures, and Modern APIs. The #DeepTrack is about all things JavaScript. YOU create the program! Join us, and let's watch out for solutions and best practices.
+JS Kongress 2020 is a two-day developer-driven and single-track International JavaScript / Web Conference. This edition is about Scaling JS – Pushing the Limits. It's about Massive Platforms, Data-Driven Architectures, and Modern APIs. The #DeepTrack is about all things JavaScript. YOU create the program! Join us, and let's watch out for solutions and best practices.
