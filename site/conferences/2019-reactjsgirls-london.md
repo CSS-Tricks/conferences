@@ -4,7 +4,7 @@ url: https://reactjsgirls.com/
 cocUrl: https://reactjsgirls.com/code-of-conduct/
 date: 2019-05-02
 endDate: 2019-05-03
-location: London, UK
+location: London, United Kingdom
 byline: A conference for every React developer where women take the stage.
 ---
 

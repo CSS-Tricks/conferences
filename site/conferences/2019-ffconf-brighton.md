@@ -4,7 +4,7 @@ url: 'https://2019.ffconf.org/'
 cocUrl: 'https://2019.ffconf.org/code-of-conduct/'
 date: 2019-11-08T00:00:00.000Z
 endDate: 2019-11-09T00:00:00.000Z
-location: 'Brighton, UK'
+location: 'Brighton, United Kingdom'
 byline: Amongst the best events for the web community.
 thumbnail: /images/uploads/ff-conf.png
 ---

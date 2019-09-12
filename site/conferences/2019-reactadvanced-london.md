@@ -4,7 +4,7 @@ url: https://reactadvanced.com/
 cocUrl: https://confcodeofconduct.com/
 date: 2019-10-25
 endDate: 2019-10-25
-location: London, UK
+location: London, United Kingdom
 byline: Conference brought to you by creators of React Amsterdam and FocusReactive experts.
 ---
 
