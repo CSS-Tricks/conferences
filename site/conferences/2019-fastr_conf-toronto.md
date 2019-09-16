@@ -1,7 +1,7 @@
 ---
 title: fastr_conf
 url: https://www.eventbrite.com/e/fastr-conf-2019-tickets-71565816283
-cocUrl: https://www.eventbrite.com/e/fastr-conf-2019-tickets-71565816283
+cocUrl: https://agilitycms.com/community/fastr_conf---code-of-conduct
 date: 2019-10-17
 endDate: 2019-10-17
 location: Toronto, Canada
