@@ -2,8 +2,8 @@
 title: Smashing Conference
 url: https://smashingconf.com/austin-2020
 cocUrl: https://smashingconf.com/codeofconduct
-date: 2019-06-09
-endDate: 2019-06-10
+date: 2020-06-09
+endDate: 2020-06-10
 location: Austin, USA
 byline: A friendly, inclusive event which is focused on real-world problems and solutions.
 ---

@@ -2,8 +2,8 @@
 title: Smashing Conference
 url: https://smashingconf.com/ny-2020/
 cocUrl: https://smashingconf.com/codeofconduct
-date: 2019-10-15
-endDate: 2019-10-16
+date: 2020-10-15
+endDate: 2020-10-16
 location: New York City, New York
 byline: We pour our heart into creating friendly, inclusive events that are focused on real-world problems and solutions.
 ---
