@@ -2,7 +2,6 @@
 title: Smashing Conference
 url: https://smashingconf.com/sf-2020/
 cocUrl: https://smashingconf.com/codeofconduct
-permalink: https://css-tricks.com
 date: 2020-04-21
 endDate: 2020-04-22
 location: San Francisco, California
