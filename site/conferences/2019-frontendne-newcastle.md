@@ -3,7 +3,7 @@ title: Frontend NE
 url: https://2019.frontendne.co.uk/
 cocUrl: https://2019.frontendne.co.uk/code-of-conduct.html
 date: 2019-04-03
-location: Newcastle upon Tyne, UK
+location: Newcastle upon Tyne, United Kingdom
 byline: Biggest Frontend Conference in the Netherlands
 ---
 
