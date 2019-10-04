@@ -50,6 +50,16 @@ module.exports = function(config) {
     }).toFormat('MMMM');
   });
 
+  config.addFilter('checkDate', (dateObj, month, year) => {
+    let current_month = DateTime.fromJSDate(dateObj, {
+        zone: 'utc'
+      }).toFormat('MMMM');
+      let current_year = DateTime.fromJSDate(dateObj, {
+        zone: 'utc'
+      }).year;
+      return current_month === month && current_year === year;
+  });
+
   config.addFilter('doesConfExist', (conferences, monthToTest, yearToTest) => {
     let length = conferences.filter(conf => {
       let month = DateTime.fromJSDate(conf.data.date, {
