@@ -1,5 +1,5 @@
 backend:
-  name: git-gateway
+  name: github
   branch: master
   open_authoring: true
 
