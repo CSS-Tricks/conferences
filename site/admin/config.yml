@@ -2,6 +2,7 @@ backend:
   name: github
   branch: master
   open_authoring: true
+  repo: CSS-Tricks/conferences
 
 publish_mode: editorial_workflow
 
