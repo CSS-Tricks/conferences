@@ -68,8 +68,8 @@ layout: layouts/base.njk
         {{ month }} {{ year }}
       </h2>
       <ul class="conference-list">
-        {%- for conf in pagination.items -%} {% if conf.data.date |
-        getMonthName === month %}
+        {%- for conf in pagination.items -%} 
+        {% if conf.data.date | checkDate(month, year) %}
         <li class="conf">
           {% include "conference.njk" %}
         </li>
