@@ -1,5 +1,5 @@
 ---
-title: HalfStack London
+title: HalfStack Charlotte
 url: https://halfstackconf.com/charlotte/
 cocUrl: https://halfstackconf.com/charlotte/code-of-conduct/
 date: 2020-04-24
