@@ -1,5 +1,5 @@
 ---
-title: Beyond Tellerrand (Düsseldorf)
+title: beyond tellerrand (Düsseldorf)
 url: http://beyondtellerrand.com/
 cocUrl: https://beyondtellerrand.com/code-of-conduct
 date: 2019-05-13
