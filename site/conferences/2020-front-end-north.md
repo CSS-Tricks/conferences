@@ -3,7 +3,6 @@ title: Front End North
 url: https://frontendnorth.com/
 cocUrl: https://frontendnorth.com/code-of-conduct/
 date: 2020-02-07
-endDate: 2020-02-07
 location: Sheffield, UK
 byline: A welcoming one-track, one-day conference for developers & designers who work on the web.
 ---
