@@ -276,6 +276,6 @@ body.grid .flyout .send-email {
 .card__face--back {
   transform: rotateY(180deg);
   background: white;
-  box-shadow: 0 0 25px rgba(0, 0, 0, 0.15);
   border-radius: 10px;
+  border-top: 1px solid #ccc;
 }
