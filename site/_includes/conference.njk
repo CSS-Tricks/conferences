@@ -58,7 +58,6 @@
   </div>
   
   <div class="flyout card__face card__face--back">
-    <button aria-controls="reminder-{{ conf.fileSlug }}" aria-haspopup="true" aria-expanded="false">Close</button>
     <form action="/.netlify/functions/send-email" method="post">
       <label>
         Email address
@@ -76,6 +75,7 @@
         </svg>
       </button>
     </form>
+    <button aria-controls="reminder-{{ conf.fileSlug }}" aria-haspopup="true" aria-expanded="false">Close</button>
   </div>
 </div>
 

@@ -246,7 +246,7 @@ body.grid .flyout .send-email {
   position: absolute;
   border: none;
   z-index: 2;
-  bottom: 2em;
+  bottom: 4em;
   right: 1.6em;
   height: 2.85em;
   width: 3.5em;
@@ -255,26 +255,19 @@ body.grid .flyout .send-email {
 
 .card {
   position: relative;
-  transform-style: preserve-3d;
-  transform-origin: center right;
-  transition: transform 0.5s;
 }
-.card[aria-hidden='false'] {
-  transform: translateX(-100%) rotateY(-180deg);
-  z-index: 5;
+.card[aria-hidden='true'] .card__face--back {
+  display: none;
 }
 
 .card__face {
   position: absolute;
   width: 100%;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
   bottom: 0;
   padding: 1rem;
 }
 
 .card__face--back {
-  transform: rotateY(180deg);
   background: white;
   border-radius: 10px;
   border-top: 1px solid #ccc;
