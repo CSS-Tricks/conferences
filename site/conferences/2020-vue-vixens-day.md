@@ -3,7 +3,6 @@ title: Vue Vixens Day US
 url: https://vvdayus.vuevixens.org
 cocUrl: https://workshops.vuevixens.org/workshop/code_of_conduct.html
 date: 2020-03-05
-endDate: 2020-03-05
 location: Austin, USA
 byline: A free one-day conference presented by foxy people who identify as women
 ---
