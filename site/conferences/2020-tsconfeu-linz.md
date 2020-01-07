@@ -3,7 +3,6 @@ title: TSConf:EU
 url: https://tsconf.eu/
 cocUrl: https://tsconf.eu/code-of-conduct
 date: 2019-03-31
-endDate: 2019-03-31
 location: Linz, Astria
 byline: Europe's TypeScript Community Conference.
 ---
