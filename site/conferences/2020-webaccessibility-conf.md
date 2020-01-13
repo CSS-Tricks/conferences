@@ -2,7 +2,7 @@
 title: WebAccessibilityConf
 url: https://webaccessibilityconf.com/
 cocUrl: https://uiarchconf.com/codeofconduct/
-date: 2020–04-01
+date: 2020–04-1
 location: New Orleans, USA
 byline: A community Web Accessibility Conference
 ---
