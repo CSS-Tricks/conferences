@@ -3,7 +3,7 @@ title: JS Kongress 2020
 url: https://js-kongress.com/
 cocUrl: https://js-kongress.com/code-of-conduct/
 date: 2020-04-15
-endDate: 2019-04-16
+endDate: 2020-04-16
 location: Munich, Germany
 byline: The focus of JS Kongress 2020 is Scaling JS – Pushing the Limits. Massive Platforms, Data-Driven Architectures, and Modern APIs. The #DeepTrack is about all things JavaScript where YOU create the program!
 ---
