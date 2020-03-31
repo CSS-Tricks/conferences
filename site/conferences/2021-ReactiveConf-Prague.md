@@ -8,5 +8,4 @@ location: Prague, Czech Republic
 byline: ReactiveConf covers all cutting-edge mobile and web tech stacks.
 ---
 
-ReactiveConf is a 2-day European-wide web & mobile development festival
-in the heart of Europe made for functional developers, where World-class JS experts share unique insights.
+ReactiveConf is a 2-day web and mobile development festival in the heart of Europe for for functional developers. It is where world-class JavaScript experts share unique insights.
