@@ -8,5 +8,4 @@ location: Columbus, Ohio
 byline: JavaScript and Friends Conference (JS&Friends) is a not-for-profit conference, organized by a team of volunteers.
 ---
 
-JavaScript and Friends Conference (JS&Friends) is a not-for-profit conference, organized by a team of volunteers.JS&Friends is for everyone. If you are interested in JavaScript or topics related to JavasScript, this conference is for you! 
-Whether you are a seasoned professional, a bootcamp or college student, a self-taught dev, or anywhere in between, this conference is for you!
+JavaScript and Friends Conference (JS&Friends) is a not-for-profit conference, organized by a team of volunteers. JS&Friends is for everyone. If you are interested in JavaScript or topics related to JavasScript, this conference is for you! Whether you are a seasoned professional, a bootcamp or college student, a self-taught dev, or anywhere in between, this conference is for you!
