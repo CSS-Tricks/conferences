@@ -1,4 +1,16 @@
 (function() {
+  //FIXED HEADER
+  const navEl = document.getElementsByClassName('main-nav')[0];
+  const navTop = navEl.offsetTop;
+  window.addEventListener('scroll', function() {
+    var windowS = window.pageYOffset;
+    if(window.pageYOffset > (navTop + 80)){
+      navEl.classList.add('floating');
+    }else{
+      navEl.classList.remove('floating');
+    }
+  });
+  
   // VIEW SWITCHER
   const viewButtons = document.querySelectorAll('.style-switcher button');
 

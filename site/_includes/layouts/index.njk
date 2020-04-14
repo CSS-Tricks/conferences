@@ -1,81 +1,90 @@
 ---
 layout: layouts/base.njk
 ---
-
-<header class="site-header">
-  <div class="logo">
-    <a href="https://css-tricks.com">
-      <div class="screen-reader-text">CSS-Tricks</div>
-      <svg class="icon-logo-star" width="35px" height="35px">
-        <use xlink:href="#icon-logo-star"></use>
-      </svg>
-      <!-- 288 35 -->
-      <svg class="icon-logo-text" width="214px" height="35px">
-        <use xlink:href="#logo"></use>
-      </svg>
-    </a>
-    <span class="presents">presents</span>
+ <header class="fixed">
+  <div class="container">
+    <img src="/images/pubg-logo.svg" class="logo">
+    <a href="https://pubg.com/" title="PUBG Oficial" target="_blank">PUBG Oficial <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M13 1V6M13 1H8M13 1L6 8" stroke="#878787" stroke-width="2"/>
+<path d="M6.86667 2H1V13H12V7.13333" stroke="#878787" stroke-width="2"/>
+</svg>
+</a>
   </div>
+ </header>
 
-  <h1><a href="/">{{ title }}</a></h1>
-  {% if lede %}
-  <p class="subtitle">{{ lede }}</p>
-  {% endif %}
+<section class="site-hero">
+  <div class="container">
+    <div class="content">
+      {% if hashtag %}
+      <span class="hashtag">{{ hashtag }}</span>
+      {% endif %}
+      <h1><a href="/">{{ title }}</a></h1>
+      {% if description %}
+      <p class="subtitle">{{ description }}</p>
+      {% endif %}
+      <img src="images/characters-mobile.png" class="characters mobile">
+      <img src="images/characters-desktop.png" class="characters desktop">
+    </div>
+  </div>
+</section>
 
-  {{ content | safe }}
-
-  <a
-    class="contribute-link"
-    href="https://github.com/CSS-Tricks/conferences#contributing"
-  >
-    <strong>Add a Conference</strong>
-    on GitHub
-  </a>
-
-  <nav class="main-nav">
+<nav class="main-nav">
+  <div class="container">
     <div class="time-travel">
       <a href="/"  {% if page.url == "/" %} class="active"{% endif %}>Upcoming</a>
       <a href="/archive/"{% if page.url == "/archive/" %} class="active"{% endif %}>Past</a>
     </div>
     <div class="style-switcher">
       <button class="active" data-body-class="grid">
-        <span aria-hidden="true" class="view-icon">⠿</span>
+        <span aria-hidden="true" class="view-icon">
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="1" y="1" width="5" height="5" stroke="#F9F9F9" stroke-width="2"/>
+            <rect x="1" y="12" width="5" height="5" stroke="#F9F9F9" stroke-width="2"/>
+            <rect x="12" y="1" width="5" height="5" stroke="#F9F9F9" stroke-width="2"/>
+            <rect x="12" y="12" width="5" height="5" stroke="#F9F9F9" stroke-width="2"/>
+          </svg>
+        </span>
         <span class="screen-reader-text">
           View conferences as grid
         </span>
       </button>
       <button data-body-class="list">
-        <span aria-hidden="true" class="view-icon">☰</span>
+        <span aria-hidden="true" class="view-icon">
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="1" y="1" width="16" height="5" stroke="#fffff" stroke-width="2"/>
+            <rect x="1" y="12" width="16" height="5" stroke="#fffff" stroke-width="2"/>
+          </svg>
+        </span>
         <span class="screen-reader-text">
           View conferences as list
         </span>
       </button>
     </div>
-  </nav>
+  </div>
+</nav>
 
-</header>
+<main id="maincontent" role="main" aria-label="Events listing">
+  <div class="container">
+    <ul aria-label="Events listed by months">
 
-<div id="maincontent" role="main" aria-label="Conference listing">
+      {%- for year in (pagination.items | getConferenceYears) -%}
+      {%- for month in helper.months -%} {% if (pagination.items |
+      doesConfExist(month, year)) > 0 %}
 
-  <ul aria-label="Conference listed by months">
-
-    {%- for year in (pagination.items | getConferenceYears) -%}
-    {%- for month in helper.months -%} {% if (pagination.items |
-    doesConfExist(month, year)) > 0 %}
-
-    <div role="region" aria-labelledby="{{ month | slug }}-hed">
-      <h2 class="month-heading" id="{{ month | slug }}-hed">
-        {{ month }} {{ year }}
-      </h2>
-      <ul class="conference-list">
-        {%- for conf in pagination.items -%} 
-        {% if conf.data.date | checkDate(month, year) %}
-        <li class="conf">
-          {% include "conference.njk" %}
-        </li>
-        {% endif %} {%- endfor -%}
-      </ul>
-    </div>
-    {% endif %} {%- endfor -%} {%- endfor -%}
-  </ul>
-</div>
+      <div role="region" aria-labelledby="{{ month | slug }}-hed">
+        <h2 class="month-heading" id="{{ month | slug }}-hed">
+          <span>{{ month }} {{ year }}</span>
+        </h2>
+        <ul class="conference-list">
+          {%- for conf in pagination.items -%} 
+          {% if conf.data.date | checkDate(month, year) %}
+          <li class="conf">
+            {% include "conference.njk" %}
+          </li>
+          {% endif %} {%- endfor -%}
+        </ul>
+      </div>
+      {% endif %} {%- endfor -%} {%- endfor -%}
+    </ul>
+  </div>
+</main>
