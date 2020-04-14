@@ -24,6 +24,10 @@ html {
   color: white;
 }
 
+body{
+  overflow-x: hidden;
+}
+
 .screen-reader-text {
   position: absolute;
   top: -9999px;

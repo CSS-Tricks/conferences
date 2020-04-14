@@ -1,9 +1,9 @@
 ---
-title: JSCAMP
+title: JSCAMP bigger really big title
 url: https://jscamp.tech/
 cocUrl: https://jscamp.tech/code-of-conduct/
-date: 2020-07-16
-endDate: 2020-07-17
+date: 2020-04-16
+endDate: 2020-04-17
 location: Barcelona
 byline: Listen. Learn. Get Inspired.
 ---

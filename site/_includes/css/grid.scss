@@ -183,27 +183,68 @@ body.grid {
 
   .conf-head {
     display: flex;
-    flex-direction: column;
-    background: linear-gradient(to right, #ff8a00, #da1b60);
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 160px;
+    padding: 30px 20px 10px 20px;
+    position: relative;
+    background-image: url(../../images/default-cover.jpg);
+    background-position: center center;
+    background-size: cover;
+    &:after{
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 0;
+      border-top: 7px solid transparent;
+      border-left: 7px solid transparent;
+      border-right: 7px solid #fff;
+      border-bottom: 7px solid #fff;
+      right: 0;
+      bottom: 0;
+    }
+    h3{
+      height: 72px;
+      font-size: 28px;
+      font-weight: bold;
+      line-height: 120%;
+      letter-spacing: .1em;
+      color: #fff;
+      text-transform: uppercase;
+      margin-right: 15px;
+      flex: 0 0 calc(100% - 70px);
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .conf-dates{
+      flex: 0 0 50px;
+      background: none;
+      border: none;
+      padding: 0;
+    }
   }
 
-  .conf div {
-    &:nth-child(1) {
-      order: 2;
-    }
-
-    &:nth-child(2) {
-      order: 1;
-    }
-
-    &:nth-child(3) {
-      order: 3;
-    }
-
-    &:nth-child(4) {
-      order: 4;
-    }
-  }
+//  .conf div {
+//    &:nth-child(1) {
+//      order: 2;
+//    }
+//
+//    &:nth-child(2) {
+//      order: 1;
+//    }
+//
+//    &:nth-child(3) {
+//      order: 3;
+//    }
+//
+//    &:nth-child(4) {
+//      order: 4;
+//    }
+//  }
 }
 
 @media (prefers-reduced-motion: no-preference) {
