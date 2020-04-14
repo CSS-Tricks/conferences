@@ -8,7 +8,7 @@
 
 html {
   --yellow:#F2A900;
-  --ocher:#D39300;
+  --ocher:#DD9700;
   --jetblack:#1C1C1C;
   --black: #272727;
   --darkergray:#313131;
@@ -81,7 +81,7 @@ header {
     background: var(--darkergray);
     letter-spacing: .1em;
     font-weight: 500;
-    transition: background ease-out .53s;
+    transition: background ease .53s;
 
     &:hover {
       background: var(--black);
@@ -157,13 +157,11 @@ header {
   transform: translateY(-80px);
   padding: 15px 0;
   background: transparent;
-  border-bottom: 2px solid transparent;
-  transition: ease-out .3s;
-  transition-property: background, border-color, top, transform;
+  transition: ease .3s;
+  transition-property: transform;
   &.floating{
     position: fixed;
     background: var(--jetblack);
-    border-bottom-color: var(--darkgray);
     top: 0;
     margin-top: 0;
     transform: translateY(0);
@@ -182,7 +180,7 @@ header {
       margin-right: 45px;
       padding: 0 0 5px 0;
       position: relative;
-      transition: ease-out .3s;
+      transition: ease .3s;
       transition-property: color, -webkit-text-fill-color, -webkit-text-stroke-width; 
       &:after{
         content: '';
@@ -192,7 +190,7 @@ header {
         background: var(--yellow);
         left: 0;
         bottom: 0;
-        transition: width ease-out .3s;
+        transition: width ease .3s;
       }
       &.active, &:hover {
         color: var(--yellow);
@@ -216,11 +214,11 @@ header {
     position: relative;
     border: none;
     margin-left: 10px;
-    transition: background ease-out .3s;
+    transition: background ease .3s;
     cursor: pointer;
     svg *{
       stroke: var(--mediumgray);
-      transition: stroke ease-out .3s;
+      transition: stroke ease .3s;
     }
     &:hover{
       background: var(--black);

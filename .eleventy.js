@@ -49,6 +49,13 @@ module.exports = function(config) {
       zone: 'utc'
     }).toFormat('MMMM');
   });
+  
+  config.addFilter('getMonthInitials', dateObj => {
+    var monthName = DateTime.fromJSDate(dateObj, {
+      zone: 'utc'
+    }).toFormat('MMMM');
+    return monthName.substring(0,3);
+  });
 
   config.addFilter('checkDate', (dateObj, month, year) => {
     let current_month = DateTime.fromJSDate(dateObj, {
