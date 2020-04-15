@@ -26,7 +26,11 @@ body.list {
     color: #000;
     border-left: 2px solid var(--yellow);
     position: relative;
-    @media (min-width: 768px){
+    flex: 0 0 100%;
+    @media (min-width: 768px) and (max-width: 992px){
+      flex: 0 0 50%;
+    }
+    @media (min-width: 992px){
       flex: 0 0 60%;
       &:after{
         content: '';
@@ -52,11 +56,23 @@ body.list {
       position: relative;
       order: 2;
       width: 150px;
+      display: none;
+      @media (min-width: 992px){
+        display: block;
+      }
     }
     .conf-info{
       order: 3;
-      padding: 20px 15px 20px 30px;
-      flex: 0 0 calc(100% - 250px);
+      padding: 20px 15px 20px 20px;
+      flex: 0 0 calc(100% - 150px);
+      @media (min-width: 768px) and (max-width: 992px){
+        flex: 0 0 calc(100% - 100px);
+        padding: 20px 15px 20px 30px;
+      }
+      @media (min-width: 992px){
+        flex: 0 0 calc(100% - 250px);
+        padding: 20px 15px 20px 30px;
+      }
       h3{
         width: 100%;
         font-size: 24px;
@@ -69,6 +85,7 @@ body.list {
         text-overflow: ellipsis;
       }
       .conf-location{
+        width: 100%;
         height: 18px;
         font-size: 16px;
         color: var(--darkgray);
@@ -86,13 +103,16 @@ body.list {
       }
     }
     .conf-dates{
-      flex: 0 0 100px;
+      flex: 0 0 75px;
       order: 1;
       background: var(--darkgray);
       color: #fff;
       font-family: var(--ff-title);
       text-align: center;
       padding-top: 15px;
+      @media (min-width: 768px){
+        flex: 0 0 100px;
+      }
       .day{
         font-size: 42px;
         font-weight: bold;
@@ -111,6 +131,13 @@ body.list {
   }
   
   .conf-about{
+    display: none;
+    @media (min-width: 768px) and (max-width: 992px){
+      flex: 0 0 50%;
+    }
+    @media (min-width: 768px){
+      display: block;
+    }
     background: var(--lightgray);
     padding: 20px 85px 20px 30px;
     p{
@@ -230,41 +257,41 @@ body.list {
 //  }
 }
 
-@media (max-width: 700px) {
-  body.list {
-    .conference-list {
-      padding: 1rem;
-    }
-
-    .conf {
-      display: block;
-      margin-bottom: 0.5rem;
-    }
-
-    .conf-head {
-      display: block;
-
-      > * {
-        padding: 0.25rem 0;
-      }
-    }
-
-    .conf {
-      > * {
-        padding: 1rem;
-
-        &:not(:first-child) {
-          padding-top: 0.25rem;
-        }
-      }
-
-      .conf-byline {
-        white-space: normal;
-      }
-
-      .conf-meta {
-        padding: 0.15rem 1rem 0.75rem 1rem;
-      }
-    }
-  }
-}
+//@media (max-width: 700px) {
+//  body.list {
+//    .conference-list {
+//      padding: 1rem;
+//    }
+//
+//    .conf {
+//      display: block;
+//      margin-bottom: 0.5rem;
+//    }
+//
+//    .conf-head {
+//      display: block;
+//
+//      > * {
+//        padding: 0.25rem 0;
+//      }
+//    }
+//
+//    .conf {
+//      > * {
+//        padding: 1rem;
+//
+//        &:not(:first-child) {
+//          padding-top: 0.25rem;
+//        }
+//      }
+//
+//      .conf-byline {
+//        white-space: normal;
+//      }
+//
+//      .conf-meta {
+//        padding: 0.15rem 1rem 0.75rem 1rem;
+//      }
+//    }
+//  }
+//}

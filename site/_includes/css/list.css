@@ -17,8 +17,12 @@ body.list .conf-head {
   display: flex;
   color: #000;
   border-left: 2px solid var(--yellow);
-  position: relative; }
-  @media (min-width: 768px) {
+  position: relative;
+  flex: 0 0 100%; }
+  @media (min-width: 768px) and (max-width: 992px) {
+    body.list .conf-head {
+      flex: 0 0 50%; } }
+  @media (min-width: 992px) {
     body.list .conf-head {
       flex: 0 0 60%; }
       body.list .conf-head:after {
@@ -41,11 +45,23 @@ body.list .conf-head {
   body.list .conf-head .thumbnail {
     position: relative;
     order: 2;
-    width: 150px; }
+    width: 150px;
+    display: none; }
+    @media (min-width: 992px) {
+      body.list .conf-head .thumbnail {
+        display: block; } }
   body.list .conf-head .conf-info {
     order: 3;
-    padding: 20px 15px 20px 30px;
-    flex: 0 0 calc(100% - 250px); }
+    padding: 20px 15px 20px 20px;
+    flex: 0 0 calc(100% - 150px); }
+    @media (min-width: 768px) and (max-width: 992px) {
+      body.list .conf-head .conf-info {
+        flex: 0 0 calc(100% - 100px);
+        padding: 20px 15px 20px 30px; } }
+    @media (min-width: 992px) {
+      body.list .conf-head .conf-info {
+        flex: 0 0 calc(100% - 250px);
+        padding: 20px 15px 20px 30px; } }
     body.list .conf-head .conf-info h3 {
       width: 100%;
       font-size: 24px;
@@ -57,6 +73,7 @@ body.list .conf-head {
       overflow: hidden;
       text-overflow: ellipsis; }
     body.list .conf-head .conf-info .conf-location {
+      width: 100%;
       height: 18px;
       font-size: 16px;
       color: var(--darkgray);
@@ -72,13 +89,16 @@ body.list .conf-head {
       overflow: hidden;
       text-overflow: ellipsis; }
   body.list .conf-head .conf-dates {
-    flex: 0 0 100px;
+    flex: 0 0 75px;
     order: 1;
     background: var(--darkgray);
     color: #fff;
     font-family: var(--ff-title);
     text-align: center;
     padding-top: 15px; }
+    @media (min-width: 768px) {
+      body.list .conf-head .conf-dates {
+        flex: 0 0 100px; } }
     body.list .conf-head .conf-dates .day {
       font-size: 42px;
       font-weight: bold;
@@ -92,8 +112,15 @@ body.list .conf-head {
       display: block;
       text-transform: uppercase; }
 body.list .conf-about {
+  display: none;
   background: var(--lightgray);
   padding: 20px 85px 20px 30px; }
+  @media (min-width: 768px) and (max-width: 992px) {
+    body.list .conf-about {
+      flex: 0 0 50%; } }
+  @media (min-width: 768px) {
+    body.list .conf-about {
+      display: block; } }
   body.list .conf-about p {
     color: var(--mediumgray);
     font-size: 16px;
@@ -134,24 +161,5 @@ body.list .conf-cta {
 body.list .our-notes-text {
   color: var(--rust);
   position: static; }
-
-@media (max-width: 700px) {
-  body.list .conference-list {
-    padding: 1rem; }
-  body.list .conf {
-    display: block;
-    margin-bottom: 0.5rem; }
-  body.list .conf-head {
-    display: block; }
-    body.list .conf-head > * {
-      padding: 0.25rem 0; }
-  body.list .conf > * {
-    padding: 1rem; }
-    body.list .conf > *:not(:first-child) {
-      padding-top: 0.25rem; }
-  body.list .conf .conf-byline {
-    white-space: normal; }
-  body.list .conf .conf-meta {
-    padding: 0.15rem 1rem 0.75rem 1rem; } }
 
 /*# sourceMappingURL=list.css.map */
