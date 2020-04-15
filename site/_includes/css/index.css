@@ -32,8 +32,11 @@ body {
 .container {
   width: 100%;
   max-width: 1140px;
-  padding: 0 30px;
+  padding: 0 15px;
   margin: auto; }
+  @media (min-width: 768px) {
+    .container {
+      padding: 0 30px; } }
 
 /* Typography */
 a {
@@ -76,29 +79,36 @@ header {
     position: relative; }
     .site-hero .content .hashtag {
       display: inline-block;
-      font-size: 24px;
+      font-size: 12px;
       color: var(--mediumgray);
       text-transform: uppercase;
       font-family: var(--ff-title);
       font-weight: 500;
       letter-spacing: .15em;
       margin-bottom: 10px; }
+      @media (min-width: 768px) {
+        .site-hero .content .hashtag {
+          font-size: 24px; } }
     .site-hero .content h1 {
       display: inline-block;
-      font-size: 92px;
+      font-size: 52px;
       color: #fff;
       font-weight: bold;
       letter-spacing: .15em;
       margin-bottom: 5px;
       text-transform: uppercase; }
+      @media (min-width: 768px) {
+        .site-hero .content h1 {
+          font-size: 92px; } }
     .site-hero .content p {
-      font-size: 18px;
+      font-size: 14px;
       color: var(--gray);
       line-height: 150%;
       max-width: 80%; }
       @media (min-width: 768px) {
         .site-hero .content p {
-          max-width: 75%; } }
+          max-width: 75%;
+          font-size: 18px; } }
   .site-hero .characters {
     position: absolute;
     height: calc(100% + 75px);
@@ -106,12 +116,12 @@ header {
     right: 0;
     transform: translateX(calc(50% + 60px));
     pointer-events: none; }
-    @media (min-width: 768px) {
+    @media (min-width: 992px) {
       .site-hero .characters.mobile {
         display: none; } }
     .site-hero .characters.desktop {
       display: none; }
-      @media (min-width: 768px) {
+      @media (min-width: 992px) {
         .site-hero .characters.desktop {
           display: block; } }
 
@@ -136,7 +146,7 @@ header {
   .main-nav .container {
     display: flex; }
     .main-nav .container a {
-      font-size: 32px;
+      font-size: 20px;
       text-transform: uppercase;
       color: var(--mediumgray);
       -webkit-text-fill-color: var(--jetblack);
@@ -144,11 +154,15 @@ header {
       -webkit-text-stroke-width: 1px;
       letter-spacing: .15em;
       display: inline-block;
-      margin-right: 45px;
+      margin-right: 20px;
       padding: 0 0 5px 0;
       position: relative;
       transition: ease .3s;
       transition-property: color, -webkit-text-fill-color, -webkit-text-stroke-width; }
+      @media (min-width: 768px) {
+        .main-nav .container a {
+          font-size: 32px;
+          margin-right: 45px; } }
       .main-nav .container a:after {
         content: '';
         position: absolute;
@@ -173,30 +187,43 @@ header {
     height: 40px;
     background: var(--darkergray);
     position: relative;
+    margin-top: -5px;
     border: none;
-    margin-left: 10px;
     transition: background ease .3s;
     cursor: pointer; }
+    @media (min-width: 768px) {
+      .style-switcher button {
+        margin-left: 10px;
+        margin-top: 0; } }
     .style-switcher button svg * {
       stroke: var(--mediumgray);
       transition: stroke ease .3s; }
-    .style-switcher button:hover {
+    .style-switcher button:hover, .style-switcher button:focus {
       background: var(--black); }
     .style-switcher button.active {
-      background: var(--yellow);
+      background: var(--darkgray);
       cursor: default; }
+      @media (min-width: 768px) {
+        .style-switcher button.active {
+          background: var(--yellow); } }
       .style-switcher button.active svg * {
-        stroke: #fff; }
+        stroke: var(--yellow); }
+        @media (min-width: 768px) {
+          .style-switcher button.active svg * {
+            stroke: #fff; } }
   .style-switcher .view-icon {
     font-family: sans-serif;
     pointer-events: none; }
 
 /* Listing Wrapper */
 main#maincontent {
-  margin-top: 135px; }
+  margin-top: 105px; }
+  @media (min-width: 768px) {
+    main#maincontent {
+      margin-top: 135px; } }
 
 .month-heading {
-  font-size: 32px;
+  font-size: 24px;
   font-weight: 500;
   color: var(--lightgray);
   text-transform: uppercase;
@@ -204,6 +231,9 @@ main#maincontent {
   margin-top: 60px;
   position: relative;
   z-index: 2; }
+  @media (min-width: 768px) {
+    .month-heading {
+      font-size: 32px; } }
   .month-heading span {
     background: var(--jetblack);
     padding-right: 15px; }

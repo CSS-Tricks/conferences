@@ -37,8 +37,11 @@ body{
 .container {
   width: 100%;
   max-width: 1140px;
-  padding: 0 30px;
+  padding: 0 15px;
   margin: auto;
+  @media (min-width: 768px){
+    padding: 0 30px;
+  }
 }
 
 /* Typography */
@@ -99,30 +102,37 @@ header {
     position: relative;
     .hashtag {
       display: inline-block;
-      font-size: 24px;
+      font-size: 12px;
       color: var(--mediumgray);
       text-transform: uppercase;
       font-family: var(--ff-title);
       font-weight: 500;
       letter-spacing: .15em;
       margin-bottom: 10px;
+      @media (min-width: 768px){
+        font-size: 24px;
+      }
     }
     h1 {
       display: inline-block;
-      font-size: 92px;
+      font-size: 52px;
       color: #fff;
       font-weight: bold;
       letter-spacing: .15em;
       margin-bottom: 5px;
       text-transform: uppercase;
+      @media (min-width: 768px){
+        font-size: 92px;
+      }
     }
     p {
-      font-size: 18px;
+      font-size: 14px;
       color: var(--gray);
       line-height: 150%;
       max-width: 80%;
       @media (min-width: 768px){
         max-width: 75%;
+        font-size: 18px;
       }
     }
   }
@@ -134,13 +144,13 @@ header {
     transform: translateX(calc(50% + 60px));
     pointer-events: none;
     &.mobile {
-      @media (min-width: 768px){
+      @media (min-width: 992px){
         display: none;
       }
     }
     &.desktop {
       display: none;
-      @media (min-width: 768px){
+      @media (min-width: 992px){
         display: block;
       }
     }
@@ -170,7 +180,7 @@ header {
   .container{
     display: flex;
     a {
-      font-size: 32px;
+      font-size: 20px;
       text-transform: uppercase;
       color: var(--mediumgray);
       -webkit-text-fill-color: var(--jetblack);
@@ -178,11 +188,15 @@ header {
       -webkit-text-stroke-width: 1px;
       letter-spacing: .15em;
       display: inline-block;
-      margin-right: 45px;
+      margin-right: 20px;
       padding: 0 0 5px 0;
       position: relative;
       transition: ease .3s;
-      transition-property: color, -webkit-text-fill-color, -webkit-text-stroke-width; 
+      transition-property: color, -webkit-text-fill-color, -webkit-text-stroke-width;
+      @media (min-width: 768px){
+        font-size: 32px;
+        margin-right: 45px;
+      }
       &:after{
         content: '';
         position: absolute;
@@ -213,22 +227,32 @@ header {
     height: 40px;
     background: var(--darkergray);
     position: relative;
+    margin-top: -5px;
     border: none;
-    margin-left: 10px;
     transition: background ease .3s;
     cursor: pointer;
+    @media (min-width: 768px){
+      margin-left: 10px;
+      margin-top: 0;
+    }
     svg *{
       stroke: var(--mediumgray);
       transition: stroke ease .3s;
     }
-    &:hover{
+    &:hover, &:focus{
       background: var(--black);
     }
     &.active {
-      background: var(--yellow);
+      background: var(--darkgray);
       cursor: default;
+      @media (min-width: 768px){
+        background: var(--yellow);
+      }
       svg *{
-        stroke: #fff;
+        stroke: var(--yellow);
+        @media (min-width: 768px){
+          stroke: #fff;
+        }
       }
     }
   }
@@ -243,11 +267,14 @@ header {
 /* Listing Wrapper */
 
 main#maincontent{
-  margin-top: 135px;
+  margin-top: 105px;
+  @media (min-width: 768px){
+    margin-top: 135px;
+  }
 }
 
 .month-heading {
-  font-size: 32px;
+  font-size: 24px;
   font-weight: 500;
   color: var(--lightgray);
   text-transform: uppercase;
@@ -255,6 +282,9 @@ main#maincontent{
   margin-top: 60px;
   position: relative;
   z-index: 2;
+  @media (min-width: 768px){
+    font-size: 32px;
+  }
   span{
     background: var(--jetblack);
     padding-right: 15px;

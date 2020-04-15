@@ -63,7 +63,7 @@ body.list {
     }
     .conf-info{
       order: 3;
-      padding: 20px 15px 20px 20px;
+      padding: 15px;
       flex: 0 0 calc(100% - 150px);
       @media (min-width: 768px) and (max-width: 992px){
         flex: 0 0 calc(100% - 100px);
@@ -75,14 +75,18 @@ body.list {
       }
       h3{
         width: 100%;
-        font-size: 24px;
+        font-size: 18px;
         text-transform: uppercase;
         letter-spacing: .1em;
         color: var(--jetblack);
-        margin-bottom: 15px;
+        margin-bottom: 5px;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
+        @media (min-width: 768px){
+          font-size: 24px;
+          margin-bottom: 15px;
+        }
       }
       .conf-location{
         width: 100%;
@@ -100,6 +104,9 @@ body.list {
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
+        @media (min-width: 768px){
+          font-size: 14px;
+        }
       }
     }
     .conf-dates{
@@ -114,18 +121,24 @@ body.list {
         flex: 0 0 100px;
       }
       .day{
-        font-size: 42px;
+        font-size: 36px;
         font-weight: bold;
         letter-spacing: .1em;
         line-height: 100%;
         display: block;
+        @media (min-width: 768px){
+          font-size: 42px;
+        }
       }
       .month{
-        font-size: 20px;
+        font-size: 18px;
         letter-spacing: .15em;
         line-height: 100%;
         display: block;
         text-transform: uppercase;
+        @media (min-width: 768px){
+          font-size: 20px;
+        }
       }
     }
   }

@@ -21,6 +21,10 @@ body.grid {
     position: relative;
     padding-bottom: 70px;
     overflow: hidden;
+    margin-bottom: 30px;
+    @media (min-width: 768px){
+      margin-bottom: 0;
+    }
     &:hover{
       .conf-head .thumbnail{
         transform: scale(1.1);
@@ -34,11 +38,14 @@ body.grid {
     flex-direction: row;
     flex-wrap: wrap;
     width: 100%;
-    height: 160px;
+    height: 145px;
     padding: 30px 20px 10px 20px;
     position: relative;
     overflow: hidden;
     z-index: 1;
+    @media (min-width: 768px){
+      height: 160px;
+    }
     .thumbnail{
       width: 100%;
       height: 100%;
@@ -70,8 +77,8 @@ body.grid {
     }
     h3{
       width: calc(100% - 15px);
-      height: 72px;
-      font-size: 28px;
+      height: 56px;
+      font-size: 24px;
       font-weight: bold;
       line-height: 120%;
       letter-spacing: .1em;
@@ -83,6 +90,10 @@ body.grid {
       -webkit-box-orient: vertical;
       overflow: hidden;
       text-overflow: ellipsis;
+      @media (min-width: 768px){
+        font-size: 28px;
+        height: 72px;
+      }
     }
     .conf-dates{
       flex: 0 0 50px;
@@ -94,17 +105,23 @@ body.grid {
       color: #fff;
       .day{
         display: block;
-        font-size: 42px;
+        font-size: 36px;
         font-weight: bold;
         letter-spacing: .1em;
         line-height: 100%;
+        @media (min-width: 768px){
+          font-size: 42px;
+        }
       }
       .month{
-        font-size: 20px;
+        font-size: 18px;
         font-weight: bold;
         letter-spacing: .15em;
         text-transform: uppercase;
         line-height: 100%;
+        @media (min-width: 768px){
+          font-size: 20px;
+        }
       }
     }
   }
@@ -117,7 +134,7 @@ body.grid {
     width: calc(100% - 20px);
     height: 18px;
     margin-top: 32px;
-    font-size: 16px;
+    font-size: 14px;
     color: var(--lightgray);
     letter-spacing: .15em;
     display: inline-block;
@@ -130,6 +147,9 @@ body.grid {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+    @media (min-width: 768px){
+      font-size: 16px;
+    }
   }
   
   .conf-cta{
@@ -218,6 +238,7 @@ body.grid {
       bottom: 15px;
       text-align: center;
       button {
+        width: 100%;
         text-align: center;
         border: none;
         background: none;
@@ -298,11 +319,11 @@ body.grid {
   }
 }
 
-@media (max-width: 700px) {
-  body.grid {
-    .conference-list {
-      display: block;
-      padding: 1rem;
-    }
-  }
-}
+//@media (max-width: 700px) {
+//  body.grid {
+//    .conference-list {
+//      display: block;
+//      padding: 1rem;
+//    }
+//  }
+//}
