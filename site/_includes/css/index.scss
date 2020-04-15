@@ -165,6 +165,7 @@ header {
     top: 0;
     margin-top: 0;
     transform: translateY(0);
+    z-index: 10;
   }
   .container{
     display: flex;

@@ -18,6 +18,9 @@ body.grid .conf {
   position: relative;
   padding-bottom: 70px;
   overflow: hidden; }
+  body.grid .conf:hover .conf-head .thumbnail {
+    transform: scale(1.1);
+    transition-duration: 2s; }
 body.grid .conf-head {
   display: flex;
   flex-direction: row;
@@ -26,9 +29,20 @@ body.grid .conf-head {
   height: 160px;
   padding: 30px 20px 10px 20px;
   position: relative;
-  background-image: url(../../images/default-cover.jpg);
-  background-position: center center;
-  background-size: cover; }
+  overflow: hidden;
+  z-index: 1; }
+  body.grid .conf-head .thumbnail {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    z-index: -1;
+    pointer-events: none;
+    transition: transform ease;
+    transition-duration: .3s;
+    transform-origin: center center; }
   body.grid .conf-head:after {
     content: '';
     position: absolute;
@@ -40,7 +54,11 @@ body.grid .conf-head {
     border-bottom: 7px solid #fff;
     right: 0;
     bottom: 0; }
+  body.grid .conf-head .conf-info {
+    flex: 0 0 calc(100% - 55px);
+    overflow: hidden; }
   body.grid .conf-head h3 {
+    width: calc(100% - 15px);
     height: 72px;
     font-size: 28px;
     font-weight: bold;
@@ -49,7 +67,6 @@ body.grid .conf-head {
     color: #fff;
     text-transform: uppercase;
     margin-right: 15px;
-    flex: 0 0 calc(100% - 70px);
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
@@ -75,10 +92,8 @@ body.grid .conf-head {
       letter-spacing: .15em;
       text-transform: uppercase;
       line-height: 100%; }
-body.grid .conf-coc-in-title {
-  display: none !important; }
 body.grid .conf-location {
-  width: calc(100% - 70px);
+  width: calc(100% - 20px);
   height: 18px;
   margin-top: 32px;
   font-size: 16px;
@@ -99,7 +114,8 @@ body.grid .conf-cta {
   padding: 0 26px;
   position: relative;
   margin-top: -25px;
-  text-align: right; }
+  text-align: right;
+  z-index: 2; }
   body.grid .conf-cta a {
     width: 50px;
     height: 50px;

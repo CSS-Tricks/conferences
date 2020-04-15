@@ -1,16 +1,19 @@
 <div class="conf-head">
-  <h3 class="conf-title" id="{{ conf.data.title | slug }}-hed" title="{{ conf.data.title }}">
-    {{ conf.data.title }}
-  </h3>
+  <img src="/images/default-cover.jpg" class="thumbnail">
+  <div class="conf-info">
+    <h3 class="conf-title" id="{{ conf.data.title | slug }}-hed" title="{{ conf.data.title }}">
+      {{ conf.data.title }}
+    </h3>
+    <address class="conf-location" aria-label="Event location" title="{{ conf.data.location }}">
+      {{ conf.data.location }}
+    </address>
+  </div>
   <div class="conf-dates" aria-label="Event starts on {{ conf.data.date | readableDate }}">
     <time datetime="{{ conf.data.date | htmlTime }}" aria-hidden="true">
       <span class="day" aria-hidden="true">{{ conf.data.date | htmlTime | replace(r/^.{0,8}/, "") }}</span>
       <span class="month" aria-hidden="true">{{ conf.data.date | getMonthInitials }}</span>
     </time>
   </div>
-  <address class="conf-location" aria-label="Event location" title="{{ conf.data.location }}">
-    {{ conf.data.location }}
-  </address>
 </div>
 <div class="conf-cta">
   <a href="{{ conf.url }}" aria-title="Details">
@@ -26,7 +29,7 @@
 <div class="conf-actions">
   <div class="remindme card" id="reminder-{{ conf.fileSlug }}" aria-hidden="true">
     <div class="to-website">
-      <a href="{{ conf.data.url | url }}">Go to website</a>
+      <a href="{{ conf.data.url | url }}" target="_blank">Go to website</a>
     </div>
     <div class="card__face card__face--front">
       <button aria-controls="reminder-{{ conf.fileSlug }}" aria-haspopup="true" aria-expanded="false">Email Event Info</button>

@@ -1,118 +1,157 @@
 body.list .conference-list {
-  list-style: none;
-  padding: 2rem;
-  font-size: 14px;
   width: 100%;
-}
+  padding-top: 30px; }
 body.list .conf {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  justify-content: center;
+  display: flex;
+  margin: 0 0 2px 0;
   background: white;
-  color: var(--dark);
-  margin: 0 0 1px 0;
-  border-radius: 5px;
-}
-body.list .conf > *,
-body.list .conf-head > * {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: block;
-}
-body.list .conf > * {
-  padding: 0.5rem;
-}
+  position: relative; }
+  body.list .conf > * {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block; }
+  body.list .conf:nth-child(even) .conf-dates {
+    background: #3E3E3E; }
 body.list .conf-head {
-  display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
-}
+  display: flex;
+  color: #000;
+  border-left: 2px solid var(--yellow);
+  position: relative; }
+  @media (min-width: 768px) {
+    body.list .conf-head {
+      flex: 0 0 60%; }
+      body.list .conf-head:after {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 0;
+        border-top: 7px solid transparent;
+        border-left: 7px solid transparent;
+        border-right: 7px solid #fff;
+        border-bottom: 7px solid #fff;
+        left: 236px;
+        bottom: 0;
+        z-index: 2; } }
+  body.list .conf-head > * {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block; }
+  body.list .conf-head .thumbnail {
+    position: relative;
+    order: 2;
+    width: 150px; }
+  body.list .conf-head .conf-info {
+    order: 3;
+    padding: 20px 15px 20px 30px;
+    flex: 0 0 calc(100% - 250px); }
+    body.list .conf-head .conf-info h3 {
+      width: 100%;
+      font-size: 24px;
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      color: var(--jetblack);
+      margin-bottom: 15px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis; }
+    body.list .conf-head .conf-info .conf-location {
+      height: 18px;
+      font-size: 16px;
+      color: var(--darkgray);
+      letter-spacing: .15em;
+      display: inline-block;
+      border-left: 1px solid var(--yellow);
+      padding-left: 10px;
+      font-style: normal;
+      font-family: var(--ff-title);
+      font-weight: 400;
+      text-transform: uppercase;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis; }
+  body.list .conf-head .conf-dates {
+    flex: 0 0 100px;
+    order: 1;
+    background: var(--darkgray);
+    color: #fff;
+    font-family: var(--ff-title);
+    text-align: center;
+    padding-top: 15px; }
+    body.list .conf-head .conf-dates .day {
+      font-size: 42px;
+      font-weight: bold;
+      letter-spacing: .1em;
+      line-height: 100%;
+      display: block; }
+    body.list .conf-head .conf-dates .month {
+      font-size: 20px;
+      letter-spacing: .15em;
+      line-height: 100%;
+      display: block;
+      text-transform: uppercase; }
+body.list .conf-about {
+  background: var(--lightgray);
+  padding: 20px 85px 20px 30px; }
+  body.list .conf-about p {
+    color: var(--mediumgray);
+    font-size: 16px;
+    line-height: 150%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; }
+    body.list .conf-about p:nth-child(1) {
+      display: block; }
+body.list .conf-actions {
+  display: none; }
+body.list .conf-cta {
+  height: 50px;
+  position: absolute;
+  top: 0;
+  right: 20px;
+  bottom: 0;
+  margin: auto;
+  z-index: 2; }
+  body.list .conf-cta a {
+    width: 50px;
+    height: 50px;
+    position: relative;
+    background: var(--yellow);
+    display: inline-block;
+    overflow: hidden;
+    transition: ease .3s;
+    transition-property: background; }
+    body.list .conf-cta a svg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto; }
+    body.list .conf-cta a:hover {
+      background: var(--ocher); }
 body.list .our-notes-text {
   color: var(--rust);
-  position: static;
-}
-body.list .details-link {
-  display: none;
-}
-body.list .icon {
-  width: 10px;
-  fill: #222;
-  margin-bottom: -3px;
-  margin-right: 5px;
-}
-body.list .conf-dates {
-}
-body.list .end-date {
-  display: none;
-}
-body.list .conf-meta {
-  display: none;
-}
-body.list .conf-coc-in-title {
-  display: inline-block;
-  color: var(--rust);
-  font-size: 0.7rem !important;
-}
-body.list .conf-title {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-body.list .conf-title a {
-  font-size: 1rem;
-  line-height: 1.2;
-}
-body.list .conf-link,
-body.list .conf-about {
-  display: none;
-}
-body.list .conf-location {
-  font-style: normal;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: block;
-}
+  position: static; }
 
-body.list .conf-coc {
-  color: var(--rust);
-  margin-left: auto;
-}
 @media (max-width: 700px) {
   body.list .conference-list {
-    padding: 1rem;
-  }
+    padding: 1rem; }
   body.list .conf {
     display: block;
-    margin-bottom: 0.5rem;
-  }
+    margin-bottom: 0.5rem; }
   body.list .conf-head {
-    display: block;
-  }
-  body.list .conf-head > * {
-    padding: 0.25rem 0;
-  }
+    display: block; }
+    body.list .conf-head > * {
+      padding: 0.25rem 0; }
   body.list .conf > * {
-    padding: 1rem;
-  }
-  body.list .conf > *:not(:first-child) {
-    padding-top: 0.25rem;
-  }
+    padding: 1rem; }
+    body.list .conf > *:not(:first-child) {
+      padding-top: 0.25rem; }
   body.list .conf .conf-byline {
-    white-space: normal;
-  }
+    white-space: normal; }
   body.list .conf .conf-meta {
-    padding: 0.15rem 1rem 0.75rem 1rem;
-  }
-}
-body.list h3 a {
-  color: var(--dark);
-}
-body.list h3 a:hover,
-body.list h3 a:focus,
-body.list h3 a:visited {
-  color: #3a3448;
-}
-body.list .remindme {
-  display: none;
-}
+    padding: 0.15rem 1rem 0.75rem 1rem; } }
+
+/*# sourceMappingURL=list.css.map */

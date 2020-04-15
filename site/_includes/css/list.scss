@@ -1,0 +1,270 @@
+body.list {
+  .conference-list {
+    width: 100%;
+    padding-top: 30px;
+  }
+  .conf {
+    display: flex;
+    margin: 0 0 2px 0;
+    background: white;
+    position: relative;
+    > * {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: block;
+    }
+    &:nth-child(even){
+      .conf-dates{
+        background: #3E3E3E;
+      } 
+    }
+  }
+
+  .conf-head {
+    display: flex;
+    color: #000;
+    border-left: 2px solid var(--yellow);
+    position: relative;
+    @media (min-width: 768px){
+      flex: 0 0 60%;
+      &:after{
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 0;
+        border-top: 7px solid transparent;
+        border-left: 7px solid transparent;
+        border-right: 7px solid #fff;
+        border-bottom: 7px solid #fff;
+        left: 236px;
+        bottom: 0;
+        z-index: 2;
+      }
+    }
+    & > * {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: block;
+    }
+    .thumbnail{
+      position: relative;
+      order: 2;
+      width: 150px;
+    }
+    .conf-info{
+      order: 3;
+      padding: 20px 15px 20px 30px;
+      flex: 0 0 calc(100% - 250px);
+      h3{
+        width: 100%;
+        font-size: 24px;
+        text-transform: uppercase;
+        letter-spacing: .1em;
+        color: var(--jetblack);
+        margin-bottom: 15px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      .conf-location{
+        height: 18px;
+        font-size: 16px;
+        color: var(--darkgray);
+        letter-spacing: .15em;
+        display: inline-block;
+        border-left: 1px solid var(--yellow);
+        padding-left: 10px;
+        font-style: normal;
+        font-family: var(--ff-title);
+        font-weight: 400;
+        text-transform: uppercase;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+    .conf-dates{
+      flex: 0 0 100px;
+      order: 1;
+      background: var(--darkgray);
+      color: #fff;
+      font-family: var(--ff-title);
+      text-align: center;
+      padding-top: 15px;
+      .day{
+        font-size: 42px;
+        font-weight: bold;
+        letter-spacing: .1em;
+        line-height: 100%;
+        display: block;
+      }
+      .month{
+        font-size: 20px;
+        letter-spacing: .15em;
+        line-height: 100%;
+        display: block;
+        text-transform: uppercase;
+      }
+    }
+  }
+  
+  .conf-about{
+    background: var(--lightgray);
+    padding: 20px 85px 20px 30px;
+    p{
+      color: var(--mediumgray);
+      font-size: 16px;
+      line-height: 150%;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      &:nth-child(1){
+        display: block;
+      }
+    }
+  }
+  
+  .conf-actions{
+    display: none;
+  }
+  
+  .conf-cta{
+    height: 50px;
+    position: absolute;
+    top: 0;
+    right: 20px;
+    bottom: 0;
+    margin: auto;
+    z-index: 2;
+    a{
+      width: 50px;
+      height: 50px;
+      position: relative;
+      background: var(--yellow);
+      display: inline-block;
+      overflow: hidden;
+      transition: ease .3s;
+      transition-property: background;
+      svg{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+      }
+      &:hover{
+        background: var(--ocher);
+      }
+    }
+  }
+
+  .our-notes-text {
+    color: var(--rust);
+    position: static;
+  }
+//
+//  .details-link {
+//    display: none;
+//  }
+//
+//  .icon {
+//    width: 10px;
+//    fill: #222;
+//    margin-bottom: -3px;
+//    margin-right: 5px;
+//  }
+//
+//  .conf-dates {}
+//
+//  .end-date, .conf-meta {
+//    display: none;
+//  }
+
+//  .conf-coc-in-title {
+//    display: inline-block;
+//    color: var(--rust);
+//    font-size: 0.7rem !important;
+//  }
+
+//  .conf-title {
+//    white-space: nowrap;
+//    overflow: hidden;
+//    text-overflow: ellipsis;
+//
+//    a {
+//      font-size: 1rem;
+//      line-height: 1.2;
+//    }
+//  }
+//
+//  .conf-link, .conf-about {
+//    display: none;
+//  }
+//
+//  .conf-location {
+//    font-style: normal;
+//    white-space: nowrap;
+//    overflow: hidden;
+//    text-overflow: ellipsis;
+//    display: block;
+//  }
+//
+//  .conf-coc {
+//    color: var(--rust);
+//    margin-left: auto;
+//  }
+//
+//  h3 a {
+//    color: var(--dark);
+//
+//    &:hover, &:focus, &:visited {
+//      color: #3a3448;
+//    }
+//  }
+//
+//  .remindme {
+//    display: none;
+//  }
+}
+
+@media (max-width: 700px) {
+  body.list {
+    .conference-list {
+      padding: 1rem;
+    }
+
+    .conf {
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+
+    .conf-head {
+      display: block;
+
+      > * {
+        padding: 0.25rem 0;
+      }
+    }
+
+    .conf {
+      > * {
+        padding: 1rem;
+
+        &:not(:first-child) {
+          padding-top: 0.25rem;
+        }
+      }
+
+      .conf-byline {
+        white-space: normal;
+      }
+
+      .conf-meta {
+        padding: 0.15rem 1rem 0.75rem 1rem;
+      }
+    }
+  }
+}
