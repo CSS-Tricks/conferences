@@ -43,6 +43,10 @@ module.exports = function(config) {
     let domainObj = urlParse(rootUrl);
     return domainObj.hostname;
   });
+  
+  config.addFilter('randomNumber', function(value) {
+    return Math.floor(Math.random() * value);
+  });
 
   config.addFilter('getMonthName', dateObj => {
     return DateTime.fromJSDate(dateObj, {

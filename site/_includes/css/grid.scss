@@ -28,7 +28,7 @@ body.grid {
     &:hover{
       .conf-head .thumbnail{
         transform: scale(1.1);
-        transition-duration: 2s;
+        transition-duration: 1s;
       }
     }
   }
@@ -43,8 +43,21 @@ body.grid {
     position: relative;
     overflow: hidden;
     z-index: 1;
+    &:before{
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 145px;
+      top: 0;
+      left: 0;
+      background: var(--jetblack);
+      opacity: .5;
+    }
     @media (min-width: 768px){
       height: 160px;
+      &:before{
+        height: 160px;
+      }
     }
     .thumbnail{
       width: 100%;
@@ -74,6 +87,7 @@ body.grid {
     .conf-info{
       flex: 0 0 calc(100% - 55px);
       overflow: hidden;
+      position: relative;
     }
     h3{
       width: calc(100% - 15px);
@@ -103,6 +117,7 @@ body.grid {
       font-family: var(--ff-title);
       text-align: center;
       color: #fff;
+      position: relative;
       .day{
         display: block;
         font-size: 36px;

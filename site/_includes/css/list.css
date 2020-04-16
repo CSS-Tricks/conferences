@@ -46,6 +46,7 @@ body.list .conf-head {
     position: relative;
     order: 2;
     width: 150px;
+    object-fit: cover;
     display: none; }
     @media (min-width: 992px) {
       body.list .conf-head .thumbnail {

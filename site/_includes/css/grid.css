@@ -24,7 +24,7 @@ body.grid .conf {
       margin-bottom: 0; } }
   body.grid .conf:hover .conf-head .thumbnail {
     transform: scale(1.1);
-    transition-duration: 2s; }
+    transition-duration: 1s; }
 body.grid .conf-head {
   display: flex;
   flex-direction: row;
@@ -35,9 +35,20 @@ body.grid .conf-head {
   position: relative;
   overflow: hidden;
   z-index: 1; }
+  body.grid .conf-head:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 145px;
+    top: 0;
+    left: 0;
+    background: var(--jetblack);
+    opacity: .5; }
   @media (min-width: 768px) {
     body.grid .conf-head {
-      height: 160px; } }
+      height: 160px; }
+      body.grid .conf-head:before {
+        height: 160px; } }
   body.grid .conf-head .thumbnail {
     width: 100%;
     height: 100%;
@@ -63,7 +74,8 @@ body.grid .conf-head {
     bottom: 0; }
   body.grid .conf-head .conf-info {
     flex: 0 0 calc(100% - 55px);
-    overflow: hidden; }
+    overflow: hidden;
+    position: relative; }
   body.grid .conf-head h3 {
     width: calc(100% - 15px);
     height: 56px;
@@ -90,7 +102,8 @@ body.grid .conf-head {
     padding: 0;
     font-family: var(--ff-title);
     text-align: center;
-    color: #fff; }
+    color: #fff;
+    position: relative; }
     body.grid .conf-head .conf-dates .day {
       display: block;
       font-size: 36px;
