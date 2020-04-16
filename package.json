@@ -11,14 +11,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/CSS-Tricks/conferences.git"
+    "url": "git+https://github.com/pubg/events.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/CSS-Tricks/conferences/issues"
+    "url": "https://github.com/pubg/events/issues"
   },
-  "homepage": "https://github.com/CSS-Tricks/conferences#readme",
+  "homepage": "https://github.com/pubg/eventss#readme",
   "devDependencies": {
     "@11ty/eleventy": "^0.8.2",
     "@11ty/eleventy-plugin-rss": "^1.0.3",

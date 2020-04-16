@@ -80,6 +80,18 @@ header {
     width: 75%;
     padding: 75px 0 120px 0;
     position: relative; }
+    .site-hero .content:after {
+      content: '';
+      position: absolute;
+      width: 150%;
+      height: 150%;
+      background: url(../../images/sparks.png) no-repeat center center;
+      background-size: contain;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto; }
     .site-hero .content .hashtag {
       display: inline-block;
       font-size: 12px;
@@ -354,6 +366,7 @@ figure.conf-details-image {
 .conf-details-content article {
   background: #fff;
   position: relative;
+  color: var(--darkgray);
   padding: 30px 15px 45px 15px; }
   .conf-details-content article:after {
     content: '';
@@ -366,6 +379,10 @@ figure.conf-details-image {
     border-bottom: 7px solid var(--jetblack);
     right: 0;
     bottom: 0; }
+  .conf-details-content article h1, .conf-details-content article h2, .conf-details-content article h3, .conf-details-content article h4, .conf-details-content article h5, .conf-details-content article h6 {
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    margin-bottom: .5em; }
   .conf-details-content article p {
     font-size: 16px;
     line-height: 150%;
@@ -376,18 +393,27 @@ figure.conf-details-image {
     text-decoration: none;
     border-bottom: 2px solid var(--yellow);
     margin-bottom: 30px; }
+  .conf-details-content article iframe {
+    width: 100%;
+    height: 300px;
+    margin-bottom: 30px; }
   @media (min-width: 768px) {
     .conf-details-content article {
       padding: 30px 60px 75px 60px;
-      font-size: 20px; } }
+      font-size: 20px; }
+      .conf-details-content article iframe {
+        height: 350px; } }
   @media (min-width: 992px) {
     .conf-details-content article {
-      padding: 30px 180px 75px 105px; } }
+      padding: 30px 180px 75px 105px; }
+      .conf-details-content article iframe {
+        height: 450px; } }
 
 .site-footer {
   background: #222;
   text-align: center;
-  margin-top: 2rem; }
+  margin-top: 2rem;
+  display: none; }
   .site-footer img {
     max-height: 60px;
     vertical-align: middle; }

@@ -1,5 +1,10 @@
 <div class="conf-head">
-  <img src="/images/default-thumbnail/small/thumbnail-{{ 6 | randomNumber }}.jpg" class="thumbnail">
+  {% if conf.data.thumbSmall %}
+      <img src="{{ conf.data.thumbSmall }}" class="thumbnail">
+    {% else %}
+      <img src="/images/default-thumbnail/small/thumbnail-{{ 6 | randomNumber }}.jpg" class="thumbnail">
+    {% endif %}
+  
   <div class="conf-info">
     <h3 class="conf-title" id="{{ conf.data.title | slug }}-hed" title="{{ conf.data.title }}">
       {{ conf.data.title }}
@@ -23,7 +28,7 @@
   </a>
 </div>
 <div class="conf-about">
-  {{ conf.templateContent | safe }}
+  <p>{{ conf.data.byline }}</p>
 </div>
 
 <div class="conf-actions">
@@ -32,7 +37,7 @@
       <a href="{{ conf.data.url | url }}" target="_blank">Go to website</a>
     </div>
     <div class="card__face card__face--front">
-      <button aria-controls="reminder-{{ conf.fileSlug }}" aria-haspopup="true" aria-expanded="false">Email Event Info</button>
+      <button aria-controls="reminder-{{ conf.fileSlug }}" aria-haspopup="true" aria-expanded="false">Email Info</button>
     </div>
 
     <div class="flyout card__face card__face--back">

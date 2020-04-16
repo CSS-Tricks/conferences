@@ -156,7 +156,7 @@ module.exports = function(config) {
   config.addPassthroughCopy('site/images');
   config.addPassthroughCopy('site/admin');
   config.addPassthroughCopy('apple-touch-icon.png');
-  config.addPassthroughCopy('favicon.ico');
+  config.addPassthroughCopy('favicon.png');
 
 
   return {

@@ -93,8 +93,8 @@ body.grid .conf-head {
     text-overflow: ellipsis; }
     @media (min-width: 768px) {
       body.grid .conf-head h3 {
-        font-size: 28px;
-        height: 72px; } }
+        height: 90px;
+        -webkit-line-clamp: 3; } }
   body.grid .conf-head .conf-dates {
     flex: 0 0 50px;
     background: none;
@@ -125,7 +125,7 @@ body.grid .conf-head {
 body.grid .conf-location {
   width: calc(100% - 20px);
   height: 18px;
-  margin-top: 32px;
+  margin-top: 14px;
   font-size: 14px;
   color: var(--lightgray);
   letter-spacing: .15em;
