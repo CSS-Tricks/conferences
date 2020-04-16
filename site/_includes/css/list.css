@@ -1,6 +1,7 @@
 body.list .conference-list {
   width: 100%;
-  padding-top: 30px; }
+  padding-top: 30px;
+  position: relative; }
 body.list .conf {
   display: flex;
   margin: 0 0 2px 0;

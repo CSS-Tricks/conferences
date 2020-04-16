@@ -7,7 +7,7 @@
 html {
   --yellow:#F2A900;
   --ocher:#DD9700;
-  --jetblack:#1C1C1C;
+  --jetblack:#1F1F1F;
   --black: #272727;
   --darkergray:#313131;
   --darkgray:#4C4C4C;
@@ -60,7 +60,7 @@ header {
     display: flex;
     justify-content: space-between; }
   header .logo {
-    margin: 10px 0; }
+    margin: 10px 0 5px 0; }
   header a.pubg-official {
     display: block;
     margin: 15px 0;
@@ -91,7 +91,8 @@ header {
       left: 0;
       right: 0;
       bottom: 0;
-      margin: auto; }
+      margin: auto;
+      pointer-events: none; }
     .site-hero .content .hashtag {
       display: inline-block;
       font-size: 12px;
@@ -235,6 +236,49 @@ main#maincontent {
   @media (min-width: 768px) {
     main#maincontent {
       margin-top: 135px; } }
+  main#maincontent ul div[role="region"] {
+    position: relative; }
+    main#maincontent ul div[role="region"]:after {
+      content: '';
+      position: absolute;
+      width: 150%;
+      height: 150%;
+      background: url(../../images/sparks.png) no-repeat center center;
+      background-size: contain;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+      z-index: -1;
+      transform: scale(-1, 1) translateX(12.5%); }
+    main#maincontent ul div[role="region"]:nth-child(even):after {
+      transform: scale(1.5) translateX(-12.5%); }
+    @media (min-width: 768px) {
+      main#maincontent ul div[role="region"]:first-child:before {
+        content: '';
+        position: absolute;
+        width: 417px;
+        height: 418px;
+        background: url(../../images/molotov.png) no-repeat center right;
+        background-size: contain;
+        left: 75px;
+        bottom: 0;
+        transform: translateX(-100%);
+        z-index: 2;
+        pointer-events: none; }
+      main#maincontent ul div[role="region"]:last-child:before {
+        content: '';
+        position: absolute;
+        width: 536px;
+        height: 536px;
+        background: url(../../images/pan.png) no-repeat center right;
+        background-size: contain;
+        right: 75px;
+        bottom: 0px;
+        transform: translateX(100%);
+        z-index: 2;
+        pointer-events: none; } }
 
 .month-heading {
   font-size: 24px;
