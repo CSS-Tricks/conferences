@@ -198,11 +198,11 @@ body.grid .conf-actions {
   position: absolute;
   bottom: 0; }
   body.grid .conf-actions .to-website {
-    width: calc((100%/2) - 30px);
+    width: calc(100% - 40px);
     padding: 10px 15px;
     background: var(--lightgray);
     color: var(--darkgray);
-    margin: 0 15px 15px 20px;
+    margin: 0 20px 20px 20px;
     text-align: center;
     transition: background ease .3s; }
     body.grid .conf-actions .to-website:hover {
