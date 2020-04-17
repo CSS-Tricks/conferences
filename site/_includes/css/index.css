@@ -76,10 +76,18 @@ header {
 .site-hero {
   position: relative;
   z-index: 3; }
+  @media (max-width: 768px) {
+    .site-hero {
+      overflow: hidden;
+      padding-top: -30px;
+      margin-top: -30px; } }
   .site-hero .content {
     width: 75%;
-    padding: 75px 0 120px 0;
+    padding: 75px 0;
     position: relative; }
+    @media (min-width: 768px) {
+      .site-hero .content {
+        padding: 75px 0 120px 0; } }
     .site-hero .content:after {
       content: '';
       position: absolute;
@@ -127,11 +135,15 @@ header {
           font-size: 18px; } }
   .site-hero .characters {
     position: absolute;
-    height: calc(100% + 75px);
-    top: -30px;
+    height: calc(100% + 15px);
+    top: 0;
     right: 0;
     transform: translateX(calc(50% + 60px));
     pointer-events: none; }
+    @media (min-width: 768px) {
+      .site-hero .characters {
+        height: calc(100% + 75px);
+        top: -30px; } }
     @media (min-width: 992px) {
       .site-hero .characters.mobile {
         display: none; } }
@@ -233,6 +245,9 @@ header {
 
 main#maincontent {
   margin-top: 105px; }
+  @media (max-width: 768px) {
+    main#maincontent {
+      overflow: hidden; } }
   @media (min-width: 768px) {
     main#maincontent {
       margin-top: 135px; } }
@@ -308,7 +323,8 @@ main#maincontent {
 /* Details Page */
 a.return-btn {
   position: absolute;
-  top: 100px;
+  top: 50vh;
+  transform: translateY(calc(-100% - 15px));
   z-index: 3;
   padding: 10px 15px;
   background: var(--darkergray);
@@ -316,6 +332,9 @@ a.return-btn {
   font-family: var(--ff-title);
   color: var(--gray);
   transition: background ease .3s; }
+  @media (min-width: 768px) {
+    a.return-btn {
+      top: 100px; } }
   a.return-btn:hover, a.return-btn:focus {
     background: var(--black); }
   a.return-btn i {
@@ -439,7 +458,7 @@ figure.conf-details-image {
     margin-bottom: 30px; }
   .conf-details-content article iframe {
     width: 100%;
-    height: 300px;
+    height: 250px;
     margin-bottom: 30px; }
   @media (min-width: 768px) {
     .conf-details-content article {

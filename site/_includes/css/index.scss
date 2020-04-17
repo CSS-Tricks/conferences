@@ -98,10 +98,18 @@ header {
 .site-hero {
   position: relative;
   z-index: 3;
+  @media (max-width: 768px){
+    overflow: hidden;
+    padding-top: -30px;
+    margin-top: -30px;
+  }
   .content {
     width: 75%;
-    padding: 75px 0 120px 0;
+    padding: 75px 0;
     position: relative;
+    @media (min-width: 768px){
+      padding: 75px 0 120px 0;
+    }
     &:after{
       content: '';
       position: absolute;
@@ -154,11 +162,15 @@ header {
   }
   .characters {
     position: absolute;
-    height: calc(100% + 75px);
-    top: -30px;
+    height: calc(100% + 15px);
+    top: 0;
     right: 0;
     transform: translateX(calc(50% + 60px));
     pointer-events: none;
+    @media (min-width: 768px){
+      height: calc(100% + 75px);
+      top: -30px;
+    }
     &.mobile {
       @media (min-width: 992px){
         display: none;
@@ -281,6 +293,9 @@ header {
 
 main#maincontent{
   margin-top: 105px;
+  @media (max-width: 768px){
+    overflow: hidden;
+  }
   @media (min-width: 768px){
     margin-top: 135px;
   }
@@ -373,7 +388,8 @@ main#maincontent{
 
 a.return-btn{
   position: absolute;
-  top: 100px;
+  top: 50vh;
+  transform: translateY(calc(-100% - 15px));
   z-index: 3;
   padding: 10px 15px;
   background: var(--darkergray);
@@ -381,6 +397,9 @@ a.return-btn{
   font-family: var(--ff-title);
   color: var(--gray);
   transition: background ease .3s;
+  @media (min-width: 768px){
+    top: 100px;
+  }
   &:hover, &:focus{
     background: var(--black);
   }
@@ -525,7 +544,7 @@ figure.conf-details-image{
     }
     iframe{
       width: 100%;
-      height: 300px;
+      height: 250px;
       margin-bottom: 30px;
     }
     
