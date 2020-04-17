@@ -1,6 +1,6 @@
 ---
 title: PUBG Events
-description: 'Fusce ac accumsan lorem. Vivamus eu nunc et lacus tincidunt egestas nec non ante maecenas metus turpis!'
+description: 'Keep on track with the events happening in the PUBG community!'
 hashtag: '#playaparttogether'
 layout: layouts/index.njk
 pagination:
