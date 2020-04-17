@@ -9,9 +9,9 @@ If you wanna spin it up, after an `npm install`, you should be able to run `npm 
 
 ### Adding an Event
 
-Check out /site/conferences/ for a bunch of `.md` files. Tossing a file in there following that format (YYYY-conf-city.md) should do the trick.
+Check out /site/events/ for a bunch of `.md` files. Tossing a file in there following that format (YYYY-conf-city.md) should do the trick.
 
-Feel free to send me PR (Pull Request) of new conferences.
+Feel free to send me PR (Pull Request) of new events.
 
 Note:
 

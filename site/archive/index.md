@@ -4,7 +4,7 @@ lede: 'Fusce ac accumsan lorem. Vivamus eu nunc et lacus tincidunt egestas nec n
 hashtag: '#playaparttogether'
 layout: layouts/index.njk
 pagination:
-  data: collections.pastconferences
+  data: collections.pastevents
   size: 999
 ---
 

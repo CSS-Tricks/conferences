@@ -2,37 +2,42 @@ backend:
   name: github
   branch: develop
   open_authoring: true
-  repo:  pubg/events
+  repo: pubg/events
 
 publish_mode: editorial_workflow
 
-media_folder: 'images/uploads' # Media files will be stored in the repo under images/uploads
+media_folder: "images/uploads" # Media files will be stored in the repo under images/uploads
 
 collections:
-  - name: 'conferences' # Used in routes, e.g., /admin/collections/blog
-    label: 'Conference' # Used in the UI
-    folder: 'site/conferences' # The path to the folder where the documents are stored
+  - name: "events" # Used in routes, e.g., /admin/collections/blog
+    label: "Event" # Used in the UI
+    folder: "site/events" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
-    slug: '{{year}}-{{title}}-{{city}}' # Filename template, e.g., YYYY-MM-DD-title.md
+    slug: "{{year}}-{{title}}-{{city}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
-      - { label: 'Title', name: 'title', widget: 'string' }
-      - { label: 'URL', name: 'url', widget: 'string' }
-      - { label: 'Start Date', name: 'date', widget: 'datetime' }
-      - { label: 'End Date', name: 'endDate', widget: 'datetime',   required: false}
-      - { label: 'Location', name: 'location', widget: 'string' }
-      - { label: 'Short Description', name: 'byline', widget: 'string' }
-      - { label: 'Body', name: 'body', widget: 'markdown' }
-      - label: 'Small Featured Image (600px wide)'
-        name: 'thumbSmall'
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "URL", name: "url", widget: "string" }
+      - { label: "Start Date", name: "date", widget: "datetime" }
+      - {
+          label: "End Date",
+          name: "endDate",
+          widget: "datetime",
+          required: false,
+        }
+      - { label: "Location", name: "location", widget: "string" }
+      - { label: "Short Description", name: "byline", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown" }
+      - label: "Small Featured Image (600px wide)"
+        name: "thumbSmall"
         required: false
-        widget: 'image'
+        widget: "image"
         media_library:
           config:
             multiple: false
-      - label: 'Large Featured Image (1366px wide)'
-        name: 'thumbLarge'
+      - label: "Large Featured Image (1366px wide)"
+        name: "thumbLarge"
         required: false
-        widget: 'image'
+        widget: "image"
         media_library:
           config:
             multiple: false

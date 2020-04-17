@@ -45,7 +45,7 @@ layout: layouts/base.njk
           </svg>
         </span>
         <span class="screen-reader-text">
-          View conferences as grid
+          View events as grid
         </span>
       </button>
       <button data-body-class="list">
@@ -56,7 +56,7 @@ layout: layouts/base.njk
           </svg>
         </span>
         <span class="screen-reader-text">
-          View conferences as list
+          View events as list
         </span>
       </button>
     </div>
@@ -67,7 +67,7 @@ layout: layouts/base.njk
   <div class="container">
     <ul aria-label="Events listed by months">
 
-      {%- for year in (pagination.items | getConferenceYears) -%}
+      {%- for year in (pagination.items | getEventYears) -%}
       {%- for month in helper.months -%} {% if (pagination.items |
       doesConfExist(month, year)) > 0 %}
 

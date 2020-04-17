@@ -2,9 +2,9 @@
 permalink: feed.json
 ---
 {
-  "source" : "https://conferences.css-tricks.com",
-  "conferences" : [
-    {% for conf in collections.conferences -%}
+  "source" : "https://events.pubg.com",
+  "events" : [
+    {% for conf in collections.events -%}
     {
       "title" : "{{ conf.data.title }}",
       "date" : "{{ conf.data.date }}",

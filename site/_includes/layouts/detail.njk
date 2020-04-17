@@ -32,7 +32,7 @@ layout: layouts/base.njk
 
 <div class="container">
   <main class="conf-details-content">
-    <div class="dates" aria-label="Conference starts on {{ date | readableDate }}">
+    <div class="dates" aria-label="Event starts on {{ date | readableDate }}">
       <time datetime="{{ date | htmlTime }}" >{{ date | readableDate }}</time>
         {% if endDate %}
         <span class="end-date">
@@ -46,7 +46,7 @@ layout: layouts/base.njk
       <h1 class="conf-title" id="{{ title | slug }}-hed">
         {{ title }}
       </h1>
-      <address aria-label="Conference location">
+      <address aria-label="Event location">
         {{ location }}
       </address>
     </div>
@@ -74,7 +74,7 @@ layout: layouts/base.njk
           </div>
 
           <div>
-            <address class="conf-location" aria-label="Conference location">
+            <address class="conf-location" aria-label="Event location">
               <svg class="icon" aria-hidden="true" viewBox="0 0 268 426" version="1" xmlns="http://www.w3.org/2000/svg" fill="#fff" fill-rule="nonzero"><path d="M134 0C60 0 0 60 0     133c0   49 22 112 66 189a1051 1051 0 0 0 68 104l4-2c1-1 33-49 65-109 43-81 65-142 65-182C268 60 208 0 134 0zm62 137a62 62 0 1 1-124-1 62 62 0 0 1 124 1z"/></svg>
               {{ location }}
             </address>

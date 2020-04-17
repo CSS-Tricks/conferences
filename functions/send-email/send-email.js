@@ -2,7 +2,7 @@ const SparkPost = require('sparkpost');
 const client = new SparkPost(process.env.SPARKPOST);
 const querystring = require('querystring');
 
-exports.handler = function(event, context, callback) {
+exports.handler = function (event, context, callback) {
   const post = querystring.parse(event.body);
 
   const email = post['email'],
@@ -20,7 +20,7 @@ exports.handler = function(event, context, callback) {
   client.transmissions
     .send({
       content: {
-        from: 'chris@css-tricks.com',
+        from: 'no-reply@pubg.com',
         subject: `${conf}`,
         html: `<html>
   <body>

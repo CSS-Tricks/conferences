@@ -1,16 +1,16 @@
 ---
 permalink: feed.xml
 metadata:
-  title: Upcoming Conferences - CSS-Tricks
-  url: https://conferences.css-tricks.com
+  title: Upcoming Events - PUBG
+  url: https://events.pubg.com
   author:
     name: CSS Tricks
   feed:
     subtitle:  A place for conferences.
     filename: feed.xml
     path: feed.xml
-    url: https://conferences.css-tricks.com/feed.xml
-    id: https://conferences.css-tricks.com
+    url: https://events.pubg.com/feed.xml
+    id: https://events.pubg.com
 ---
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
@@ -18,12 +18,12 @@ metadata:
   <subtitle>{{ metadata.feed.subtitle }}</subtitle>
   <link href="{{ metadata.feed.url }}" rel="self"/>
   <link href="{{ metadata.url }}"/>
-  <updated>{{ collections.conferences | rssLastUpdatedDate }}</updated>
+  <updated>{{ collections.events | rssLastUpdatedDate }}</updated>
   <id>{{ metadata.feed.id }}</id>
   <author>
     <name>{{ metadata.author.name }}</name>
   </author>
-  {%- for post in collections.conferences %}
+  {%- for post in collections.events %}
   {% set absolutePostUrl %}{{ post.url | url | absoluteUrl(metadata.url) }}{% endset %}
   <entry>
     <title>{{ post.data.title }}</title>
