@@ -4,7 +4,7 @@ url: 'https://pubg.com/'
 date: 2020-04-21
 # endDate: 2019-04-15
 location: 'Twitch / Discord'
-byline: 'The God of PUBG weekly plays on twitch'
+byline: 'Weekly events with the PUBG Team'
 # thumbSmall: /images/uploads/sample-event-small.jpg
 # thumbLarge: /images/uploads/sample-event-large.jpg
 ---
