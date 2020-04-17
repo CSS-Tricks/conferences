@@ -197,7 +197,8 @@ body.grid .conf-actions {
   height: 50px;
   position: absolute;
   bottom: 0; }
-  body.grid .conf-actions .to-website {
+  body.grid .conf-actions .to-website a {
+    display: block;
     width: calc(100% - 40px);
     padding: 10px 15px;
     background: var(--lightgray);
@@ -205,7 +206,7 @@ body.grid .conf-actions {
     margin: 0 20px 20px 20px;
     text-align: center;
     transition: background ease .3s; }
-    body.grid .conf-actions .to-website:hover {
+    body.grid .conf-actions .to-website a:hover {
       background: #F0F0F0; }
   body.grid .conf-actions [aria-hidden='true'] .card__face--back {
     display: none; }

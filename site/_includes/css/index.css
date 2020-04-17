@@ -292,8 +292,10 @@ main#maincontent {
         right: 75px;
         bottom: 0px;
         transform: translateX(100%);
-        z-index: 2;
-        pointer-events: none; } }
+        z-index: 3;
+        pointer-events: none; }
+      main#maincontent ul div[role="region"]:first-child:last-child:before {
+        display: none; } }
 
 .month-heading {
   font-size: 24px;
@@ -334,7 +336,8 @@ a.return-btn {
   transition: background ease .3s; }
   @media (min-width: 768px) {
     a.return-btn {
-      top: 100px; } }
+      top: 100px;
+      transform: translateY(0); } }
   a.return-btn:hover, a.return-btn:focus {
     background: var(--black); }
   a.return-btn i {

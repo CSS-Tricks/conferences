@@ -348,8 +348,13 @@ main#maincontent{
           right: 75px;
           bottom: 0px;
           transform: translateX(100%);
-          z-index: 2;
+          z-index: 3;
           pointer-events: none;
+        }
+      }
+      &:first-child:last-child{
+        &:before{
+          display: none;
         }
       }
     }
@@ -399,6 +404,7 @@ a.return-btn{
   transition: background ease .3s;
   @media (min-width: 768px){
     top: 100px;
+    transform: translateY(0);
   }
   &:hover, &:focus{
     background: var(--black);
