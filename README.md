@@ -1,6 +1,5 @@
-# CSS-Tricks Conference Listing Site
-
-https://conferences.css-tricks.com/
+# PUBG Events Website
+https://events.pubg.com/
 
 ## Running Locally
 
@@ -19,8 +18,4 @@ Note:
 - To be listed, events need to be about front-end.
 - Events need to provide a custom Code of Conduct, and not just link to confcodeofconduct.com, because that provides nothing actionable for an attendee with a problem.
 
-After I merge in a PR, it will trigger a Netlify build that rebuilds the production site. I also set up a Zapier thing to rebuild the site each day, which should remove old conferences as they pass automatically.
-
-### Development, Design Updates
-
-I'm also be open to making the design better and adding nice features (sorting? automatic map generation?), but talk to me (chriscoyier@gmail.com) first about it. I just don't wanna waste your time if our ideas don't align.
+After a PR is merged, it will trigger a Netlify build that rebuilds the production site. 
