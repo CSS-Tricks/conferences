@@ -1,89 +1,62 @@
 <div class="conf-head">
-  <div>
-    <h3 class="conf-title" id="{{ conf.data.title | slug }}-hed">
-      <a href="{{ conf.data.url }}">
-        {{ conf.data.title }}
-      </a>
-      <a href="{{ conf.data.cocUrl }}" class="conf-coc-in-title" aria-label="Code of Conduct for {{ conf.data.title }}" title="Code of Conduct for {{ conf.data.title }}">(CoC)</a>
-    </h3>
-  </div>
-
-  <div class="conf-dates" aria-label="Conference starts on {{ conf.data.date | readableDate }}">
-    <span class="icon-calendar" aria-hidden="true">{{ conf.data.date | htmlTime | replace(r/^.{0,8}/, "") }}</span>
-    <time datetime="{{ conf.data.date | htmlTime }}" >{{ conf.data.date | readableDate }}</time>
-      {% if conf.data.endDate %}
-        <span class="end-date">
-          - <time datetime="{{ conf.data.endDate | htmlTime }}">{{ conf.data.endDate | readableDate }}</time>
-        </span>
+  {% if conf.data.thumbSmall %}
+      <img src="{{ conf.data.thumbSmall }}" class="thumbnail">
+    {% else %}
+      <img src="/images/default-thumbnail/small/thumbnail-{{ 6 | randomNumber }}.jpg" class="thumbnail">
     {% endif %}
-    </time> 
-  </div>
-
-  <div>
-    <address class="conf-location" aria-label="Conference location">
-      <svg class="icon" aria-hidden="true" viewBox="0 0 268 426" version="1" xmlns="http://www.w3.org/2000/svg" fill="#fff" fill-rule="nonzero"><path d="M134 0C60 0 0 60 0 133c0 49 22 112 66 189a1051 1051 0 0 0 68 104l4-2c1-1 33-49 65-109 43-81 65-142 65-182C268 60 208 0 134 0zm62 137a62 62 0 1 1-124-1 62 62 0 0 1 124 1z"/></svg>
+  
+  <div class="conf-info">
+    <h3 class="conf-title" id="{{ conf.data.title | slug }}-hed" title="{{ conf.data.title }}">
+      {{ conf.data.title }}
+    </h3>
+    <address class="conf-location" aria-label="Event location" title="{{ conf.data.location }}">
       {{ conf.data.location }}
     </address>
   </div>
+  <div class="conf-dates" aria-label="Event starts on {{ conf.data.date | readableDate }}">
+    <time datetime="{{ conf.data.date | htmlTime }}" aria-hidden="true">
+      <span class="day" aria-hidden="true">{{ conf.data.date | htmlTime | replace(r/^.{0,8}/, "") }}</span>
+      <span class="month" aria-hidden="true">{{ conf.data.date | getMonthInitials }}</span>
+    </time>
+  </div>
 </div>
-
-<div class="conf-about">
-  {{ conf.templateContent | safe }}
-
-  <div class="link-and-coc">  
-  <a href="{{ conf.data.url | url }}" class="conf-link">
-    {{ conf.data.url | domainRoot }}
-    <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-arrow-right">
-      <use xlink:href="#icon-arrow-right"></use>
+<div class="conf-cta">
+  <a href="{{ conf.url }}" aria-title="Details">
+    <svg width="22" height="12" viewBox="0 0 22 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M15 1L20 6M20 6L15 11M20 6H0" stroke="white" stroke-width="2"/>
     </svg>
   </a>
-
-  {% if conf.data.cocUrl %}
-    <a href="{{ conf.data.cocUrl }}" class="conf-coc" aria-label="Code of Conduct for {{ conf.data.title }}">
-      Code of Conduct
-    </a>
-  {% endif %}
-  </div>
-
+</div>
+<div class="conf-about">
+  <p>{{ conf.data.byline }}</p>
 </div>
 
-<div class="conf-byline">
-  {{ conf.data.byline }}
-</div>
+<div class="conf-actions">
+  <div class="remindme card" id="reminder-{{ conf.fileSlug }}" aria-hidden="true">
+    <div class="to-website">
+      <a href="{{ conf.data.url | url }}" target="_blank">Go to website</a>
+    </div>
+    <div class="card__face card__face--front" style="display: none;">
+      <button aria-controls="reminder-{{ conf.fileSlug }}" aria-haspopup="true" aria-expanded="false">Email Info</button>
+    </div>
 
-<div class="remindme card" id="reminder-{{ conf.fileSlug }}" aria-hidden="true">
-    
-  <div class="card__face card__face--front">
-    <button aria-controls="reminder-{{ conf.fileSlug }}" aria-haspopup="true" aria-expanded="false">Email Conference Info</button>
-  </div>
-  
-  <div class="flyout card__face card__face--back">
-    <form action="/.netlify/functions/send-email" method="post">
-      <label>
-        Email address
-        <input type="email" name="email" required>
-      </label>
-      <input type="hidden" name="url" value="{{ conf.data.url }}">
-      <input type="hidden" name="conf" value="{{ conf.data.title }}">
-      <input type="hidden" name="dates" value="{{ conf.data.date | readableDate }}{% if conf.data.endDate %} - {{ conf.data.endDate | readableDate }}{% endif %}">
-      <input type="hidden" name="loc" value="{{ conf.data.location }}">
-      <input type="hidden" name="coc" value="{{ conf.data.cocUrl }}">
-      <input type="hidden" name="desc" value="{{ conf.templateContent }}">
-      <button class="send-email" aria-label="send email">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon-arrow-right">
-          <use xlink:href="#icon-arrow-right"></use>
-        </svg>
-      </button>
-    </form>
-    <button aria-controls="reminder-{{ conf.fileSlug }}" aria-haspopup="true" aria-expanded="false">Close</button>
+    <div class="flyout card__face card__face--back">
+      <form action="/.netlify/functions/send-email" method="post">
+        <label>
+          Email address
+          <input type="email" name="email" required>
+        </label>
+        <input type="hidden" name="url" value="{{ conf.data.url }}">
+        <input type="hidden" name="conf" value="{{ conf.data.title }}">
+        <input type="hidden" name="dates" value="{{ conf.data.date | readableDate }}{% if conf.data.endDate %} - {{ conf.data.endDate | readableDate }}{% endif %}">
+        <input type="hidden" name="loc" value="{{ conf.data.location }}">
+        <input type="hidden" name="coc" value="{{ conf.data.cocUrl }}">
+        <input type="hidden" name="desc" value="{{ conf.templateContent }}">
+        <button class="send-email" aria-label="send email">
+          Send Email
+        </button>
+      </form>
+      <button aria-controls="reminder-{{ conf.fileSlug }}" aria-haspopup="true" aria-expanded="false" class="close">Close</button>
+    </div>
   </div>
 </div>
-
-<a href="{{ conf.url }}" class="details-link">
-  <span class="screen-reader-text our-notes-text">Details</span>
-  <span aria-hidden="true">
-    <svg class="icon-logo-star" width="35px" height="35px">
-      <use xlink:href="#icon-logo-star"></use>
-    </svg>
-  </span>
-</a>

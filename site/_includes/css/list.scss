@@ -1,0 +1,210 @@
+body.list {
+  .conference-list {
+    width: 100%;
+    padding-top: 30px;
+    position: relative;
+  }
+  .conf {
+    display: flex;
+    margin: 0 0 2px 0;
+    background: white;
+    position: relative;
+    > * {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: block;
+    }
+    &:nth-child(even){
+      .conf-dates{
+        background: #3E3E3E;
+      } 
+    }
+  }
+
+  .conf-head {
+    display: flex;
+    color: #000;
+    border-left: 2px solid var(--yellow);
+    position: relative;
+    flex: 0 0 100%;
+    @media (min-width: 768px) and (max-width: 992px){
+      flex: 0 0 50%;
+    }
+    @media (min-width: 992px){
+      flex: 0 0 60%;
+      &:after{
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 0;
+        border-top: 7px solid transparent;
+        border-left: 7px solid transparent;
+        border-right: 7px solid #fff;
+        border-bottom: 7px solid #fff;
+        left: 236px;
+        bottom: 0;
+        z-index: 2;
+      }
+    }
+    & > * {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: block;
+    }
+    .thumbnail{
+      position: relative;
+      order: 2;
+      width: 150px;
+      object-fit: cover;
+      display: none;
+      @media (min-width: 992px){
+        display: block;
+      }
+    }
+    .conf-info{
+      order: 3;
+      padding: 15px;
+      flex: 0 0 calc(100% - 150px);
+      @media (min-width: 768px) and (max-width: 992px){
+        flex: 0 0 calc(100% - 100px);
+        padding: 20px 15px 20px 30px;
+      }
+      @media (min-width: 992px){
+        flex: 0 0 calc(100% - 250px);
+        padding: 20px 15px 20px 30px;
+      }
+      h3{
+        width: 100%;
+        font-size: 18px;
+        text-transform: uppercase;
+        letter-spacing: .1em;
+        color: var(--jetblack);
+        margin-bottom: 5px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        @media (min-width: 768px){
+          font-size: 24px;
+          margin-bottom: 15px;
+        }
+      }
+      .conf-location{
+        width: 100%;
+        height: 18px;
+        font-size: 16px;
+        color: var(--darkgray);
+        letter-spacing: .15em;
+        display: inline-block;
+        border-left: 1px solid var(--yellow);
+        padding-left: 10px;
+        font-style: normal;
+        font-family: var(--ff-title);
+        font-weight: 400;
+        text-transform: uppercase;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        @media (min-width: 768px){
+          font-size: 14px;
+        }
+      }
+    }
+    .conf-dates{
+      flex: 0 0 75px;
+      order: 1;
+      background: var(--darkgray);
+      color: #fff;
+      font-family: var(--ff-title);
+      text-align: center;
+      padding-top: 15px;
+      @media (min-width: 768px){
+        flex: 0 0 100px;
+      }
+      .day{
+        font-size: 36px;
+        font-weight: bold;
+        letter-spacing: .1em;
+        line-height: 100%;
+        display: block;
+        @media (min-width: 768px){
+          font-size: 42px;
+        }
+      }
+      .month{
+        font-size: 18px;
+        letter-spacing: .15em;
+        line-height: 100%;
+        display: block;
+        text-transform: uppercase;
+        @media (min-width: 768px){
+          font-size: 20px;
+        }
+      }
+    }
+  }
+  
+  .conf-about{
+    display: none;
+    @media (min-width: 768px) and (max-width: 992px){
+      flex: 0 0 50%;
+    }
+    @media (min-width: 768px){
+      display: block;
+    }
+    background: var(--lightgray);
+    padding: 20px 85px 20px 30px;
+    p{
+      color: var(--mediumgray);
+      font-size: 16px;
+      line-height: 150%;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      &:nth-child(1){
+        display: block;
+      }
+    }
+  }
+  
+  .conf-actions{
+    display: none;
+  }
+  
+  .conf-cta{
+    height: 50px;
+    position: absolute;
+    top: 0;
+    right: 20px;
+    bottom: 0;
+    margin: auto;
+    z-index: 2;
+    a{
+      width: 50px;
+      height: 50px;
+      position: relative;
+      background: var(--yellow);
+      display: inline-block;
+      overflow: hidden;
+      transition: ease .3s;
+      transition-property: background;
+      svg{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+      }
+      &:hover{
+        background: var(--ocher);
+      }
+    }
+  }
+
+  .our-notes-text {
+    color: var(--rust);
+    position: static;
+  }
+}

@@ -1,8 +1,8 @@
 backend:
   name: github
-  branch: master
+  branch: develop
   open_authoring: true
-  repo: CSS-Tricks/conferences
+  repo:  pubg/events
 
 publish_mode: editorial_workflow
 
@@ -17,19 +17,20 @@ collections:
     fields: # The fields for each document, usually in front matter
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'URL', name: 'url', widget: 'string' }
-      - { label: 'Code of Conduct URL', name: 'cocUrl', widget: 'string' }
       - { label: 'Start Date', name: 'date', widget: 'datetime' }
-      - {
-          label: 'End Date',
-          name: 'endDate',
-          widget: 'datetime',
-          required: false,
-        }
+      - { label: 'End Date', name: 'endDate', widget: 'datetime',   required: false}
       - { label: 'Location', name: 'location', widget: 'string' }
-      - { label: 'Byline', name: 'byline', widget: 'string' }
+      - { label: 'Short Description', name: 'byline', widget: 'string' }
       - { label: 'Body', name: 'body', widget: 'markdown' }
-      - label: 'Featured Image'
-        name: 'thumbnail'
+      - label: 'Small Featured Image (600px wide)'
+        name: 'thumbSmall'
+        required: false
+        widget: 'image'
+        media_library:
+          config:
+            multiple: false
+      - label: 'Large Featured Image (1366px wide)'
+        name: 'thumbLarge'
         required: false
         widget: 'image'
         media_library:

@@ -12,16 +12,17 @@
   <meta property="og:type" content="website">
   <meta property="og:title" content="{{ site.title }}">
   <meta property="og:description" content="{{ site.description }}">
-  <meta property="og:image" content="https://css-tricks.com/wp-content/uploads/2013/06/CSS-Tricks-star.png">
+  <meta property="og:image" content="/images/og-image.png">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="{{ site.title }}">
   <meta name="twitter:description" content="{{ site.description }}">
-  <meta name="twitter:image" content="https://css-tricks.com/wp-content/uploads/2013/06/CSS-Tricks-star.png">
+  <meta name="twitter:image" content="/images/og-image.png">
+  
+  <link rel="icon" href="/images/favicon-32x32.png" sizes="32x32" />
+  <link rel="icon" href="/images/favicon-192-x192.png" sizes="192x192" />
+  <link rel="apple-touch-icon-precomposed" href="/images/apple-touch-icon.png" />
 
-  <link
-    href="https://fonts.googleapis.com/css?family=Rubik:700"
-    rel="stylesheet"
-  />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Rajdhani:wght@600;700&display=swap" rel="stylesheet">
   {%- set css -%}
     {% include "css/index.css" %}
     {% include "css/grid.css" %}
@@ -31,6 +32,14 @@
     {{ css | cssmin | safe }}
   </style>
   <link rel="alternate" href="/feed.xml" title="{{ site.title }}" type="application/atom+xml">
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-119774708-4"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-119774708-4');
+    </script>
 </head>
 
 <body class="grid">

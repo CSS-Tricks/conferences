@@ -43,11 +43,22 @@ module.exports = function(config) {
     let domainObj = urlParse(rootUrl);
     return domainObj.hostname;
   });
+  
+  config.addFilter('randomNumber', function(value) {
+    return Math.floor(Math.random() * value);
+  });
 
   config.addFilter('getMonthName', dateObj => {
     return DateTime.fromJSDate(dateObj, {
       zone: 'utc'
     }).toFormat('MMMM');
+  });
+  
+  config.addFilter('getMonthInitials', dateObj => {
+    var monthName = DateTime.fromJSDate(dateObj, {
+      zone: 'utc'
+    }).toFormat('MMMM');
+    return monthName.substring(0,3);
   });
 
   config.addFilter('checkDate', (dateObj, month, year) => {
@@ -145,7 +156,7 @@ module.exports = function(config) {
   config.addPassthroughCopy('site/images');
   config.addPassthroughCopy('site/admin');
   config.addPassthroughCopy('apple-touch-icon.png');
-  config.addPassthroughCopy('favicon.ico');
+  config.addPassthroughCopy('favicon.png');
 
 
   return {
