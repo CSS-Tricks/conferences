@@ -1,7 +1,7 @@
 ---
-title: 'Play with PUBG - PC Edition!'
-url: 'https://pubg.com/'
-date: 2020-04-21
+title: 'Play with PUBG - Console Edition!'
+url: 'https://www.twitch.tv/playwithpubg'
+date: 2020-04-10
 # endDate: 2019-04-15
 location: 'Twitch / Discord'
 byline: 'Weekly events with the PUBG Team'
