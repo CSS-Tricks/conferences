@@ -4,7 +4,7 @@ url: 'https://www.twitch.tv/playwithpubg'
 date: 2020-04-24
 # endDate: 2019-04-15
 location: 'Twitch / Discord'
-byline: 'Weekly events with the PUBG Team'
+byline: 'Come play with the PUBG Dev & Community Team!'
 # thumbSmall: /images/uploads/sample-event-small.jpg
 # thumbLarge: /images/uploads/sample-event-large.jpg
 ---
