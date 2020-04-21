@@ -4,7 +4,7 @@ url: https://react-finland.fi
 cocUrl: http://berlincodeofconduct.org
 date: 2020-05-12
 endDate: 2020-05-15
-location: Helsinki, Finland
+location: Online
 byline: Learn More about React, Explore Finland.
 ---
 

@@ -2,8 +2,8 @@
 title: CityJS Conference
 url: https://cityjsconf.org/home
 cocUrl: https://cityjsconf.org/coc
-date: 2020-03-27
-endDate: 2020-03-27
+date: 2020-09-14
+endDate: 2020-09-14
 location: London, England
 byline: CITY OF LONDON JAVASCRIPT CONFERENCE
 ---

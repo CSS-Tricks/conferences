@@ -2,7 +2,7 @@
 title: HalfStack Charlotte
 url: https://halfstackconf.com/charlotte/
 cocUrl: https://halfstackconf.com/charlotte/code-of-conduct/
-date: 2020-04-24
+date: 2020-12-11
 location: Charlotte, North Carolina
 byline: Frontend, JavaScript, UI, Web, Development.
 ---
