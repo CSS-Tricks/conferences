@@ -7,5 +7,5 @@ location: Tel Aviv-Yafo, Israel
 byline: Frontend, JavaScript, UI, Web, Development.
 ---
 
-An authentic, high value experience for attendees and sponsors focused on UI-centric JavaScript and web development.
+An authentic, high value experience for attendees and sponsors focused on creative JavaScript and web development.
 
