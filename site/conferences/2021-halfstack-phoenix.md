@@ -1,9 +1,9 @@
 ---
-title: HalfStack London
-url: https://halfstackconf.com/london/
-cocUrl: https://halfstackconf.com/london/code-of-conduct/
-date: 2020-11-20
-location: Shoreditch, London
+title: HalfStack Phoenix
+url: https://halfstackconf.com/phoenix/
+cocUrl: https://halfstackconf.com/phoenix/code-of-conduct/
+date: 2021-01-15
+location: Chandler, AZ
 byline: Frontend, JavaScript, UI, Web, Development.
 ---
 
