@@ -8,4 +8,4 @@ location: 'Budapest, Hungary'
 byline:
 ---
 
-JSConf Budapest
+A strictly nonprofit, open-sourced and community driven conference for the community of JavaScript, with the purpose to build and educate about new technologies, ideas and culture.
