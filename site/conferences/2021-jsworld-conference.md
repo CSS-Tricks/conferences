@@ -8,4 +8,4 @@ location: Online
 byline: JSworld Conference is the Worlds Premier Javascript Conference of 2021. J
 ---
 
-JSworld Conference Online is the Largest & Most Epic JavaScript Conference and Community Event of 2021. Learn & Talk directly with the JavaScript Frontend Developer Leaders from around the world.
+JSworld Conference Online is the Largest & Most Epic JavaScript Conference and Community Event of 2021. Learn & Talk directly with the JavaScript Front-End Developer Leaders from around the world.
