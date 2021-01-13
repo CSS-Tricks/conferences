@@ -8,10 +8,4 @@ location: Virtual
 byline: The biggest React conference in the cloud
 ---
 
-React Summit Remote Edition 2021 will be held online and will include:
-* 3-day conference with 2 tracks: Base Camp & Summit
-* Managed Q&A sessions after each talk
-* Speakers individual video rooms
-* Discussion rooms focusing on multiple tech topics
-* Discord for networking and questions to speakers
-* Afterparty video rooms with different activities
+Attend a two-track three-day conference on all things React, gathering international Front-end and Full-stack engineers in the cloud. To help you stay up-to-date on the latest React tech, we're coming back with a new remote gig on April 14-16, 2020.
