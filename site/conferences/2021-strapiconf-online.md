@@ -2,8 +2,8 @@
 title: StrapiConf
 url: 'https://conf.strapi.io/'
 cocUrl: 'https://github.com/strapi/strapi/blob/master/CODE_OF_CONDUCT.md'
-date: 2021-04-22 T00:00:00.000Z
-endDate: 2021-04-22 T00:00:00.000Z
+date: 2021-04-22 
+endDate: 2021-04-22 
 location: 'Online'
 byline: A virtual conference for the Strapi and JAMstack communities. Free for everyone.
 ---
