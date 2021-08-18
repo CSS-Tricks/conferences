@@ -51,10 +51,10 @@
   {{ conf.data.byline }}
 </div>
 
-<div class="remindme card" id="reminder-{{ conf.fileSlug }}" aria-hidden="true">
+<div class="remindme card" id="reminder-{{ conf.fileSlug | slug }}" aria-hidden="true">
     
   <div class="card__face card__face--front">
-    <button aria-controls="reminder-{{ conf.fileSlug }}" aria-haspopup="true" aria-expanded="false">Email Conference Info</button>
+    <button aria-controls="reminder-{{ conf.fileSlug | slug }}" aria-haspopup="true" aria-expanded="false">Email Conference Info</button>
   </div>
   
   <div class="flyout card__face card__face--back">
@@ -75,7 +75,7 @@
         </svg>
       </button>
     </form>
-    <button aria-controls="reminder-{{ conf.fileSlug }}" aria-haspopup="true" aria-expanded="false">Close</button>
+    <button aria-controls="reminder-{{ conf.fileSlug | slug }}" aria-haspopup="true" aria-expanded="false">Close</button>
   </div>
 </div>
 
