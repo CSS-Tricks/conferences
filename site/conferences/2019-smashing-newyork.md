@@ -1,5 +1,5 @@
 ---
-title: Smashing Conference
+title: Smashing Conference New York City 2019
 url: https://smashingconf.com/ny-2019/
 cocUrl: https://smashingconf.com/codeofconduct
 date: 2019-10-15

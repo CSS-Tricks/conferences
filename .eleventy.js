@@ -146,7 +146,7 @@ module.exports = function(config) {
   return {
     dir: { input: 'site', output: 'dist', includes: '_includes' },
     passthroughFileCopy: true,
-    templateFormats: ['njk', 'md', 'css', 'html', 'yml'],
+    templateFormats: ['njk', 'md', 'css', 'html'],
     htmlTemplateEngine: 'njk',
     markdownTemplateEngine: 'njk'
   };

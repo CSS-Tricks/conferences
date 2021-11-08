@@ -1,5 +1,5 @@
 ---
-title: Smashing Conference
+title: Smashing Conference Toronto 2019
 url: https://smashingconf.com/toronto-2019
 cocUrl: https://smashingconf.com/codeofconduct
 date: 2019-06-25

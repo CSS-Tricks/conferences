@@ -1,5 +1,5 @@
 ---
-title: An Event Apart
+title: An Event Apart Denver 2019
 url: https://aneventapart.com/event/denver-2019
 cocUrl: https://aneventapart.com/registration-information#code-of-conduct
 date: 2019-10-28

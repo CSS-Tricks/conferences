@@ -1,5 +1,5 @@
 ---
-title: Smashing Conference
+title: Smashing Conference Freiburg 2020
 url: https://smashingconf.com/freiburg-2020/
 cocUrl: https://smashingconf.com/codeofconduct
 date: 2020-09-07

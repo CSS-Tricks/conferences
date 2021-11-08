@@ -1,5 +1,5 @@
 ---
-title: An Event Apart
+title: An Event Apart Washington DC 2020
 url: 'https://aneventapart.com/event/washington-dc-2020'
 cocUrl: 'https://aneventapart.com/registration-information#code-of-conduct'
 date: 2020-04-13T13:31:22.463Z

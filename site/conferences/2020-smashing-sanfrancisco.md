@@ -1,5 +1,5 @@
 ---
-title: Smashing Conference
+title: Smashing Conference San Francisco 2020
 url: https://smashingconf.com/sf-2020/
 cocUrl: https://smashingconf.com/codeofconduct
 date: 2020-04-21

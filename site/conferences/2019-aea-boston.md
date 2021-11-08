@@ -1,5 +1,5 @@
 ---
-title: An Event Apart
+title: An Event Apart Boston 2019
 url: 'https://aneventapart.com/event/boston-2019'
 cocUrl: 'http://aneventapart.com/registration-information#code-of-conduct'
 date: 2019-05-05T15:00:00.000Z

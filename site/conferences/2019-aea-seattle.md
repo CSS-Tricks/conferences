@@ -1,5 +1,5 @@
 ---
-title: An Event Apart
+title: An Event Apart Seattle 2019
 url: https://aneventapart.com/event/seattle-2019
 cocUrl: https://aneventapart.com/registration-information#code-of-conduct
 date: 2019-03-04

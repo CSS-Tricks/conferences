@@ -1,5 +1,5 @@
 ---
-title: Smashing Conference
+title: Smashing Conference San Francisco 2019
 url: https://smashingconf.com/sf-2019/
 cocUrl: https://smashingconf.com/codeofconduct
 permalink: https://css-tricks.com

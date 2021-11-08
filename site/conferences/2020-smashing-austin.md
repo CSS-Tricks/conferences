@@ -1,5 +1,5 @@
 ---
-title: Smashing Conference
+title: Smashing Conference Austin 2020
 url: https://smashingconf.com/austin-2020
 cocUrl: https://smashingconf.com/codeofconduct
 date: 2020-06-09
