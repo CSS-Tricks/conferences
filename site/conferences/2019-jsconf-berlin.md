@@ -1,5 +1,5 @@
 ---
-title: JSConf EU
+title: JSConf EU 2019
 url: https://2019.jsconf.eu/
 cocUrl: https://2019.jsconf.eu/code-of-conduct/
 date: 2019-06-01

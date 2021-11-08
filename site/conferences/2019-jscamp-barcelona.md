@@ -1,5 +1,5 @@
 ---
-title: JSCamp
+title: JSCamp Barcelona 2019
 url: https://jscamp.tech/
 cocUrl: https://jscamp.tech/code-of-conduct/
 date: 2019-07-18

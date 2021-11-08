@@ -1,5 +1,5 @@
 ---
-title: Frontend United
+title: Frontend United Minsk 2020
 url: 'https://www.frontendunited.org'
 cocUrl: 'https://www.frontendunited.org/code-of-conduct'
 date: 2020-05-01T09:00:00.00

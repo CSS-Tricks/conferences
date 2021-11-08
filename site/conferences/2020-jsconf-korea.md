@@ -1,5 +1,5 @@
 ---
-title: JSConf Korea
+title: JSConf Korea 2020
 url: 'https://jsconfkorea.com/'
 cocUrl: 'https://jsconfkorea.com/code-of-conduct'
 date: 2020-09-20

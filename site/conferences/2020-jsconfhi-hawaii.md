@@ -1,5 +1,5 @@
 ---
-title: JSConf Hawaiʻi
+title: JSConf Hawaiʻi 2020
 url: https://www.jsconfhi.com/
 cocUrl: https://www.jsconfhi.com/code-of-conduct/
 date: 2020-02-05

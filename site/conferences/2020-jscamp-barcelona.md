@@ -1,5 +1,5 @@
 ---
-title: JSCAMP
+title: JSCAMP Barcelona 2020
 url: https://jscamp.tech/
 cocUrl: https://jscamp.tech/code-of-conduct/
 date: 2020-07-16

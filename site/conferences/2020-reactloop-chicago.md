@@ -1,5 +1,5 @@
 ---
-title: React Loop
+title: React Loop Chicago 2020
 url: https://reactloop.com
 cocUrl: https://reactloop.com/conduct
 date: 2020-06-19

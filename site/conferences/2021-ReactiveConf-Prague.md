@@ -1,5 +1,5 @@
 ---
-title: "ReactiveConf"
+title: 'ReactiveConf Prague 2021'
 url: https://reactiveconf.com/
 cocUrl: https://reactiveconf.com/code-of-conduct/
 date: 2021-03-08

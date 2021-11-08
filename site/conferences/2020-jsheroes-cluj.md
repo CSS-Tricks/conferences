@@ -1,5 +1,5 @@
 ---
-title: JSHeroes
+title: JSHeroes Cluj 2020
 url: https://jsheroes.io/
 cocUrl: https://jsheroes.io/code-of-conduct
 date: 2020-04-23

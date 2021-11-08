@@ -1,5 +1,5 @@
 ---
-title: Nordic.js
+title: Nordic.js Stockholm 2021
 url: https://nordicjs.com/2021
 cocUrl: https://nordicjs.com/code-of-conduct
 date: 2021-10-07

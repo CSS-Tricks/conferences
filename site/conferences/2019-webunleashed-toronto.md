@@ -1,5 +1,5 @@
 ---
-title: Web Unleashed
+title: Web Unleashed Toronto 2019
 url: https://fitc.ca/event/webu19/
 cocUrl: https://fitc.ca/code-of-conduct/
 date: 2019-09-13

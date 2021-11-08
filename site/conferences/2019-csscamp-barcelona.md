@@ -1,5 +1,5 @@
 ---
-title: CSSCamp
+title: CSSCamp Barcelona 2019
 url: https://csscamp.tech/
 cocUrl: https://csscamp.tech/code-of-conduct/
 date: 2019-07-17

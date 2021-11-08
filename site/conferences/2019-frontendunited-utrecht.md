@@ -1,5 +1,5 @@
 ---
-title: Frontend United
+title: Frontend United Utrecht 2019
 url: https://www.frontendunited.org/
 cocUrl: https://www.frontendunited.org/code-of-conduct
 date: 2019-05-16
