@@ -1,6 +1,6 @@
 const { DateTime } = require('luxon');
 const CleanCSS = require('clean-css');
-const urlParse = require('url-parse')
+const urlParse = require('url-parse');
 const pluginRss = require('@11ty/eleventy-plugin-rss');
 const slugify = require('slugify');
 
@@ -25,18 +25,18 @@ module.exports = function(config) {
     return collection.getFilteredByGlob('site/conferences/*.md');
   });
 
-  config.addFilter('getConferenceYears', (conferences) => {
-      let result = conferences.reduce((years,conf) => {
-        let current_year = DateTime.fromJSDate(conf.data.date,{
-          zone: 'utc'
-        }).year;
-        if(years.indexOf(current_year) === -1){
-          years.push(current_year);
-        }
-        return years;
-      },[])
-      result.sort();
-      return result;
+  config.addFilter('getConferenceYears', conferences => {
+    let result = conferences.reduce((years, conf) => {
+      let current_year = DateTime.fromJSDate(conf.data.date, {
+        zone: 'utc'
+      }).year;
+      if (years.indexOf(current_year) === -1) {
+        years.push(current_year);
+      }
+      return years;
+    }, []);
+    result.sort();
+    return result;
   });
 
   config.addFilter('domainRoot', rootUrl => {
@@ -52,12 +52,12 @@ module.exports = function(config) {
 
   config.addFilter('checkDate', (dateObj, month, year) => {
     let current_month = DateTime.fromJSDate(dateObj, {
-        zone: 'utc'
-      }).toFormat('MMMM');
-      let current_year = DateTime.fromJSDate(dateObj, {
-        zone: 'utc'
-      }).year;
-      return current_month === month && current_year === year;
+      zone: 'utc'
+    }).toFormat('MMMM');
+    let current_year = DateTime.fromJSDate(dateObj, {
+      zone: 'utc'
+    }).year;
+    return current_month === month && current_year === year;
   });
 
   config.addFilter('doesConfExist', (conferences, monthToTest, yearToTest) => {
@@ -79,38 +79,38 @@ module.exports = function(config) {
     }).toFormat('LLLL d, y');
   });
 
-  config.addFilter("firstLine", firstString => {
+  config.addFilter('firstLine', firstString => {
     let partString = firstString.split(/[ ,]+/);
-    let ret = "";
-    if( partString[ 0 ] ) {
-      ret += partString[ 0 ];
+    let ret = '';
+    if (partString[0]) {
+      ret += partString[0];
     }
-    if( partString[ 1 ] ) {
-      ret += " " + partString[ 1 ];
+    if (partString[1]) {
+      ret += ' ' + partString[1];
     }
     return ret;
   });
 
-  config.addFilter("secondLine", firstString => {
+  config.addFilter('secondLine', firstString => {
     let partString = firstString.split(/[ ,]+/);
-    let ret = "";
-    if( partString[ 2 ] ) {
-      ret += " " + partString[ 2 ];
+    let ret = '';
+    if (partString[2]) {
+      ret += ' ' + partString[2];
     }
-    if( partString[ 3 ] ) {
-      ret += " " + partString[ 3 ];
+    if (partString[3]) {
+      ret += ' ' + partString[3];
     }
     return ret;
   });
 
-    config.addFilter("thirdLine", firstString => {
+  config.addFilter('thirdLine', firstString => {
     let partString = firstString.split(/[ ,]+/);
-    let ret = "";
-    if( partString[ 4 ] ) {
-      ret += " " + partString[ 4 ];
+    let ret = '';
+    if (partString[4]) {
+      ret += ' ' + partString[4];
     }
-    if( partString[ 5 ] ) {
-      ret += " " + partString[ 5 ];
+    if (partString[5]) {
+      ret += ' ' + partString[5];
     }
     return ret;
   });
@@ -127,14 +127,10 @@ module.exports = function(config) {
 
   // override the slug filter to be more restrictive
   // eg. for confereces with parenthesis or Script'19
-  slugify.extend(
-    {"'": '-'},
-    {'(': ''},
-    {')': ''},
-  )
+  slugify.extend({ "'": '-' }, { '(': '' }, { ')': '' });
   config.addFilter('slug', function(value) {
     return slugify(value, {
-      replacement: "-",
+      replacement: '-',
       lower: true
     });
   });
@@ -147,11 +143,10 @@ module.exports = function(config) {
   config.addPassthroughCopy('apple-touch-icon.png');
   config.addPassthroughCopy('favicon.ico');
 
-
   return {
     dir: { input: 'site', output: 'dist', includes: '_includes' },
     passthroughFileCopy: true,
-    templateFormats: ['njk', 'md', 'css', 'js', 'html', 'yml'],
+    templateFormats: ['njk', 'md', 'css', 'html', 'yml'],
     htmlTemplateEngine: 'njk',
     markdownTemplateEngine: 'njk'
   };
