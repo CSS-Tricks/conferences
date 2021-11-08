@@ -1,0 +1,142 @@
+body.list .conference-list {
+  list-style: none;
+  padding: 2rem;
+  font-size: 14px;
+  width: 100%;
+}
+
+body.list .conf {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  justify-content: center;
+  background: white;
+  color: var(--dark);
+  margin: 0 0 1px 0;
+  border-radius: 5px;
+}
+
+body.list .conf > *,
+body.list .conf-head > * {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+}
+
+body.list .conf > * {
+  padding: 0.5rem;
+}
+
+body.list .conf-head {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+}
+
+body.list .our-notes-text {
+  color: var(--rust);
+  position: static;
+}
+
+body.list .details-link {
+  display: none;
+}
+
+body.list .icon {
+  width: 10px;
+  fill: #222;
+  margin-bottom: -3px;
+  margin-right: 5px;
+}
+
+body.list .end-date {
+  display: none;
+}
+
+body.list .conf-meta {
+  display: none;
+}
+
+body.list .conf-coc-in-title {
+  display: inline-block;
+  color: var(--rust);
+  font-size: 0.7rem !important;
+}
+
+body.list .conf-title {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+body.list .conf-title a {
+  font-size: 1rem;
+  line-height: 1.2;
+}
+
+body.list .conf-link,
+body.list .conf-about {
+  display: none;
+}
+
+body.list .conf-location {
+  font-style: normal;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+}
+
+body.list .conf-coc {
+  color: var(--rust);
+  margin-left: auto;
+}
+
+@media (max-width: 700px) {
+  body.list .conference-list {
+    padding: 1rem;
+  }
+
+  body.list .conf {
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+
+  body.list .conf-head {
+    display: block;
+  }
+
+  body.list .conf-head > * {
+    padding: 0.25rem 0;
+  }
+
+  body.list .conf > * {
+    padding: 1rem;
+  }
+
+  body.list .conf > *:not(:first-child) {
+    padding-top: 0.25rem;
+  }
+
+  body.list .conf .conf-byline {
+    white-space: normal;
+  }
+
+  body.list .conf .conf-meta {
+    padding: 0.15rem 1rem 0.75rem 1rem;
+  }
+}
+body.list h3 a {
+  color: var(--dark);
+}
+
+body.list h3 a:hover,
+body.list h3 a:focus,
+body.list h3 a:visited {
+  color: #3a3448;
+}
+
+body.list .remindme {
+  display: none;
+}
+
+/*# sourceMappingURL=list.css.map */

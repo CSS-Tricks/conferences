@@ -23,9 +23,9 @@
     rel="stylesheet"
   />
   {%- set css -%}
-    {% include "css/index.css" %}
-    {% include "css/grid.css" %}
-    {% include "css/list.css" %}
+    {% include "processed_css/index.css" %}
+    {% include "processed_css/grid.css" %}
+    {% include "processed_css/list.css" %}
   {%- endset %}
   <style>
     {{ css | cssmin | safe }}

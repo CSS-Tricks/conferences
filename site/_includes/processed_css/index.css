@@ -1,0 +1,274 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  --rust: #993300;
+  --orange: #ff8a00;
+  --dark: #100e17;
+  --pink: #da1b60;
+  --ff-title: "Rubik", "Lato", "Lucida Grande", "Lucida Sans Unicode", Tahoma,
+    Sans-Serif;
+  --ff-body: -system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol";
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.35;
+  font-family: var(--ff-body);
+  background: var(--dark);
+  color: white;
+}
+
+.screen-reader-text {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--ff-title);
+}
+
+.site-header {
+  padding: 6rem 2rem 3.25rem 2rem;
+  position: relative;
+}
+
+h1 {
+  font-family: var(--ff-title);
+  color: var(--orange);
+  line-height: 1;
+  font-size: 32px;
+  letter-spacing: -0.035em;
+  text-transform: uppercase;
+}
+
+@media (min-width: 45em) {
+  h1 {
+    font-size: 5.75vw;
+  }
+}
+@media (min-width: 65em) {
+  h1 {
+    font-size: 60px;
+  }
+}
+h1 a {
+  font-family: var(--ff-title);
+  color: var(--orange);
+}
+
+.logo {
+  margin-right: 1rem;
+}
+
+.icon-logo-star {
+  fill: var(--orange);
+  height: 20px;
+  width: 20px;
+}
+
+.icon-logo-text {
+  fill: white;
+  height: 20px;
+  width: 122px;
+}
+
+.presents {
+  color: white;
+  font-size: 12px;
+  font-style: italic;
+  position: relative;
+  top: -3px;
+}
+
+.contribute-link {
+  position: absolute;
+  right: 2rem;
+  top: 2rem;
+  color: white;
+  background: var(--rust);
+  border-radius: 5px;
+  padding: 0.5rem 2rem;
+}
+
+.contribute-link:hover,
+.contribute-link:focus {
+  background: var(--orange);
+}
+
+.main-nav {
+  position: relative;
+  border-bottom: 2px solid white;
+  display: flex;
+  align-items: flex-end;
+  margin: 2rem 0 0 0;
+}
+
+.main-nav a {
+  color: white;
+  display: inline-block;
+  padding: 2px 10px 2px 0;
+  opacity: 0.75;
+  margin-right: 5px;
+}
+
+.main-nav a.active {
+  opacity: 1;
+  color: var(--orange);
+  border-bottom: 4px solid var(--orange);
+}
+
+.style-switcher {
+  display: flex;
+  margin-left: auto;
+}
+
+.month-heading {
+  padding: 0 2rem;
+  margin-top: 2rem;
+}
+
+button {
+  background: none;
+  padding: 0.5rem 1rem;
+  color: white;
+  border: 1px solid white;
+  font-size: 24px;
+}
+
+button.active {
+  background: white;
+  color: black;
+}
+
+.view-icon {
+  font-family: sans-serif;
+  pointer-events: none;
+}
+
+.site-footer {
+  background: #222;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.site-footer img {
+  max-height: 60px;
+  vertical-align: middle;
+}
+
+.credit {
+  padding: 2rem;
+}
+
+.syndication {
+  background: black;
+  padding: 2rem;
+}
+
+.syndication a {
+  color: white;
+}
+
+@media (max-width: 700px) {
+  html {
+    font-size: 15px;
+  }
+
+  .subtitle {
+    margin-bottom: 0.5rem;
+  }
+
+  .site-header {
+    padding: 1.5rem 1rem 1rem 1rem;
+  }
+
+  .site-header:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  .contribute-link {
+    position: static;
+    margin-bottom: 1rem;
+  }
+
+  .month-heading {
+    padding: 0 1rem;
+    margin-top: 2rem;
+    display: block;
+  }
+}
+.conf-standalone {
+  padding: 0 1rem;
+}
+
+.conf-standalone .conf {
+  margin: 0 auto;
+  max-width: 70em;
+}
+
+.conf-standalone .conf-title {
+  font-size: 2.4em;
+}
+
+.conf-standalone .split {
+  padding: 0.5rem 0 0 0;
+}
+
+@media (min-width: 65em) {
+  .conf-standalone .split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 4rem;
+  }
+}
+.conf-teasers img,
+.conf-teasers object {
+  max-width: 600px;
+  border-radius: 0.175em;
+}
+
+body.grid .conf .split div.conf-about {
+  order: 1;
+}
+
+.conf-standalone .conf-teasers {
+  margin: 1rem;
+}
+
+.conf-standalone figcaption {
+  font-size: 0.9rem;
+  display: block;
+  margin: 0.75rem 0 0.25rem 0;
+}
+
+.conf-standalone figcaption a {
+  color: var(--rust);
+}
+
+body.grid .conf-standalone .conf-link {
+  font-size: 1.1rem;
+}
+
+body.grid .conf-standalone .conf-coc {
+  position: static;
+  display: block;
+  margin-top: 0.65em;
+}
+
+/*# sourceMappingURL=index.css.map */

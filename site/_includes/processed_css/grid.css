@@ -1,0 +1,286 @@
+body.grid .conference-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  grid-gap: 4rem;
+  padding: 2rem;
+}
+
+body.grid .conf {
+  background: white;
+  color: #100e17;
+  border-radius: 10px;
+  box-shadow: 0 25px 50px black;
+  position: relative;
+  padding-bottom: 50px;
+}
+
+body.grid .conf-title a {
+  display: block;
+  padding: 0.5rem 1rem;
+  color: white;
+  line-height: 1.2;
+  text-shadow: 1px 1px 2px #00000073;
+}
+
+body.grid .conf-coc-in-title {
+  display: none !important;
+}
+
+body.grid .icon {
+  font-size: 24px;
+  margin-right: 0.5rem;
+  width: 10px;
+}
+
+body.grid .icon-calendar {
+  position: relative;
+  display: block;
+  height: 24px;
+  width: 24px;
+  font-size: 12px;
+  text-align: center;
+  border: 1px solid #333;
+  background: white;
+  color: black;
+  border-radius: 2px;
+  padding-top: 6px;
+  margin: 3px 10px 3px 0;
+}
+
+body.grid .icon-calendar::before {
+  content: "";
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  height: 4px;
+  width: 100%;
+  background: var(--rust);
+  border: 1px solid #333;
+  border-radius: 2px 2px 0px 0px;
+}
+
+body.grid .conf-dates {
+  background: #000;
+  background: repeating-linear-gradient(45deg, #1f1f1f, #1f1f1f 10px, #0f0e16 10px, #0f0e16 20px);
+  background-attachment: fixed;
+  color: #fff;
+  font-weight: 600;
+  border: solid rgba(255, 255, 255, 0.125);
+  border-width: 1px 0 0 1px;
+  border-radius: 0 0 5.5em/95% 0;
+}
+
+body.grid .conf-dates,
+body.grid .conf-location {
+  display: flex;
+  align-items: center;
+  padding: 0.66rem 1rem;
+  font-size: 15px;
+}
+
+body.grid .end-date {
+  margin-left: 0.25rem;
+}
+
+body.grid .link-and-coc {
+  margin-top: 2rem;
+}
+
+body.grid .conf-coc:hover,
+body.grid .conf-coc:focus,
+body.grid .conf-link:hover,
+body.grid .conf-link:focus {
+  color: var(--dark);
+}
+
+body.grid .conf-link,
+body.grid .conf-coc {
+  font-size: 0.8rem;
+  color: var(--rust);
+  font-weight: 700;
+  white-space: nowrap;
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+body.grid .conf-coc {
+  font-size: 0.66rem;
+}
+
+body.grid .icon-arrow-right {
+  margin-bottom: -0.225em;
+  transition: margin-left 0.2s ease-in-out;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  body.grid .conf-link:hover .icon-arrow-right {
+    margin-left: 0.125em;
+  }
+}
+body.grid .conf-location {
+  font-style: normal;
+  background-color: #ffc9a3;
+  background-size: cover;
+}
+
+body.grid .conf-about {
+  padding: 1rem 2.5rem 1rem 1rem;
+}
+
+body.grid .conf-about p {
+  margin-bottom: 1rem;
+}
+
+body.grid .conf-standalone .conf-about p {
+  font-size: 130%;
+}
+
+body.grid .conf-byline {
+  display: none;
+}
+
+body.grid .details-link {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 45px;
+  height: 45px;
+  padding-left: 5px;
+  background-color: var(--pink);
+  background-image: linear-gradient(to right, #ff8a00, rgba(255, 255, 255, 0));
+  color: white;
+  display: flex;
+  align-items: flex-end;
+  transition: background-color 0.2s linear;
+  border-top-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+body.grid .details-link:hover,
+body.grid .details-link:focus {
+  background-color: var(--orange);
+}
+
+body.grid .details-link svg {
+  display: block;
+  fill: #fff;
+  transition: transform 0.25s;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+/* @media (prefers-reduced-motion: no-preference) { */
+body.grid .details-link:hover svg {
+  transform: translate(5px, 5px) rotate(160deg);
+}
+
+/* } */
+body.grid .conf-head {
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(to right, #ff8a00, #da1b60);
+}
+
+body.grid .conf div:nth-child(1) {
+  order: 2;
+}
+
+body.grid .conf div:nth-child(2) {
+  order: 1;
+}
+
+body.grid .conf div:nth-child(3) {
+  order: 3;
+}
+
+body.grid .conf div:nth-child(4) {
+  order: 4;
+}
+
+abbr[title] {
+  border-bottom: none !important;
+  cursor: inherit !important;
+  text-decoration: none !important;
+}
+
+@media (max-width: 700px) {
+  body.grid .conference-list {
+    display: block;
+    padding: 1rem;
+  }
+
+  body.grid .conf {
+    margin-bottom: 4rem;
+  }
+}
+body.grid .remindme {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+body.grid .remindme button {
+  border: none;
+  background: none;
+  padding: 0.15em 0.75em;
+  font-size: 0.66rem;
+  cursor: pointer;
+  color: var(--rust);
+  transition: opacity 0.1s linear;
+  border: 1px solid var(--rust);
+  border-radius: 10px;
+}
+
+body.grid .flyout {
+  z-index: 1;
+}
+
+body.grid .flyout label {
+  font-size: 0.8rem;
+}
+
+body.grid .flyout input[type=email] {
+  width: 100%;
+  font-size: 1rem;
+  margin-top: 0.15em;
+  border: 2px solid var(--orange);
+  padding: 0.5em 0.6em 0.55em 0.5em;
+  border-radius: 0.2em;
+}
+
+body.grid .flyout .send-email {
+  position: absolute;
+  border: none;
+  z-index: 2;
+  bottom: 4em;
+  right: 1.6em;
+  height: 2.85em;
+  width: 3.5em;
+  background: none;
+}
+
+.card {
+  position: relative;
+}
+
+.card[aria-hidden=true] .card__face--back {
+  display: none;
+}
+
+.card__face {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  padding: 1rem;
+}
+
+.card__face--back {
+  background: white;
+  border-radius: 10px;
+  border-top: 1px solid #ccc;
+}
+
+/*# sourceMappingURL=grid.css.map */
