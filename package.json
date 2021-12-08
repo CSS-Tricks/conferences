@@ -10,6 +10,7 @@
     "build:sass": "sass site/_includes/scss:site/_includes/processed_css",
     "watch:eleventy": "eleventy --serve",
     "build:eleventy": "eleventy",
+    "dev": "npm-run-all build:sass --parallel watch:*",
     "start": "npm-run-all build:sass --parallel watch:*",
     "build": "npm-run-all build:*"
   },
