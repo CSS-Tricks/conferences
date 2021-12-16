@@ -1,7 +1,7 @@
 ---
 title: Render-Atlanta (RenderATL) 2022
 url: https://www.renderatl.com/
-cocUrl: https://www.renderatl.com/code-of-conduct
+cocUrl: https://www.renderatl.com/thecode
 date: 2022-06-02
 endDate: 2022-06-04
 location: Atlanta , USA
