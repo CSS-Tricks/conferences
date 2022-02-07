@@ -2,8 +2,8 @@
 title: 'An Event Apart: Spring Summit 2022'
 url: https://aneventapart.com/event/spring-summit-2022
 cocUrl: https://aneventapart.com/registration-information#code-of-conduct
-date: 2021-04-18T21:28:27.799Z
-endDate: 2021-04-20T21:28:27.809Z
+date: 2022-04-18T21:28:27.799Z
+endDate: 2022-04-20T21:28:27.809Z
 location: Remote
 byline: Online Together
 ---
