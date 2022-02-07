@@ -1,7 +1,7 @@
 const { schedule } = require('@netlify/functions');
 
 const handler = async function(event, context) {
-  fetch('https://api.netlify.com/build_hooks/5c587ed79f73870173703311', {
+  fetch(`https://api.netlify.com/build_hooks/${process.env.BUILD_SECRET}`, {
     method: 'POST'
   });
   return {
